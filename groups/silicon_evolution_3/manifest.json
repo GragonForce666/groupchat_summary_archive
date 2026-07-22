@@ -1,0 +1,47 @@
+{
+  "group_set": "silicon_evolution_3",
+  "display_name": "10x效率|硅基进化论③",
+  "slug": "silicon_evolution_3",
+  "generated_at": "2026-07-22T09:37:15",
+  "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
+  "days": [
+    {
+      "date": "20260721",
+      "title": "ChatGPT: Veterans Claim",
+      "summary": "今日群聊由KOL @硅基妙妙屋- Morgan 领衔，大家围绕Codex更新同步、AI模型实测体验、科学上网故障排查以及亚马逊选品工具MCP应用展开了热烈讨论。群友们分享了解决Codex登录问题的实用方法，并探讨了中美医疗差异等生活话题，展现了“蝗虫”文化对新工具的敏锐嗅觉与互助精神。",
+      "source_html": "data/20260721/silicon_evolution_3/MODE2_20260721_10x效率_硅基进化论__20260722_093510.html",
+      "path": "groups/silicon_evolution_3/days/20260721.html",
+      "mtime": "2026-07-22T09:37:11"
+    },
+    {
+      "date": "20260720",
+      "title": "SIF 跨境电商工具",
+      "summary": "今日群聊主要围绕Codex的自动更新与同步功能、各类AI模型（Kimi, GPT, Claude, Grok）的使用体验与限制、科学上网的必要性，以及跨境电商工具MCP的比较展开了深入探讨。群友们积极分享排障经验与工具评测，展现了对AI效率工具的高度关注与依赖。",
+      "source_html": "data/20260720/silicon_evolution_3/MODE2_20260720_10x效率_硅基进化论__20260721_100513.html",
+      "path": "groups/silicon_evolution_3/days/20260720.html",
+      "mtime": "2026-07-21T10:07:00"
+    },
+    {
+      "date": "20260719",
+      "title": "GitHub Copilot",
+      "summary": "今日群聊主要围绕 @谢谢你提醒我 提出的 Codex 更新及数据同步问题展开，大家分享了盲盒式更新体验。同时， @丁博 提起了对 Kimi k3 模型的讨论，探讨了国产模型的实用性与部分工具的访问风险。",
+      "source_html": "data/20260719/silicon_evolution_3/MODE2_20260719_10x效率_硅基进化论__20260720_143205.html",
+      "path": "groups/silicon_evolution_3/days/20260719.html",
+      "mtime": "2026-07-20T14:34:21"
+    },
+    {
+      "date": "20260716",
+      "title": "Ultra 模型相关资讯搜索",
+      "summary": "今日群聊围绕AI工具更新与模型体验展开。KOL @谢谢你提醒我 引发了关于Codex自动更新及数据同步的热烈讨论。大家还交流了Kimi的K3模型使用感受，以及GPT会员与国产模型的价值对比，展现了群友对前沿AI工具的高度关注与实践探索。",
+      "source_html": "data/20260716/silicon_evolution_3/MODE2_20260716_10x效率_硅基进化论__20260717_172803.html",
+      "path": "groups/silicon_evolution_3/days/20260716.html",
+      "mtime": "2026-07-17T17:30:21"
+    }
+  ],
+  "urls": {
+    "20260721": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260721.html",
+    "20260720": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260720.html",
+    "20260719": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260719.html",
+    "20260716": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260716.html"
+  }
+}

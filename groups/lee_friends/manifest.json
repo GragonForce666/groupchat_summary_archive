@@ -1,0 +1,47 @@
+{
+  "group_set": "lee_friends",
+  "display_name": "Lee和Ta的朋友们（三群合并）",
+  "slug": "lee_friends",
+  "generated_at": "2026-07-22T09:32:33",
+  "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
+  "days": [
+    {
+      "date": "20260721",
+      "title": "中国法律服务网",
+      "summary": "今日群聊讨论热烈，核心话题聚焦于亚马逊大卖与个人卖家（六边形战士）的竞争格局、税务合规与9810报关实操，以及近期股市动荡下的投资策略。此外，群友们还分享了ChatGPT Plus订阅经验、亚马逊标题新规应对方法，以及各类实用工具的专属优惠资源。",
+      "source_html": "data/20260721/lee_friends/MODE2_20260721_Lee和Ta的朋友们_三群合并__20260722_093002.html",
+      "path": "groups/lee_friends/days/20260721.html",
+      "mtime": "2026-07-22T09:32:26"
+    },
+    {
+      "date": "20260720",
+      "title": "中国法律服务网（查询律师信息）",
+      "summary": "今日群聊讨论热烈，主要聚焦于亚马逊运营合规（税务、0申报风险、大卖竞争）、股市行情吐槽（大A、纳指、黄金下跌）以及ChatGPT Plus订阅与美区苹果ID支付等实用技巧。群友们在吐槽与互助中展现了极高的活跃度与专业性。",
+      "source_html": "data/20260720/lee_friends/MODE2_20260720_Lee和Ta的朋友们_三群合并__20260721_100149.html",
+      "path": "groups/lee_friends/days/20260720.html",
+      "mtime": "2026-07-21T10:03:25"
+    },
+    {
+      "date": "20260719",
+      "title": "知无不言：关于投资与副业的探讨",
+      "summary": "今日群聊围绕亚马逊合规与税务风险、大麦降维打击与中小卖家生存之道、副业的意义与创业风险等话题展开了深度探讨。KOL @胡程 输出了大量关于税务0申报风险、六边形战士模式的深刻见解，引发群友强烈共鸣。此外，群内还交流了ChatGPT Plus订阅教程、股市行情吐槽及亚马逊标题新规等实用信息。",
+      "source_html": "data/20260719/lee_friends/MODE2_20260719_Lee和Ta的朋友们_三群合并__20260720_142704.html",
+      "path": "groups/lee_friends/days/20260719.html",
+      "mtime": "2026-07-20T14:29:19"
+    },
+    {
+      "date": "20260716",
+      "title": "跨境电商论坛问答：https://www.wearesellers.com/question/121108",
+      "summary": "今日群聊围绕亚马逊中小卖家生存现状、大卖降维打击、税务合规风险（0申报与增值税）、ChatGPT Plus订阅难题、以及股市投资吐槽等话题展开了深度探讨。KOL @胡程 输出了大量关于副业、合规与六边形战士的高价值观点，引发群友强烈共鸣。",
+      "source_html": "data/20260716/lee_friends/MODE2_20260716_Lee和Ta的朋友们_三群合并__20260717_170857.html",
+      "path": "groups/lee_friends/days/20260716.html",
+      "mtime": "2026-07-17T17:11:28"
+    }
+  ],
+  "urls": {
+    "20260721": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260721.html",
+    "20260720": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260720.html",
+    "20260719": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260719.html",
+    "20260716": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260716.html"
+  }
+}

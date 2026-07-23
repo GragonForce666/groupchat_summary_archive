@@ -2,16 +2,24 @@
   "group_set": "lee_friends",
   "display_name": "Lee和Ta的朋友们（三群合并）",
   "slug": "lee_friends",
-  "generated_at": "2026-07-22T09:32:33",
+  "generated_at": "2026-07-23T09:33:14",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
     {
+      "date": "20260722",
+      "title": "LinkFox AI渠道专属推广链接",
+      "summary": "今日群聊由 @胡程 主导，深入探讨了亚马逊“六边形战士”与副业的平衡，以及税务合规等高价值话题。大家对大麦进场、利润压缩、9810报关单免税实操等进行了热烈交流。此外，股市大跌、ChatGPT Plus订阅等日常话题也引发了广泛共鸣。整体氛围活跃，干货满满，展现了跨境电商从业者在合规与内卷环境下的深刻思考。",
+      "source_html": "data/20260722/lee_friends/MODE2_20260722_Lee和Ta的朋友们_三群合并__20260723_093103.html",
+      "path": "groups/lee_friends/days/20260722.html",
+      "mtime": "2026-07-23T09:33:09"
+    },
+    {
       "date": "20260721",
-      "title": "中国法律服务网",
-      "summary": "今日群聊讨论热烈，核心话题聚焦于亚马逊大卖与个人卖家（六边形战士）的竞争格局、税务合规与9810报关实操，以及近期股市动荡下的投资策略。此外，群友们还分享了ChatGPT Plus订阅经验、亚马逊标题新规应对方法，以及各类实用工具的专属优惠资源。",
-      "source_html": "data/20260721/lee_friends/MODE2_20260721_Lee和Ta的朋友们_三群合并__20260722_093002.html",
+      "title": "中国法律服务网律师查询",
+      "summary": "今日群聊内容丰富，涵盖了亚马逊中小卖家生存现状、税务合规风险、9810报关实操、股市行情吐槽以及ChatGPT订阅等多个热门话题。群友们积极分享经验，讨论深入，展现了极高的专业素养与互助精神。",
+      "source_html": "data/20260721/lee_friends/MODE2_20260721_Lee和Ta的朋友们_三群合并__20260722_111549.html",
       "path": "groups/lee_friends/days/20260721.html",
-      "mtime": "2026-07-22T09:32:26"
+      "mtime": "2026-07-22T11:18:32"
     },
     {
       "date": "20260720",
@@ -39,6 +47,7 @@
     }
   ],
   "urls": {
+    "20260722": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260722.html",
     "20260721": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260721.html",
     "20260720": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260720.html",
     "20260719": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260719.html",

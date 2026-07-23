@@ -2,9 +2,17 @@
   "group_set": "silicon_evolution_3",
   "display_name": "10x效率|硅基进化论③",
   "slug": "silicon_evolution_3",
-  "generated_at": "2026-07-22T09:37:15",
+  "generated_at": "2026-07-23T09:36:55",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260722",
+      "title": "Codex CLI 安装与配置指南",
+      "summary": "今日群聊围绕AI工具的最新更新展开，特别是Codex的同步问题、Grok的内容限制、以及Gemini和Miora在绘图上的消耗。同时，群友们也探讨了跨境电商工具（如SIF、Helium10）的使用体验，以及科学上网的必要性。@谢谢你提醒我 和 @硅基妙妙屋- Morgan 贡献了大量高价值的工具测试反馈与解决方案。",
+      "source_html": "data/20260722/silicon_evolution_3/MODE2_20260722_10x效率_硅基进化论__20260723_093543.html",
+      "path": "groups/silicon_evolution_3/days/20260722.html",
+      "mtime": "2026-07-23T09:36:50"
+    },
     {
       "date": "20260721",
       "title": "ChatGPT: Veterans Claim",
@@ -39,6 +47,7 @@
     }
   ],
   "urls": {
+    "20260722": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260722.html",
     "20260721": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260721.html",
     "20260720": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260720.html",
     "20260719": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260719.html",

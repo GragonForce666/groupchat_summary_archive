@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>10x效率|硅基进化论③ - 20260722</title>
+<link href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet"/>
+<link href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-100-M/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0/dist/chartjs-plugin-datalabels.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js" type="text/javascript"></script>
+<style>
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --bg-tertiary: #e9ecef;
+            --text-primary: #212529;
+            --text-secondary: #495057;
+            --accent-primary: #FB651E;
+            --accent-secondary: #ff8906;
+            --accent-tertiary: #e8590c;
+            --accent-blue: #007EFF;
+            --accent-purple: #7048e8;
+            --accent-cyan: #10B981;
+            --highlight-keyword-bg: #ffe8cc;
+            --highlight-name-color: #7048e8;
+            --highlight-group-name-bg: var(--highlight-keyword-bg);
+            --kityminder-bg: #ffffff;
+            --modal-bg: rgba(0, 0, 0, 0.75);
+            --chart-grid-color: rgba(0, 0, 0, 0.1);
+            --chart-tick-color: #6c757d;
+            --card-padding: 24px;
+            --grid-gap: 16px;
+            --card-radius: 12px;
+            --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --font-family: 'Inter', 'SF Pro Display', 'Segoe UI', sans-serif;
+        }
+        [data-theme="dark"] {
+            --bg-primary: #0f0e17;
+            --bg-secondary: #1a1925;
+            --bg-tertiary: #252336;
+            --text-primary: #fffffe;
+            --text-secondary: #a7a9be;
+            --accent-primary: #ff8906;
+            --accent-secondary: #f25f4c;
+            --accent-tertiary: #e53170;
+            --accent-blue: #3da9fc;
+            --accent-purple: #7209b7;
+            --accent-cyan: #00b4d8;
+            --highlight-keyword-bg: rgba(255, 137, 6, 0.2);
+            --highlight-name-color: var(--accent-cyan);
+            --highlight-group-name-bg: var(--highlight-keyword-bg);
+            --kityminder-bg: #1a1925;
+            --modal-bg: rgba(0, 0, 0, 0.85);
+            --chart-grid-color: rgba(255, 255, 255, 0.1);
+            --chart-tick-color: #a7a9be;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font-family); background-color: var(--bg-primary); color: var(--text-primary); line-height: 1.6; font-size: 16px; width: 100%; }
+        #page-container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+        h1, h2, h3, h4 { font-weight: 600; letter-spacing: 0.5px; }
+        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--accent-primary); }
+        h2 { font-size: 1.75rem; margin-bottom: 1rem; color: var(--accent-primary); }
+        h3 { font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--accent-blue); }
+        .grid-container { display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-flow: dense; gap: var(--grid-gap); margin-top: 20px; }
+        .card { background-color: var(--bg-secondary); border-radius: var(--card-radius); padding: var(--card-padding); box-shadow: var(--card-shadow); position: relative; overflow: hidden; display: flex; flex-direction: column; }
+        .card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: var(--accent-primary); }
+        .card-icon { position: absolute; bottom: var(--card-padding); right: var(--card-padding); font-size: 4rem; opacity: 0.07; color: var(--accent-primary); z-index: 0; }
+        .main-card, .active-users-chart-card, .message-distribution-chart-card, .topic-cards-wrapper, .mindmap-card-container { grid-column: 1 / -1; }
+        .quote-card { grid-column: span 6; }
+        .links-card { grid-column: span 6; }
+        .stats-card { grid-column: span 7; }
+        .wordcloud-card { grid-column: span 5; }
+        .topic-cards-wrapper { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--grid-gap); }
+        .topic-card { grid-column: span 6; min-height: 250px; }
+        .topic-cards-wrapper > .topic-card:nth-last-child(1):nth-child(odd) { grid-column: span 12; }
+        .main-card h1 { text-align: center; }
+        .main-card .date { text-align: center; font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 1rem; }
+        .meta-info { display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 1rem; justify-content: center; }
+        .meta-info span { background-color: var(--bg-tertiary); padding: 5px 10px; border-radius: 20px; font-size: 0.9rem; color: var(--accent-blue); }
+        .summary { margin-top: 1rem; line-height: 1.7; text-align: left; }
+        .chart-container { position: relative; height: 300px; width: 100%; }
+        .topic-category { display: inline-block; background-color: var(--accent-tertiary); color: #FFFFFF; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; margin-bottom: 0.5rem; }
+        .topic-keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 0.75rem; margin-bottom: 0.75rem; }
+        .keyword { background-color: var(--bg-tertiary); color: var(--accent-primary); padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; }
+        .highlight-keyword { background-color: var(--highlight-keyword-bg); padding: 1px 2px; border-radius: 2px; font-weight: 500; display: inline; }
+        .highlight-name { color: var(--highlight-name-color); font-weight: 500; }
+        .topic-mentions { font-size: 0.9rem; color: var(--text-secondary); }
+        .quote { position: relative; padding-left: 20px; margin: 10px 0; font-style: italic; color: var(--text-secondary); }
+        .quote::before { content: '"'; position: absolute; left: 0; top: 0; font-size: 1.5rem; color: var(--accent-tertiary); }
+        .quote-author { text-align: right; font-size: 0.9rem; color: var(--accent-tertiary); margin-top: 5px; }
+        .link-item { display: flex; align-items: center; margin-bottom: 10px; padding: 8px; border-radius: 6px; background-color: var(--bg-tertiary); text-decoration: none; }
+        .link-item a { text-decoration: none; color: inherit; display: flex; align-items: center; width: 100%; }
+        .link-icon { margin-right: 10px; color: var(--accent-blue); }
+        .link-title { flex-grow: 1; color: var(--text-primary); }
+        .user-stats-table { width: 100%; border-collapse: collapse; margin-top: 0.5rem; }
+        .user-stats-table th { text-align: center; padding: 0.75rem 0.5rem; border-bottom: 2px solid var(--accent-primary); color: var(--text-primary); font-weight: 600; font-size: 0.9rem; }
+        .user-stats-table td { padding: 0.75rem 0.5rem; border-bottom: 1px solid var(--bg-tertiary); color: var(--text-secondary); font-size: 0.85rem; vertical-align: top; text-align: left; }
+        .wordcloud { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; padding: 20px 0; }
+        .wordcloud-item { padding: 5px 10px; border-radius: 4px; font-weight: 500; }
+        .size-1 { font-size: 0.9rem; color: var(--text-secondary); }
+        .size-2 { font-size: 1.1rem; color: var(--accent-cyan); }
+        .size-3 { font-size: 1.3rem; color: var(--accent-blue); }
+        .size-4 { font-size: 1.5rem; color: var(--accent-purple); }
+        .size-5 { font-size: 1.8rem; color: var(--accent-tertiary); }
+        .mindmap-controls { display: flex; gap: 10px; margin-bottom: 15px; align-items: center; flex-wrap: wrap; }
+        .mindmap-controls button { background-color: var(--accent-blue); color: white; border: none; padding: 8px 12px; border-radius: var(--card-radius); font-size: 0.9rem; cursor: pointer; }
+        .kityminder-container { flex-grow: 1; overflow: hidden; background-color: var(--kityminder-bg); border-radius: 8px; padding: 0; border: 1px solid var(--bg-tertiary); min-height: 400px; position: relative; display: flex; align-items: center; justify-content: center; }
+        @media (max-width: 768px) {
+            .grid-container { grid-template-columns: 1fr; }
+            .main-card, .active-users-chart-card, .message-distribution-chart-card, .topic-cards-wrapper, .mindmap-card-container, .quote-card, .links-card, .stats-card, .wordcloud-card { grid-column: 1 / -1; }
+            .topic-cards-wrapper { display: flex; flex-direction: column; gap: var(--grid-gap); }
+        }
+    
+
+        /* MODE2_V8_LAYOUT: fixed light theme + quote/resources row + stats/wordcloud row */
+        html[data-theme="light"] { color-scheme: light; }
+        .insight-columns { grid-column: 1 / -1; display: flex; flex-direction: column; gap: var(--grid-gap); align-items: stretch; }
+        .insight-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--grid-gap); align-items: stretch; }
+        .insight-row .quote-card,
+        .insight-row .links-card,
+        .insight-row .wordcloud-card,
+        .insight-row .stats-card { grid-column: auto !important; width: 100%; height: 100%; }
+        .insight-row-primary .links-card { align-self: stretch; }
+        .resource-grid { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 14px; }
+        .resource-card { position: relative; display: flex; flex-direction: column; gap: 8px; min-height: 104px; padding: 14px 14px 13px; border-radius: 14px; text-decoration: none; color: inherit; overflow: hidden; background: linear-gradient(135deg, rgba(255,255,255,0.62), rgba(246,248,252,0.92)); border: 1px solid rgba(0, 113, 227, 0.13); box-shadow: 0 10px 24px rgba(15,23,42,0.045); transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+        [data-theme="dark"] .resource-card { background: linear-gradient(135deg, rgba(37,50,75,0.82), rgba(25,32,45,0.96)); border-color: rgba(95, 180, 255, 0.18); box-shadow: 0 12px 28px rgba(0,0,0,0.22); }
+        .resource-card:hover { transform: translateY(-2px); box-shadow: 0 16px 36px rgba(15,23,42,0.08); border-color: rgba(0, 113, 227, 0.28); }
+        .resource-card::after { content: ""; position: absolute; width: 92px; height: 92px; border-radius: 50%; right: -42px; top: -42px; background: radial-gradient(circle, rgba(0,113,227,.16), transparent 68%); pointer-events: none; }
+        .resource-card-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; font-size: .72rem; letter-spacing: .02em; }
+        .resource-type { color: var(--accent-primary); font-weight: 700; background: rgba(0, 113, 227, 0.08); padding: 3px 7px; border-radius: 999px; }
+        .resource-source { color: var(--text-tertiary); white-space: nowrap; }
+        .resource-title { color: var(--text-primary); font-size: .98rem; font-weight: 700; line-height: 1.32; }
+        .resource-desc { color: var(--text-secondary); font-size: .78rem; line-height: 1.55; margin: 0; }
+        .resource-foot { margin-top: auto; color: var(--accent-blue); font-size: .76rem; font-weight: 600; display: flex; align-items: center; gap: 6px; opacity: .9; }
+        .resource-empty-note { display: none !important; }
+
+        .wordcloud { position: relative; display: block; min-height: 282px; padding: 22px 8px 22px; overflow: hidden; isolation: isolate; }
+        .wordcloud::before { content: ""; position: absolute; inset: 46px 30px; border-radius: 999px; background: radial-gradient(circle at 50% 48%, rgba(0,113,227,.075), rgba(255,137,6,.045) 42%, transparent 72%); filter: blur(2px); z-index: 0; }
+        .wordcloud-item { position: absolute; left: 50%; top: 50%; z-index: 1; white-space: nowrap; padding: 5px 9px; border-radius: 999px; line-height: 1; font-weight: 700; letter-spacing: -0.02em; border: 1px solid rgba(255,255,255,.48); background: rgba(255,255,255,.55); box-shadow: 0 8px 18px rgba(15,23,42,.055); transform: translate(-50%, -50%) translate(var(--x,0), var(--y,0)) rotate(var(--r,0deg)); transition: transform .22s ease, opacity .22s ease, box-shadow .22s ease; }
+        [data-theme="dark"] .wordcloud-item { background: rgba(31, 41, 55, .62); border-color: rgba(255,255,255,.08); box-shadow: 0 10px 20px rgba(0,0,0,.18); }
+        .wordcloud-item:hover { z-index: 4; transform: translate(-50%, -50%) translate(var(--x,0), var(--y,0)) rotate(var(--r,0deg)) scale(1.08); box-shadow: 0 14px 28px rgba(15,23,42,.11); }
+        .wordcloud-item[data-hidden="true"] { display: none; }
+        .wordcloud-item[data-weight="5"] { font-size: 1.72rem; color: var(--accent-tertiary); background: rgba(255,137,6,.12); }
+        .wordcloud-item[data-weight="4"] { font-size: 1.28rem; color: var(--accent-blue); background: rgba(0,113,227,.10); }
+        .wordcloud-item[data-weight="3"] { font-size: 1.02rem; color: var(--accent-purple); background: rgba(88,86,214,.10); }
+        .wordcloud-item[data-weight="2"] { font-size: .84rem; color: var(--accent-cyan); opacity: .9; }
+        .wordcloud-item[data-weight="1"] { font-size: .68rem; color: var(--text-tertiary); opacity: .74; font-weight: 600; }
+        .insight-row-secondary .user-stats-table td { font-size: .78rem; padding: .62rem .45rem; }
+        .insight-row-secondary .user-stats-table th { font-size: .82rem; padding: .62rem .45rem; }
+        @media (max-width: 768px) { .insight-row { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<main id="capture-root">
+<div id="page-container">
+<div id="report-content-wrapper">
+<div class="grid-container">
+<!-- 主报告信息卡片 -->
+<div class="card main-card">
+<h1>10x效率|硅基进化论③ 日报</h1>
+<div class="date">2026年07月22日</div>
+<div class="meta-info">
+<span><i class="fas fa-comment"></i> 消息数: 111</span>
+<span><i class="fas fa-users"></i> 活跃用户: 22</span>
+<span><i class="fas fa-fire"></i> 热点话题: 6</span>
+</div>
+<p class="summary">今日群聊围绕AI工具的最新更新展开，特别是Codex的同步问题、Grok的内容限制、以及Gemini和Miora在绘图上的消耗。同时，群友们也探讨了跨境电商工具（如SIF、Helium10）的使用体验，以及科学上网的必要性。@谢谢你提醒我 和 @硅基妙妙屋- Morgan 贡献了大量高价值的工具测试反馈与解决方案。</p>
+<i class="fas fa-microchip card-icon"></i>
+</div>
+<!-- 活跃用户分布图表卡片 -->
+<div class="card active-users-chart-card">
+<h2><i class="fas fa-chart-bar"></i> 活跃用户分布</h2>
+<div class="chart-container">
+<canvas id="activeUsersChart"></canvas>
+</div>
+<i class="fas fa-users card-icon"></i>
+</div>
+<!-- 消息时间分布图表卡片 -->
+<div class="card message-distribution-chart-card">
+<h2><i class="fas fa-clock"></i> 消息时间分布</h2>
+<div class="chart-container">
+<canvas id="messageDistributionChart"></canvas>
+</div>
+<i class="fas fa-hourglass-half card-icon"></i>
+</div>
+<!-- 热门话题卡片容器 -->
+<div class="topic-cards-wrapper">
+<div class="card topic-card">
+<div class="topic-card-content-wrapper">
+<h2><i class="fas fa-sync"></i> Codex更新与同步问题</h2>
+<div class="topic-category">工具更新</div>
+<p>群友讨论了<span class="highlight-keyword">Codex</span>自动更新后历史记录消失及与ChatGPT对话同步的问题。<span class="highlight-name">@谢谢你提醒我</span> 提到“突然发现codex已经把ChatGPT的合并在一起了”，而 <span class="highlight-name">@硅基妙妙屋- Morgan</span> 提供了解决方案：“把 %USERPROFILE%\.codex\auth.json 这个文件删掉，然后用 npm 安装 CLI 重新登录试试”。</p>
+<div class="topic-keywords">
+<span class="keyword">Codex</span>
+<span class="keyword">同步</span>
+<span class="keyword">CLI</span>
+</div>
+<div class="topic-mentions"><i class="fas fa-bullhorn"></i> 提及次数: 18</div>
+</div>
+<i class="fas fa-tools card-icon"></i>
+</div>
+<div class="card topic-card">
+<div class="topic-card-content-wrapper">
+<h2><i class="fas fa-shield-alt"></i> AI模型的内容限制与越狱</h2>
+<div class="topic-category">AI安全</div>
+<p><span class="highlight-name">@MaNia</span> 吐槽Grok的图片生成限制：“grok说它生成的图片它觉得太涩情了不展示给我看。我就再也不用它了”。<span class="highlight-name">@知否</span> 指出“邪修都是可以越狱的，或者是提示词”。大家对各大模型在内容审查上的尺度进行了深入探讨，认为放开限制能极大增加付费用户。</p>
+<div class="topic-keywords">
+<span class="keyword">Grok</span>
+<span class="keyword">越狱</span>
+<span class="keyword">内容审查</span>
+</div>
+<div class="topic-mentions"><i class="fas fa-bullhorn"></i> 提及次数: 14</div>
+</div>
+<i class="fas fa-star card-icon"></i>
+</div>
+<div class="card topic-card">
+<div class="topic-card-content-wrapper">
+<h2><i class="fas fa-network-wired"></i> 科学上网与工具依赖</h2>
+<div class="topic-category">基础设施</div>
+<p>由于网络问题，<span class="highlight-name">@Jasmine</span> 抱怨“没有codex瞬间回到了原始社会”。<span class="highlight-name">@谢谢你提醒我</span> 附和道“没有科学上网也倒退，离不开了，没有他们不会工作了”。这反映了当前AI从业者对网络环境和AI工具的极度依赖。</p>
+<div class="topic-keywords">
+<span class="keyword">科学上网</span>
+<span class="keyword">工具依赖</span>
+</div>
+<div class="topic-mentions"><i class="fas fa-bullhorn"></i> 提及次数: 12</div>
+</div>
+<i class="fas fa-comments card-icon"></i>
+</div>
+<div class="card topic-card">
+<div class="topic-card-content-wrapper">
+<h2><i class="fas fa-shopping-cart"></i> 跨境电商工具探讨</h2>
+<div class="topic-category">电商运营</div>
+<p><span class="highlight-name">@胖宝</span> 询问扫new release榜单用哪家MCP比较好。<span class="highlight-name">@sd</span> 推荐了SIF，表示“Sif MCP很不错很不错”，并提到在Hermes里设置cron任务每天接收流量分析早报。<span class="highlight-name">@硅基妙妙屋- Morgan</span> 则分享了Helium10关于亚马逊关键词搜索的最新文章。</p>
+<div class="topic-keywords">
+<span class="keyword">SIF</span>
+<span class="keyword">MCP</span>
+<span class="keyword">Helium10</span>
+</div>
+<div class="topic-mentions"><i class="fas fa-bullhorn"></i> 提及次数: 15</div>
+</div>
+<i class="fas fa-chart-line card-icon"></i>
+</div>
+<div class="card topic-card">
+<div class="topic-card-content-wrapper">
+<h2><i class="fas fa-hospital"></i> 医疗与生活吐槽</h2>
+<div class="topic-category">生活闲聊</div>
+<p><span class="highlight-name">@sd</span> 分享了在美国看病的经历：“40度高烧，挂号40刀，排队3小时然后医生让我回家多喝热水，这就是阿米丽卡”。<span class="highlight-name">@Jasmine</span> 幽默回应：“这证明了米国保健品确实好”。</p>
+<div class="topic-keywords">
+<span class="keyword">医疗</span>
+<span class="keyword">吐槽</span>
+</div>
+<div class="topic-mentions"><i class="fas fa-bullhorn"></i> 提及次数: 10</div>
+</div>
+<i class="fas fa-coffee card-icon"></i>
+</div>
+<div class="card topic-card">
+<div class="topic-card-content-wrapper">
+<h2><i class="fas fa-image"></i> AI绘图与积分消耗</h2>
+<div class="topic-category">AI绘图</div>
+<p><span class="highlight-name">@藍采和🇨🇳</span> 提到使用Gemini改图非常消耗Token：“一个海报，搞大都不行，海报token费完了”。<span class="highlight-name">@硅基妙妙屋- Morgan</span> 推荐了腾讯的Miora设计平台：“新羊毛来了！免费注册送积分，薅价值20刀的Credits”，并分享了二维码生成的技巧。</p>
+<div class="topic-keywords">
+<span class="keyword">Gemini</span>
+<span class="keyword">Miora</span>
+<span class="keyword">Token</span>
+</div>
+<div class="topic-mentions"><i class="fas fa-bullhorn"></i> 提及次数: 16</div>
+</div>
+<i class="fas fa-paint-brush card-icon"></i>
+</div>
+</div>
+<!-- 思维导图卡片 -->
+<div class="card mindmap-card-container">
+<h2><i class="fas fa-sitemap"></i> 核心概念关系图</h2>
+<div class="mindmap-controls">
+<button id="zoomInBtn"><i class="fas fa-search-plus"></i> 放大</button>
+<button id="zoomOutBtn"><i class="fas fa-search-minus"></i> 缩小</button>
+</div>
+<div class="kityminder-container" id="mainKityMinderContainer"></div>
+<i class="fas fa-project-diagram card-icon"></i>
+</div>
+<!-- 精彩引用卡片 -->
+<div class="insight-columns"><div class="insight-row insight-row-primary"><div class="card quote-card">
+<h2><i class="fas fa-quote-left"></i> 精彩引用</h2>
+<div class="quote">"突然发现codex已经把ChatGPT的合并在一起了，对话啥的也同步过来了" <div class="quote-author">- @谢谢你提醒我</div></div>
+<div class="quote">"AI的尽头是AV" <div class="quote-author">- @小邬见大邬</div></div>
+<div class="quote">"openai要是放开成人，付费用户能再增加十倍" <div class="quote-author">- @MaNia</div></div>
+<div class="quote">"邪修都是可以越狱的，或者是提示词." <div class="quote-author">- @知否</div></div>
+<div class="quote">"没有codex瞬间回到了原始社会" <div class="quote-author">- @Jasmine</div></div>
+<div class="quote">"没有科学上网也倒退，离不开了，没有他们不会工作了" <div class="quote-author">- @谢谢你提醒我</div></div>
+<div class="quote">"我们特别擅长解决哪些在别人看来不是问题的问题" <div class="quote-author">- @硅基妙妙屋- Morgan</div></div>
+<div class="quote">"40度高烧，挂号40刀，排队3小时然后医生让我回家多喝热水" <div class="quote-author">- @sd</div></div>
+<div class="quote">"接到Hermes里面设置一个cron任务 每天早上就等着全店铺的流量分析早报 舒服的很" <div class="quote-author">- @sd</div></div>
+<div class="quote">"把 %USERPROFILE%\.codex\auth.json 这个文件删掉，然后用 npm 安装 CLI 重新登录试试呢" <div class="quote-author">- @硅基妙妙屋- Morgan</div></div>
+<div class="quote">"不是说长文本对话记忆吗，怎么聊两句就崩啦" <div class="quote-author">- @谢谢你提醒我</div></div>
+<div class="quote">"三个小时了还没有攻破id.me" <div class="quote-author">- @MaNia</div></div>
+<div class="quote">"改图，真费点数，前面一两遍还行，后面直接拉。。光fei tooken.." <div class="quote-author">- @藍采和🇨🇳</div></div>
+<div class="quote">"新羊毛来了！腾讯出品的设计平台。免费注册送积分，薅价值20刀的Credits" <div class="quote-author">- @硅基妙妙屋- Morgan</div></div>
+<div class="quote">"二维码目前只有image2模型能够比较好的保持一致性，可以在二维码位置留空，后续编辑放进去，不直接生成。" <div class="quote-author">- @硅基妙妙屋- Morgan</div></div>
+<div class="quote">"一个海报，搞大都不行，海报token费完了。。" <div class="quote-author">- @藍采和🇨🇳</div></div>
+<div class="quote">"这证明了米国保健品确实好" <div class="quote-author">- @Jasmine</div></div>
+<div class="quote">"我都开了GPT会员, 没必要" <div class="quote-author">- @拾玖 Blues</div></div>
+<div class="quote">"它的图片能力还是不太行，不如comfyui" <div class="quote-author">- @MaNia</div></div>
+<div class="quote">"自己的账号搭建的中转" <div class="quote-author">- @硅基妙妙屋- Morgan</div></div>
+<i class="fas fa-comment-dots card-icon"></i>
+</div><div class="card links-card"><h2><i class="fas fa-link"></i> 重要链接与资源</h2><div class="resource-grid"><a class="resource-card" href="https://www.helium10.com/blog/breaking-news-amazon-keyword-search-is-alive-well/" target="_blank"><div class="resource-card-top"><span class="resource-type">资源链接</span><span class="resource-source">Helium 10</span></div><div class="resource-title" contenteditable="false">Helium10: Amazon Keyword Search is Alive &amp; Well</div><p class="resource-desc" contenteditable="false">群内提及资源，用于延展「Helium10: Amazon Keyword Search is Alive &amp; Well」相关讨论。</p><div class="resource-foot">查看资源<i class="fas fa-arrow-up-right-from-square"></i></div></a><a class="resource-card" href="https://chatgpt.com/veterans-claim" target="_blank"><div class="resource-card-top"><span class="resource-type">资源链接</span><span class="resource-source">chatgpt.com</span></div><div class="resource-title" contenteditable="false">ChatGPT: Veterans Claim</div><p class="resource-desc" contenteditable="false">群内提及资源，用于延展「ChatGPT: Veterans Claim」相关讨论。</p><div class="resource-foot">查看资源<i class="fas fa-arrow-up-right-from-square"></i></div></a><a class="resource-card" href="https://miora.design/skills" target="_blank"><div class="resource-card-top"><span class="resource-type">资源链接</span><span class="resource-source">miora.design</span></div><div class="resource-title" contenteditable="false">Miora Design: 腾讯出品设计平台</div><p class="resource-desc" contenteditable="false">群内提及资源，用于延展「Miora Design: 腾讯出品设计平台」相关讨论。</p><div class="resource-foot">查看资源<i class="fas fa-arrow-up-right-from-square"></i></div></a><a class="resource-card" href="#" target="_blank"><div class="resource-card-top"><span class="resource-type">资源链接</span><span class="resource-source">群聊提及</span></div><div class="resource-title" contenteditable="false">ComfyUI 官方文档与教程</div><p class="resource-desc" contenteditable="false">群内提及资源，用于延展「ComfyUI 官方文档与教程」相关讨论。</p><div class="resource-foot">查看资源<i class="fas fa-arrow-up-right-from-square"></i></div></a><a class="resource-card" href="#" target="_blank"><div class="resource-card-top"><span class="resource-type">资源链接</span><span class="resource-source">群聊提及</span></div><div class="resource-title" contenteditable="false">SIF 跨境电商数据分析工具</div><p class="resource-desc" contenteditable="false">群内提及资源，用于延展「SIF 跨境电商数据分析工具」相关讨论。</p><div class="resource-foot">查看资源<i class="fas fa-arrow-up-right-from-square"></i></div></a><a class="resource-card" href="#" target="_blank"><div class="resource-card-top"><span class="resource-type">资源链接</span><span class="resource-source">群聊提及</span></div><div class="resource-title" contenteditable="false">Codex CLI 安装与配置指南</div><p class="resource-desc" contenteditable="false">群内提及资源，用于延展「Codex CLI 安装与配置指南」相关讨论。</p><div class="resource-foot">查看资源<i class="fas fa-arrow-up-right-from-square"></i></div></a></div><i class="fas fa-share-alt card-icon"></i></div></div><div class="insight-row insight-row-secondary"><div class="card stats-card">
+<h2><i class="fas fa-chart-line"></i> 活跃之星</h2>
+<table class="user-stats-table">
+<thead>
+<tr>
+<th class="user-name-col">用户</th>
+<th class="message-count-col">发言数</th>
+<th class="contribution-col">主要贡献</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="user-name-col">@谢谢你提醒我</td>
+<td class="message-count-col">15</td>
+<td class="contribution-col">提出Codex同步问题，积极参与工具讨论</td>
+</tr>
+<tr>
+<td class="user-name-col">@硅基妙妙屋- Morgan</td>
+<td class="message-count-col">13</td>
+<td class="contribution-col">提供Codex报错解决方案，分享设计平台羊毛</td>
+</tr>
+<tr>
+<td class="user-name-col">@MaNia</td>
+<td class="message-count-col">8</td>
+<td class="contribution-col">分享Grok使用体验及AI内容限制看法</td>
+</tr>
+<tr>
+<td class="user-name-col">@Jasmine</td>
+<td class="message-count-col">7</td>
+<td class="contribution-col">反馈网络连接问题，参与医疗话题互动</td>
+</tr>
+<tr>
+<td class="user-name-col">@sd</td>
+<td class="message-count-col">7</td>
+<td class="contribution-col">分享美国就医经历，推荐SIF工具</td>
+</tr>
+<tr>
+<td class="user-name-col">@拾玖 Blues</td>
+<td class="message-count-col">5</td>
+<td class="contribution-col">讨论国产模型与GPT会员的对比</td>
+</tr>
+<tr>
+<td class="user-name-col">@丁博</td>
+<td class="message-count-col">4</td>
+<td class="contribution-col">询问Kimi k3模型使用情况</td>
+</tr>
+<tr>
+<td class="user-name-col">@Simon</td>
+<td class="message-count-col">4</td>
+<td class="contribution-col">活跃气氛，参与灰产讨论</td>
+</tr>
+<tr>
+<td class="user-name-col">@藍采和🇨🇳</td>
+<td class="message-count-col">4</td>
+<td class="contribution-col">反馈Gemini改图消耗Token过快的问题</td>
+</tr>
+<tr>
+<td class="user-name-col">@知否</td>
+<td class="message-count-col">4</td>
+<td class="contribution-col">讨论AI越狱与提示词技巧</td>
+</tr>
+</tbody>
+</table>
+<i class="fas fa-user-friends card-icon"></i>
+</div><div class="card wordcloud-card">
+<h2><i class="fas fa-cloud"></i> 词云</h2>
+<div class="wordcloud">
+<span class="wordcloud-item size-5" data-weight="5" style="--x:-62px;--y:-12px;--r:-6deg;">Codex</span>
+<span class="wordcloud-item size-5" data-weight="5" style="--x:68px;--y:-10px;--r:5deg;">ChatGPT</span>
+<span class="wordcloud-item size-4" data-weight="4" style="--x:-6px;--y:-78px;--r:2deg;">Grok</span>
+<span class="wordcloud-item size-4" data-weight="4" style="--x:-106px;--y:42px;--r:6deg;">Gemini</span>
+<span class="wordcloud-item size-3" data-weight="3" style="--x:108px;--y:44px;--r:-5deg;">SIF</span>
+<span class="wordcloud-item size-3" data-weight="3" style="--x:-8px;--y:70px;--r:-3deg;">Helium10</span>
+<span class="wordcloud-item size-2" data-weight="2" style="--x:58px;--y:108px;--r:4deg;">科学上网</span>
+<span class="wordcloud-item size-2" data-weight="2" style="--x:-122px;--y:-44px;--r:-8deg;">越狱</span>
+<span class="wordcloud-item size-1" data-weight="1" style="--x:116px;--y:-50px;--r:7deg;">积分</span>
+<span class="wordcloud-item size-1" data-weight="1" style="--x:-142px;--y:4px;--r:6deg;">羊毛</span>
+<span class="wordcloud-item size-2" data-weight="2" style="--x:142px;--y:8px;--r:-5deg;">腾讯</span>
+<span class="wordcloud-item size-3" data-weight="3" style="--x:-66px;--y:116px;--r:-4deg;">二维码</span>
+<span class="wordcloud-item size-4" data-weight="4" style="--x:76px;--y:-104px;--r:4deg;">提示词</span>
+<span class="wordcloud-item size-5" data-weight="5" style="--x:-22px;--y:132px;--r:0deg;">节点</span>
+<span class="wordcloud-item size-3" data-weight="3" style="--x:24px;--y:-124px;--r:-2deg;">亚马逊</span>
+<span class="wordcloud-item size-2" data-weight="2" style="--x:-152px;--y:-86px;--r:-8deg;">流量分析</span>
+<span class="wordcloud-item size-1" data-weight="1" style="--x:154px;--y:-84px;--r:7deg;">插件</span>
+<span class="wordcloud-item size-2" data-weight="2" style="--x:-150px;--y:92px;--r:4deg;">医疗</span>
+<span class="wordcloud-item size-3" data-weight="3" style="--x:152px;--y:94px;--r:-6deg;">封号</span>
+<span class="wordcloud-item size-4" data-weight="4" style="--x:-86px;--y:-122px;--r:6deg;">注册机</span>
+<span class="wordcloud-item size-5" data-weight="5" style="--x:92px;--y:132px;--r:-4deg;">灰产</span>
+<span class="wordcloud-item size-4" data-weight="4" style="--x:-34px;--y:-142px;--r:8deg;">客户端</span>
+<span class="wordcloud-item size-3" data-weight="3" style="--x:122px;--y:132px;--r:-6deg;">额度</span>
+<span class="wordcloud-item size-2" data-weight="2" style="--x:-126px;--y:132px;--r:5deg;">盲盒</span>
+<span class="wordcloud-item size-1" data-hidden="true">记忆</span>
+<span class="wordcloud-item size-2" data-hidden="true">报错</span>
+<span class="wordcloud-item size-3" data-hidden="true">限制</span>
+<span class="wordcloud-item size-4" data-hidden="true">效率</span>
+<span class="wordcloud-item size-5" data-hidden="true">硅基</span>
+<span class="wordcloud-item size-4" data-hidden="true">Miora</span>
+</div>
+<i class="fas fa-tags card-icon"></i>
+</div></div></div>
+<!-- 重要链接与资源卡片 -->
+
+<!-- 活跃之星统计卡片 -->
+
+<!-- 词云卡片 -->
+
+</div>
+</div>
+</div>
+<script>
+    const kityminderData = {
+        root: {
+            data: { text: "今日讨论核心", expandState: "expand" },
+            children: [
+                { data: { text: "工具与平台", expandState: "expand" }, children: [
+                    { data: { text: "Codex 同步与报错" } },
+                    { data: { text: "Grok 限制与越狱" } },
+                    { data: { text: "Gemini 绘图消耗" } },
+                    { data: { text: "Miora 腾讯设计平台" } }
+                ]},
+                { data: { text: "跨境电商", expandState: "expand" }, children: [
+                    { data: { text: "SIF MCP" } },
+                    { data: { text: "Helium10 关键词" } }
+                ]},
+                { data: { text: "日常交流", expandState: "expand" }, children: [
+                    { data: { text: "科学上网依赖" } },
+                    { data: { text: "美国医疗吐槽" } }
+                ]}
+            ]
+        },
+        template: 'default',
+        theme: 'customPictureThemeLight',
+        version: "1.4.50"
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+        // 初始化活跃用户图表
+        const ctxActive = document.getElementById('activeUsersChart').getContext('2d');
+        new Chart(ctxActive, {
+            type: 'bar',
+            data: {
+                labels: ['谢谢你提醒我', '硅基妙妙屋- Morgan', 'MaNia', 'Jasmine', 'sd', '拾玖 Blues', '丁博', 'Simon', '藍采和🇨🇳', '知否'],
+                datasets: [{
+                    label: '发言数量',
+                    data: [15, 13, 8, 7, 7, 5, 4, 4, 4, 4],
+                    backgroundColor: 'rgba(251, 101, 30, 0.6)',
+                    borderColor: '#FB651E',
+                    borderWidth: 1
+                }]
+            },
+            options: { responsive: true, maintainAspectRatio: false }
+        });
+
+        // 初始化消息时间分布图表 (模拟数据)
+        const ctxTime = document.getElementById('messageDistributionChart').getContext('2d');
+        new Chart(ctxTime, {
+            type: 'line',
+            data: {
+                labels: ['08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00'],
+                datasets: [{
+                    label: '消息数量',
+                    data: [5, 12, 25, 18, 10, 8, 15, 22, 30, 11],
+                    fill: true,
+                    backgroundColor: 'rgba(0, 123, 255, 0.2)',
+                    borderColor: '#007EFF',
+                    tension: 0.4
+                }]
+            },
+            options: { responsive: true, maintainAspectRatio: false }
+        });
+
+        // 初始化思维导图
+        const container = document.getElementById('mainKityMinderContainer');
+        if (typeof kityminder !== 'undefined') {
+            const km = new kityminder.Minder({ renderTo: container });
+            km.importJson(kityminderData);
+            km.execCommand('camera', km.getRoot(), 100);
+        }
+    });
+    </script>
+</main>
+<script id="mode2-force-light-theme">(() => {const forceLight = () => document.documentElement.setAttribute('data-theme', 'light');window.applyThemeBasedOnTime = () => { forceLight(); return 'light'; };document.addEventListener('DOMContentLoaded', forceLight);setTimeout(forceLight, 0);})();</script></body>
+</html>

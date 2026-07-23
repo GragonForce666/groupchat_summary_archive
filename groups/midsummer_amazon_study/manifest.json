@@ -2,9 +2,17 @@
   "group_set": "midsummer_amazon_study",
   "display_name": "盛夏-亚马逊学习交流群",
   "slug": "midsummer_amazon_study",
-  "generated_at": "2026-07-22T09:35:10",
+  "generated_at": "2026-07-23T09:35:43",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260722",
+      "title": "亚马逊后台：条形码首选项设置",
+      "summary": "今日群聊主要围绕亚马逊新版后台UI吐槽、二段式标题修改策略、货代选择与物流时效、以及亚马逊运营防骗事件等话题展开了热烈讨论。大家分享了实用的退回旧版技巧和应对新规的经验。",
+      "source_html": "data/20260722/midsummer_amazon_study/MODE2_20260722_盛夏-亚马逊学习交流群_20260723_093315.html",
+      "path": "groups/midsummer_amazon_study/days/20260722.html",
+      "mtime": "2026-07-23T09:35:29"
+    },
     {
       "date": "20260721",
       "title": "知无不言跨境电商社区 (群友摸鱼推荐)",
@@ -39,6 +47,7 @@
     }
   ],
   "urls": {
+    "20260722": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260722.html",
     "20260721": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260721.html",
     "20260720": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260720.html",
     "20260719": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260719.html",

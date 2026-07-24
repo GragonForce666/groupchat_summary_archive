@@ -2,9 +2,17 @@
   "group_set": "lee_friends",
   "display_name": "Lee和Ta的朋友们（三群合并）",
   "slug": "lee_friends",
-  "generated_at": "2026-07-23T09:33:14",
+  "generated_at": "2026-07-24T09:36:40",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260723",
+      "title": "微信文章链接",
+      "summary": "今日群聊讨论热烈，核心聚焦于亚马逊运营实操（如标题新规、变体拆分）、跨境税务合规（0申报与增值税风险）、以及个人卖家在当前大环境下的生存策略。此外，群友们也对近期股市表现进行了热烈交流。",
+      "source_html": "data/20260723/lee_friends/MODE2_20260723_Lee和Ta的朋友们_三群合并__20260724_093400.html",
+      "path": "groups/lee_friends/days/20260723.html",
+      "mtime": "2026-07-24T09:36:34"
+    },
     {
       "date": "20260722",
       "title": "LinkFox AI渠道专属推广链接",
@@ -47,6 +55,7 @@
     }
   ],
   "urls": {
+    "20260723": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260723.html",
     "20260722": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260722.html",
     "20260721": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260721.html",
     "20260720": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260720.html",

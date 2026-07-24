@@ -2,9 +2,17 @@
   "group_set": "silicon_evolution_3",
   "display_name": "10x效率|硅基进化论③",
   "slug": "silicon_evolution_3",
-  "generated_at": "2026-07-23T09:36:55",
+  "generated_at": "2026-07-24T09:41:49",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260723",
+      "title": "Grok AI 官网",
+      "summary": "今日群聊由KOL @硅基妙妙屋- Morgan 领衔，围绕AI工具（Codex、Grok、Gemini等）的最新更新与实操技巧展开了热烈讨论。大家不仅分享了解决Codex登录问题的方法，还探讨了Sif MCP在电商数据分析中的应用。此外，腾讯新推出的设计平台Miora也引发了“薅羊毛”热潮。整体氛围技术硬核且充满互助精神。",
+      "source_html": "data/20260723/silicon_evolution_3/MODE2_20260723_10x效率_硅基进化论__20260724_093924.html",
+      "path": "groups/silicon_evolution_3/days/20260723.html",
+      "mtime": "2026-07-24T09:41:45"
+    },
     {
       "date": "20260722",
       "title": "Codex CLI 安装与配置指南",
@@ -47,6 +55,7 @@
     }
   ],
   "urls": {
+    "20260723": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260723.html",
     "20260722": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260722.html",
     "20260721": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260721.html",
     "20260720": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260720.html",

@@ -2,9 +2,17 @@
   "group_set": "lee_friends",
   "display_name": "Lee和Ta的朋友们（三群合并）",
   "slug": "lee_friends",
-  "generated_at": "2026-07-24T09:36:40",
+  "generated_at": "2026-07-25T09:33:11",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260724",
+      "title": "微信文章分享",
+      "summary": "今日群聊围绕亚马逊运营实操展开了深度讨论。核心KOL @胡程 深入剖析了“六边形战士”与个人卖家副业模式的优势及税务合规问题，引发热烈反响。此外，群内还探讨了AI图片打标新规、竞品内卷、报关实操以及近期的股市行情。",
+      "source_html": "data/20260724/lee_friends/MODE2_20260724_Lee和Ta的朋友们_三群合并__20260725_093104.html",
+      "path": "groups/lee_friends/days/20260724.html",
+      "mtime": "2026-07-25T09:33:05"
+    },
     {
       "date": "20260723",
       "title": "微信文章链接",
@@ -55,6 +63,7 @@
     }
   ],
   "urls": {
+    "20260724": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260724.html",
     "20260723": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260723.html",
     "20260722": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260722.html",
     "20260721": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260721.html",

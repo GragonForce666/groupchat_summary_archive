@@ -2,9 +2,17 @@
   "group_set": "lee_friends",
   "display_name": "Lee和Ta的朋友们（三群合并）",
   "slug": "lee_friends",
-  "generated_at": "2026-07-25T09:33:11",
+  "generated_at": "2026-07-26T09:33:31",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260725",
+      "title": "AI图片元数据验证工具",
+      "summary": "今日群聊围绕亚马逊运营的多个核心维度展开深度讨论。KOL @胡程 提出了“六边形战士”与副业防御策略，引发广泛共鸣；@Andrew_Lee 与多位卖家深入探讨了9810报关与财税合规实操。此外，亚马逊AI生图标记新规、新版后台Bug、运营提成算法以及近期的股市波动也成为群内热议焦点。",
+      "source_html": "data/20260725/lee_friends/MODE2_20260725_Lee和Ta的朋友们_三群合并__20260726_093104.html",
+      "path": "groups/lee_friends/days/20260725.html",
+      "mtime": "2026-07-26T09:33:25"
+    },
     {
       "date": "20260724",
       "title": "微信文章分享",
@@ -63,6 +71,7 @@
     }
   ],
   "urls": {
+    "20260725": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260725.html",
     "20260724": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260724.html",
     "20260723": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260723.html",
     "20260722": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260722.html",

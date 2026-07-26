@@ -2,9 +2,17 @@
   "group_set": "midsummer_amazon_study",
   "display_name": "盛夏-亚马逊学习交流群",
   "slug": "midsummer_amazon_study",
-  "generated_at": "2026-07-25T09:35:42",
+  "generated_at": "2026-07-26T09:40:38",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260725",
+      "title": "紫鸟浏览器：https://www.ziniao.com/",
+      "summary": "今日群聊围绕亚马逊最新政策展开了热烈讨论，特别是AI生成图片强制标注新规和75+125字符两段式标题修改，引发了大量实操层面的交流。此外，群友们对新版后台界面的吐槽、近期单量下滑的应对策略、以及货代物流的选择也进行了深入探讨。KOL @好多米 和 @是盛夏呀～🥕 在解答群友问题、分享实操教程方面发挥了重要作用。",
+      "source_html": "data/20260725/midsummer_amazon_study/MODE2_20260725_盛夏-亚马逊学习交流群_20260726_093331.html",
+      "path": "groups/midsummer_amazon_study/days/20260725.html",
+      "mtime": "2026-07-26T09:40:28"
+    },
     {
       "date": "20260724",
       "title": "亚马逊帮助文档（AI生成图片政策）",
@@ -63,6 +71,7 @@
     }
   ],
   "urls": {
+    "20260725": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260725.html",
     "20260724": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260724.html",
     "20260723": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260723.html",
     "20260722": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260722.html",

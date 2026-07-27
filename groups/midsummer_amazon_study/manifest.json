@@ -2,9 +2,17 @@
   "group_set": "midsummer_amazon_study",
   "display_name": "盛夏-亚马逊学习交流群",
   "slug": "midsummer_amazon_study",
-  "generated_at": "2026-07-26T09:40:38",
+  "generated_at": "2026-07-27T09:35:56",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260726",
+      "title": "亚马逊后台帮助文档参考",
+      "summary": "今日群聊围绕亚马逊最新政策展开热烈讨论，包括AI生成图片必须标注的新规以及75+125两段式标题的修改策略。同时，群友们对新版后台界面的难用程度进行了集中吐槽，并交流了近期货代时效、广告扣款核对及新店视频验证等实操经验。",
+      "source_html": "data/20260726/midsummer_amazon_study/MODE2_20260726_盛夏-亚马逊学习交流群_20260727_093329.html",
+      "path": "groups/midsummer_amazon_study/days/20260726.html",
+      "mtime": "2026-07-27T09:35:51"
+    },
     {
       "date": "20260725",
       "title": "紫鸟浏览器：https://www.ziniao.com/",
@@ -71,6 +79,7 @@
     }
   ],
   "urls": {
+    "20260726": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260726.html",
     "20260725": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260725.html",
     "20260724": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260724.html",
     "20260723": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260723.html",

@@ -2,9 +2,17 @@
   "group_set": "lee_friends",
   "display_name": "Lee和Ta的朋友们（三群合并）",
   "slug": "lee_friends",
-  "generated_at": "2026-07-26T09:33:31",
+  "generated_at": "2026-07-27T09:33:29",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260726",
+      "title": "EXIF Tools (用于验证AI图片元数据)",
+      "summary": "今日群聊由KOL @胡程 领衔，深入探讨了亚马逊运营在当前内卷环境下的出路，提出“六边形战士”与副业模式。同时，群友们针对税务合规（0申报风险）、AI生图打标新规、奇葩的运营提成算法、以及近期股市大跌等话题展开了热烈讨论。",
+      "source_html": "data/20260726/lee_friends/MODE2_20260726_Lee和Ta的朋友们_三群合并__20260727_093111.html",
+      "path": "groups/lee_friends/days/20260726.html",
+      "mtime": "2026-07-27T09:33:24"
+    },
     {
       "date": "20260725",
       "title": "AI图片元数据验证工具",
@@ -71,6 +79,7 @@
     }
   ],
   "urls": {
+    "20260726": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260726.html",
     "20260725": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260725.html",
     "20260724": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260724.html",
     "20260723": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260723.html",

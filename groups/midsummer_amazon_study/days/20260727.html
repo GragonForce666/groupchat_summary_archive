@@ -10,7 +10,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Lee和Ta的朋友们（三群合并） - 20260724</title>
+<title>盛夏-亚马逊学习交流群日报 - 20260727</title>
 <link href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet"/>
 <link href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-100-M/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -99,9 +99,13 @@
              background-color: rgba(61, 169, 252, 0.1);
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0; padding: 0; box-sizing: border-box;
+        }
 
-        html, body { transition: background-color 0.4s ease, color 0.4s ease; }
+        html, body {
+            transition: background-color 0.4s ease, color 0.4s ease;
+        }
 
         body {
             font-family: var(--font-family);
@@ -190,8 +194,7 @@
         .active-users-chart-card,
         .message-distribution-chart-card,
         .topic-cards-wrapper,
-        .mindmap-card-container,
-        .champions-wrapper {
+        .mindmap-card-container {
             grid-column: 1 / -1;
         }
         [data-theme="dark"] .main-card {
@@ -203,17 +206,15 @@
         .stats-card { grid-column: span 7; }
         .wordcloud-card { grid-column: span 5; }
         
-        .topic-cards-wrapper, .champions-wrapper {
+        .topic-cards-wrapper {
             display: grid;
             grid-template-columns: repeat(12, 1fr); 
             gap: var(--grid-gap);
         }
-        
+
         .topic-card { grid-column: span 6; min-height: 250px; }
         .topic-card > .topic-card-content-wrapper { flex-grow: 1; padding-bottom: 1rem; }
         .topic-cards-wrapper > .topic-card:nth-last-child(1):nth-child(odd) { grid-column: span 12; }
-
-        .champion-card { grid-column: span 6; }
 
         .main-card h1 { text-align: center; }
         .main-card .date { text-align: center; }
@@ -222,7 +223,7 @@
         .meta-info span { background-color: var(--bg-tertiary); padding: 5px 10px; border-radius: 20px; font-size: 0.9rem; color: var(--accent-blue); }
         [data-theme="dark"] .meta-info span { color: var(--accent-cyan); }
         .summary { margin-top: 1rem; line-height: 1.7; text-align: left; }
-
+        
         .chart-container {
             position: relative;
             height: 300px;
@@ -256,8 +257,6 @@
         .user-stats-table .user-name-col { width: 25%; font-weight: 500; word-break: break-all; }
         .user-stats-table .message-count-col { text-align: center; width: 15%; white-space: nowrap; }
         .user-stats-table .contribution-col { width: 60%; word-break: break-all; }
-        .user-stats-table .stat-col { text-align: center; width: 20%; white-space: nowrap; }
-        .user-stats-table .description-col { width: 55%; word-break: break-all; }
         .user-stats-table tr:last-child td { border-bottom: none; }
 
         .wordcloud { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; padding: 20px 0; }
@@ -319,7 +318,9 @@
             from { opacity: 0; transform: translateY(20px); } 
             to { opacity: 1; transform: translateY(0); } 
         }
-        .card { animation: fadeIn 0.5s ease forwards; }
+        .card {
+            animation: fadeIn 0.5s ease forwards;
+        }
         .main-card { animation-delay: 0.1s; }
         .active-users-chart-card { animation-delay: 0.2s; }
         .message-distribution-chart-card { animation-delay: 0.3s; }
@@ -327,32 +328,31 @@
         .topic-cards-wrapper .topic-card:nth-child(2) { animation-delay: 0.5s; }
         .topic-cards-wrapper .topic-card:nth-child(3) { animation-delay: 0.6s; }
         .topic-cards-wrapper .topic-card:nth-child(4) { animation-delay: 0.7s; }
-        .mindmap-card-container { animation-delay: 0.8s; }
-        .champions-wrapper { animation-delay: 0.9s; }
-        .quote-card { animation-delay: 1.0s; }
-        .links-card { animation-delay: 1.1s; }
-        .stats-card { animation-delay: 1.2s; }
-        .wordcloud-card { animation-delay: 1.3s; }
+        .topic-cards-wrapper .topic-card:nth-child(5) { animation-delay: 0.8s; }
+        .topic-cards-wrapper .topic-card:nth-child(6) { animation-delay: 0.9s; }
+        .mindmap-card-container { animation-delay: 1.0s; }
+        .quote-card { animation-delay: 1.1s; }
+        .links-card { animation-delay: 1.2s; }
+        .stats-card { animation-delay: 1.3s; }
+        .wordcloud-card { animation-delay: 1.35s; }
 
         @media (max-width: 768px) {
             #page-container { padding: 10px; }
             h1 { font-size: 1.8rem; } h2 { font-size: 1.4rem; } h3 { font-size: 1.1rem; }
             .grid-container { grid-template-columns: 1fr; }
             .main-card, .active-users-chart-card, .message-distribution-chart-card, .topic-cards-wrapper, .mindmap-card-container,
-            .champions-wrapper, .quote-card, .links-card, .stats-card, .wordcloud-card {
+            .quote-card, .links-card, .stats-card, .wordcloud-card {
                 grid-column: 1 / -1;
             }
             .topic-cards-wrapper { display: flex; flex-direction: column; gap: var(--grid-gap); } 
             .topic-card { width: 100%; min-height: auto; }
-            .champions-wrapper { grid-template-columns: 1fr; }
-            .champion-card { grid-column: 1 / -1; }
             .topic-card > .topic-card-content-wrapper { padding-bottom: 1rem; }
             .topic-mentions { position: static; margin-top: 10px; margin-bottom: 10px; text-align: left; }
             .card-icon { font-size: 2.5rem; opacity:0.05; } 
             .mindmap-card-container .card-icon { bottom: 15px; right: 15px; }
             .user-stats-table th, .user-stats-table td { padding: 0.5rem 0.25rem; font-size: 0.8rem; }
             .user-stats-table td { text-align: left; } 
-            .user-stats-table .message-count-col, .user-stats-table .stat-col { text-align: center; } 
+            .user-stats-table .message-count-col { text-align: center; } 
             .mindmap-card-container { padding: 15px; } 
             .mindmap-controls button { font-size: 0.8rem; padding: 6px 10px; }
             .modal-content { width: 100%; height: 95%; padding:15px; } 
@@ -366,7 +366,7 @@
             .user-stats-table tr { border-bottom: 1px solid var(--bg-tertiary); }
             .user-stats-table th { display: none; }
             .user-stats-table td { display: block; text-align: left; border-bottom: none; padding-left: 0.5rem; width: 100% !important; }
-            .user-stats-table td.message-count-col, .user-stats-table .stat-col { text-align: left; } 
+            .user-stats-table td.message-count-col { text-align: left; } 
             .user-stats-table td::before { 
                 content: attr(data-label); 
                 font-weight: bold; 
@@ -376,8 +376,8 @@
                 color: var(--text-primary); 
                 text-align: left; 
             }
-             .user-stats-table td.contribution-col::before, .user-stats-table td.description-col::before { width: auto; margin-bottom: 5px; display: block; }
-             .user-stats-table td.contribution-col, .user-stats-table td.description-col { padding-left: 0.5rem; }
+             .user-stats-table td.contribution-col::before { width: auto; margin-bottom: 5px; display: block; }
+             .user-stats-table td.contribution-col { padding-left: 0.5rem; }
             .user-stats-table tr:last-child { border-bottom: none; }
         }
     
@@ -426,14 +426,14 @@
 <div id="report-content-wrapper">
 <div class="grid-container">
 <div class="card main-card">
-<h1 contenteditable="false">Lee和Ta的朋友们（三群合并）日报</h1>
-<div class="date" contenteditable="false">2026年7月24日</div>
+<h1 contenteditable="false">盛夏-亚马逊学习交流群日报</h1>
+<div class="date" contenteditable="false">2026年7月27日</div>
 <div class="meta-info">
-<span contenteditable="false"><i class="fas fa-comment"></i> 消息数: 232</span>
-<span contenteditable="false"><i class="fas fa-users"></i> 活跃用户: 35+</span>
+<span contenteditable="false"><i class="fas fa-comment"></i> 消息数: 201+</span>
+<span contenteditable="false"><i class="fas fa-users"></i> 活跃用户: 40+</span>
 <span contenteditable="false"><i class="fas fa-fire"></i> 热点话题: 6</span>
 </div>
-<p class="summary" contenteditable="false">今日群聊内容丰富，核心聚焦于亚马逊运营合规与策略优化。大家深入探讨了亚马逊对AI生成图片的最新标记要求及应对方案、FBA大件配送费用的临界尺寸问题、店铺商业保险的购买必要性。此外，群友还分享了低成本订阅GPT Plus的渠道，讨论了国内商标被恶意抢注导致海关扣货的维权途径，以及近期日本站销量波动和Woot活动的实际效果。</p>
+<p class="summary" contenteditable="false">今日群聊重点围绕亚马逊最新标题修改政策（75字符限制及AI自动修改机制）展开了热烈讨论。此外，群友们还分享了FBA入库缺陷费申诉成功经验、开Case沟通技巧，以及AI工具订阅费用等实用话题，展现了浓厚的互助氛围。</p>
 <i class="fas fa-microchip card-icon"></i>
 </div>
 <div class="card active-users-chart-card">
@@ -453,87 +453,87 @@
 <div class="topic-cards-wrapper">
 <div class="card topic-card">
 <div class="topic-card-content-wrapper">
-<h2 contenteditable="false"><i class="fas fa-image"></i> 亚马逊AI生图标记合规</h2>
+<h2 contenteditable="false"><i class="fas fa-edit"></i> 亚马逊标题修改政策</h2>
 <div class="topic-category" contenteditable="false">平台政策</div>
-<p contenteditable="false">群友热烈讨论了亚马逊对包含“逼真AI生成真人”图片的最新标记要求。<span class="highlight-name">@W</span>和<span class="highlight-name">@Andrew_Lee</span>分享了官方政策明细，指出若不合规可能导致ASIN被移除。大家探讨了如何通过修改图片元数据（如添加contains-synthetic-performer值）来应对，<span class="highlight-name">@鄂妹</span>提供了具体的验证流程和工具。同时，大家也确认了普通产品图和不露脸的图片暂不需要强制打标。</p>
+<p contenteditable="false">关于<span class="highlight-keyword">75字符限制</span>的讨论，<span class="highlight-name">@遇见好天气～</span>提到改后标题显示样式为75字符加竖线和亮点，大家担忧<span class="highlight-keyword">AI自动修改</span>可能导致权重降低或流量结构变化。</p>
 <div class="topic-keywords">
-<span class="keyword" contenteditable="false">AI生图</span>
-<span class="keyword" contenteditable="false">元数据打标</span>
-<span class="keyword" contenteditable="false">ASIN合规</span>
+<span class="keyword" contenteditable="false">标题修改</span>
+<span class="keyword" contenteditable="false">AI生成</span>
+<span class="keyword" contenteditable="false">流量影响</span>
 </div>
-<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 45<span style="margin-left: 1rem;">来源：Lee和Ta的朋友们</span></div>
+<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 45<span style="margin-left: 1rem;">来源：盛夏-亚马逊学习交流群</span></div>
 </div>
-<i class="fas fa-shield-alt card-icon"></i>
+<i class="fas fa-tools card-icon"></i>
 </div>
 <div class="card topic-card">
 <div class="topic-card-content-wrapper">
-<h2 contenteditable="false"><i class="fas fa-box-open"></i> FBA临界尺寸与配送费</h2>
-<div class="topic-category" contenteditable="false">物流成本</div>
-<p contenteditable="false"><span class="highlight-name">@Sophie</span>提出近期多个临界尺寸产品被亚马逊判定为大件，导致FBA配送费飙升。<span class="highlight-name">@菜极熊</span>建议申请重新测量，并指出通常是因为箱子鼓包所致。为了一劳永逸，建议优化包装设计，例如改变开口方向，或者直接采用自有包装配送（SIPP）来降低高昂的大件配送成本，这引发了卖家的广泛共鸣。</p>
+<h2 contenteditable="false"><i class="fas fa-headset"></i> 亚马逊客服开Case经验</h2>
+<div class="topic-category" contenteditable="false">运营实操</div>
+<p contenteditable="false"><span class="highlight-name">@S.mist</span>和<span class="highlight-name">@是盛夏呀～🥕</span>分享了当前<span class="highlight-keyword">开Case难</span>的问题，提到外国客服理解困难，探讨了新开Case的方法及国服客服的有效性。</p>
 <div class="topic-keywords">
-<span class="keyword" contenteditable="false">FBA配送费</span>
-<span class="keyword" contenteditable="false">临界尺寸</span>
-<span class="keyword" contenteditable="false">SIPP</span>
+<span class="keyword" contenteditable="false">开Case</span>
+<span class="keyword" contenteditable="false">在线客服</span>
+<span class="keyword" contenteditable="false">沟通技巧</span>
 </div>
-<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 18<span style="margin-left: 1rem;">来源：Lee和Ta的朋友们</span></div>
+<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 28<span style="margin-left: 1rem;">来源：盛夏-亚马逊学习交流群</span></div>
 </div>
-<i class="fas fa-truck card-icon"></i>
+<i class="fas fa-star card-icon"></i>
 </div>
 <div class="card topic-card">
 <div class="topic-card-content-wrapper">
-<h2 contenteditable="false"><i class="fas fa-file-contract"></i> 亚马逊店铺商业保险</h2>
-<div class="topic-category" contenteditable="false">风险控制</div>
-<p contenteditable="false">关于是否购买亚马逊商业保险，群内展开了经验分享。<span class="highlight-name">@Andrew_Lee</span>建议带电、母婴、玩具等高风险类目务必购买以作兜底，并推荐了PICC和大地保险。<span class="highlight-name">@Vincent</span>分享了因产品引发火灾赔付百万的惨痛教训，强调了保险的重要性。部分普货卖家则表示根据自身风险承受能力选择不买或购买低保额版本。</p>
+<h2 contenteditable="false"><i class="fas fa-robot"></i> AI工具订阅与费用</h2>
+<div class="topic-category" contenteditable="false">工具资源</div>
+<p contenteditable="false">大家对比了<span class="highlight-keyword">豆包</span>和<span class="highlight-keyword">GPT</span>的性价比，<span class="highlight-name">@翠花</span>和<span class="highlight-name">@缥缈</span>分享了使用<span class="highlight-keyword">礼品卡</span>购买正规渠道会员的经验，认为比低价折腾更稳定。</p>
 <div class="topic-keywords">
-<span class="keyword" contenteditable="false">商业保险</span>
-<span class="keyword" contenteditable="false">高风险类目</span>
-<span class="keyword" contenteditable="false">索赔案例</span>
+<span class="keyword" contenteditable="false">豆包收费</span>
+<span class="keyword" contenteditable="false">GPT价格</span>
+<span class="keyword" contenteditable="false">礼品卡</span>
 </div>
-<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 26<span style="margin-left: 1rem;">来源：Lee和Ta的朋友们</span></div>
+<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 22<span style="margin-left: 1rem;">来源：盛夏-亚马逊学习交流群</span></div>
 </div>
-<i class="fas fa-umbrella card-icon"></i>
+<i class="fas fa-comments card-icon"></i>
 </div>
 <div class="card topic-card">
 <div class="topic-card-content-wrapper">
-<h2 contenteditable="false"><i class="fas fa-robot"></i> AI工具订阅与应用</h2>
-<div class="topic-category" contenteditable="false">效率工具</div>
-<p contenteditable="false"><span class="highlight-name">@菠萝吹雪</span>分享了通过Google支付将地址改为玻利维亚，从而以极低价格（约85元/月）订阅GPT Plus的方法，引起了群友的极大兴趣。<span class="highlight-name">@Jason</span>则提到了3.5 Pro模型的性价比，并表示要用AI Vibe Coding快速写一个支持自动添加AI标识的图床工具供大家免费使用，展现了极强的动手能力。</p>
+<h2 contenteditable="false"><i class="fas fa-file-invoice-dollar"></i> FBA入库缺陷费申诉</h2>
+<div class="topic-category" contenteditable="false">物流仓储</div>
+<p contenteditable="false"><span class="highlight-name">@遇见好天气～</span>分享了成功申诉600美金<span class="highlight-keyword">入库缺陷费</span>的实战经验，巧妙利用<span class="highlight-keyword">台风天气</span>作为不可抗力理由，为群友提供了新思路。</p>
 <div class="topic-keywords">
-<span class="keyword" contenteditable="false">GPT Plus</span>
-<span class="keyword" contenteditable="false">低价订阅</span>
-<span class="keyword" contenteditable="false">Vibe Coding</span>
+<span class="keyword" contenteditable="false">入库缺陷费</span>
+<span class="keyword" contenteditable="false">申诉技巧</span>
+<span class="keyword" contenteditable="false">自然灾害</span>
 </div>
-<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 22<span style="margin-left: 1rem;">来源：Lee和Ta的朋友们</span></div>
+<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 19<span style="margin-left: 1rem;">来源：盛夏-亚马逊学习交流群</span></div>
 </div>
-<i class="fas fa-laptop-code card-icon"></i>
+<i class="fas fa-box card-icon"></i>
 </div>
 <div class="card topic-card">
 <div class="topic-card-content-wrapper">
-<h2 contenteditable="false"><i class="fas fa-gavel"></i> 商标恶意抢注与维权</h2>
-<div class="topic-category" contenteditable="false">知识产权</div>
-<p contenteditable="false"><span class="highlight-name">@志在四方</span>爆料有深圳代理公司恶意批量抢注亚马逊卖家的国内商标，并在海关备案以扣货索赔，连销量极低的新品牌也不放过。<span class="highlight-name">@Andrew_Lee</span>和<span class="highlight-name">@Richard</span>建议联合受害卖家集体起诉其商标无效，并控告其恶意竞争与商业欺诈。此事提醒广大卖家务必重视国内商标的防御性注册。</p>
+<h2 contenteditable="false"><i class="fas fa-box-open"></i> 欧洲站发货包装新规</h2>
+<div class="topic-category" contenteditable="false">合规要求</div>
+<p contenteditable="false"><span class="highlight-name">@義万</span>询问了8.12日欧洲站新规是否禁止<span class="highlight-keyword">塑料袋包装</span>，<span class="highlight-name">@Vicky</span>和<span class="highlight-name">@如风</span>澄清了正常纸盒外覆薄膜或塑料袋包装目前仍可正常发货。</p>
 <div class="topic-keywords">
-<span class="keyword" contenteditable="false">商标抢注</span>
-<span class="keyword" contenteditable="false">海关扣货</span>
-<span class="keyword" contenteditable="false">联合起诉</span>
+<span class="keyword" contenteditable="false">欧洲站</span>
+<span class="keyword" contenteditable="false">包装新规</span>
+<span class="keyword" contenteditable="false">塑料袋</span>
 </div>
-<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 15<span style="margin-left: 1rem;">来源：Lee和Ta的朋友们</span></div>
+<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 15<span style="margin-left: 1rem;">来源：盛夏-亚马逊学习交流群</span></div>
 </div>
-<i class="fas fa-balance-scale card-icon"></i>
+<i class="fas fa-globe-europe card-icon"></i>
 </div>
 <div class="card topic-card">
 <div class="topic-card-content-wrapper">
-<h2 contenteditable="false"><i class="fas fa-chart-line"></i> 日本站销量与Woot效果</h2>
-<div class="topic-category" contenteditable="false">市场洞察</div>
-<p contenteditable="false">针对近期市场表现，群友反馈日本站在7月13日会员日结束后单量出现明显下滑（“夭折”），<span class="highlight-name">@微笑生活</span>确认了这一趋势。同时，<span class="highlight-name">@W__</span>询问了Woot活动的实际效果，<span class="highlight-name">@x</span>和<span class="highlight-name">@极光猎人</span>均表示目前Woot并不好做，出单量少且转化率一般，建议大家在提报相关活动时需谨慎评估ROI。</p>
+<h2 contenteditable="false"><i class="fas fa-shield-alt"></i> 账号安全与验证</h2>
+<div class="topic-category" contenteditable="false">账号管理</div>
+<p contenteditable="false">针对接收验证码的问题，<span class="highlight-name">@Edy</span>建议使用<span class="highlight-keyword">WhatsApp</span>接收，<span class="highlight-name">@是盛夏呀～🥕</span>补充直接接听语音电话记录验证码也是一种便捷方式。</p>
 <div class="topic-keywords">
-<span class="keyword" contenteditable="false">日本站销量</span>
-<span class="keyword" contenteditable="false">Woot活动</span>
-<span class="keyword" contenteditable="false">转化率</span>
+<span class="keyword" contenteditable="false">验证码</span>
+<span class="keyword" contenteditable="false">WhatsApp</span>
+<span class="keyword" contenteditable="false">账号安全</span>
 </div>
-<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 12<span style="margin-left: 1rem;">来源：Lee和Ta的朋友们</span></div>
+<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 12<span style="margin-left: 1rem;">来源：盛夏-亚马逊学习交流群</span></div>
 </div>
-<i class="fas fa-yen-sign card-icon"></i>
+<i class="fas fa-lock card-icon"></i>
 </div>
 </div>
 <div class="card mindmap-card-container">
@@ -544,34 +544,37 @@
 <button id="downloadDiagramBtn"><i class="fas fa-download"></i> 下载 SVG</button>
 <button class="fullscreen-toggle-btn" id="fullscreenOpenBtn"><i class="fas fa-expand"></i> 全屏</button>
 </div>
-<div class="kityminder-container" id="mainKityMinderContainer"></div>
+<div class="kityminder-container" id="mainKityMinderContainer">
+</div>
 <div id="mermaid-main-feedback-message"></div>
 <i class="fas fa-project-diagram card-icon"></i>
 </div>
 <div class="insight-columns"><div class="insight-row insight-row-primary"><div class="card quote-card">
 <h2 contenteditable="false"><i class="fas fa-quote-left"></i> 精彩引用</h2>
-<div class="quote" contenteditable="false">"分享一个AI人物添加contains-synthetic-performer值后的验证流程 主要是针对官网文章中最后一段的验证"<div class="quote-author" contenteditable="false">- @鄂妹</div></div>
-<div class="quote" contenteditable="false">"表格上传商品就可以把这绝对路径填上去，不用挨个手动传"<div class="quote-author" contenteditable="false">- @Jason</div></div>
-<div class="quote" contenteditable="false">"小事，也就过去之后狂吃三倍仓储，别人旺季，你预留"<div class="quote-author" contenteditable="false">- @鄂妹</div></div>
-<div class="quote" contenteditable="false">"我看到别的群在分享一键添加水印的软件，那个我持保留态度，谁知道里面有没有后门，如果工作量很大不如自己从头写一个"<div class="quote-author" contenteditable="false">- @Andrew_Lee</div></div>
-<div class="quote" contenteditable="false">"要一劳永逸只能改包装，你可以改个开口方向，最临界的那个方向 改成另一个方向开口"<div class="quote-author" contenteditable="false">- @菜极熊</div></div>
-<div class="quote" contenteditable="false">"带电的，母婴的，玩具的，还有粉液这些不建议不买保险哈，这些经常被投诉的类目要有兜底"<div class="quote-author" contenteditable="false">- @Andrew_Lee</div></div>
-<div class="quote" contenteditable="false">"之前我们烧掉了一个人的屋子，赔了百万"<div class="quote-author" contenteditable="false">- @Vincent</div></div>
-<div class="quote" contenteditable="false">"运营理由超级多，卖的不好，市场不好，售后不好，美工图不好，性能不好，就是不说自己能力不行。"<div class="quote-author" contenteditable="false">- @绵绵</div></div>
-<div class="quote" contenteditable="false">"上次是谁要买plus呀 现在Google支付把地址改成玻利维亚订阅GPT Plus，一个月才85"<div class="quote-author" contenteditable="false">- @菠萝吹雪</div></div>
-<div class="quote" contenteditable="false">"他把我们类目的卖家品牌 扒了个遍 只要没有注册国内全部批量提交给一个深圳知识产权代理公司，走批量备案 扣货 索赔"<div class="quote-author" contenteditable="false">- @志在四方</div></div>
-<div class="quote" contenteditable="false">"这个可以告他恶意竞争以及商业欺诈的"<div class="quote-author" contenteditable="false">- @Richard</div></div>
-<div class="quote" contenteditable="false">"需要吗 宝子们，我去搓一个 给你们免费用"<div class="quote-author" contenteditable="false">- @Jason</div></div>
-<div class="quote" contenteditable="false">"针对您在美国站、欧洲站和日本站的销售场景：优先使用亚马逊内置AI工具..."<div class="quote-author" contenteditable="false">- @W</div></div>
-<div class="quote" contenteditable="false">"只要一周内能解决我就很满意了，我的库存只够支撑一个月。"<div class="quote-author" contenteditable="false">- @小马哥</div></div>
-<div class="quote" contenteditable="false">"按第四条说的老品不需要，但没有官方说明"<div class="quote-author" contenteditable="false">- @Andrew_Lee</div></div>
-<div class="quote" contenteditable="false">"如果只是一年交个几百块钱，赔不了多少的。要跟你的销售额挂钩。"<div class="quote-author" contenteditable="false">- @菜极熊</div></div>
-<div class="quote" contenteditable="false">"日本站得会员日开始没有呀，7月13号结束了"<div class="quote-author" contenteditable="false">- @W__</div></div>
-<div class="quote" contenteditable="false">"搞懂了 只有品牌不一致才会影响，因为我之前有两个店铺品牌名一样但实际不是一个品牌 所以那时候出现了不能合并的问题"<div class="quote-author" contenteditable="false">- @X_Lib</div></div>
-<div class="quote" contenteditable="false">"这人注册中国商标能干嘛？阻碍你们出口？然后谈商标转让"<div class="quote-author" contenteditable="false">- @Andrew_Lee</div></div>
-<div class="quote" contenteditable="false">"连我今年注册的新品牌和店铺 销量一天十来单 他都扒到了，还在提交注册"<div class="quote-author" contenteditable="false">- @志在四方</div></div>
+<div class="quote" contenteditable="false">
+                        "最好还是改一下，不然AI改的面目全非就难搞了，到时候亚马逊系统抓取了就麻烦了"
+                        <div class="quote-author" contenteditable="false">- @ひとり</div>
+</div>
+<div class="quote" contenteditable="false">
+                        "没有很正规的模板，我就写了一段话，找了个发货当月登陆的台风，说是因为台风原因耽误了开船...就这样"
+                        <div class="quote-author" contenteditable="false">- @遇见好天气～</div>
+</div>
+<div class="quote" contenteditable="false">
+                        "礼品卡好用的。各种低价折腾，最后发现还是正规渠道好用"
+                        <div class="quote-author" contenteditable="false">- @缥缈</div>
+</div>
+<div class="quote" contenteditable="false">
+                        "竞对都还没改，先写好观察看看"
+                        <div class="quote-author" contenteditable="false">- @遇见好天气～</div>
+</div>
 <i class="fas fa-comment-dots card-icon"></i>
-</div><div class="card links-card"><h2 contenteditable="false"><i class="fas fa-link"></i> 重要链接与资源</h2><div class="resource-grid"><a class="resource-card" href="https://exif.tools/" target="_blank"><div class="resource-card-top"><span class="resource-type">资源链接</span><span class="resource-source">exif.tools</span></div><div class="resource-title" contenteditable="false">图片元数据在线查看与验证工具：exif.tools</div><p class="resource-desc" contenteditable="false">群内提及资源，用于延展「图片元数据在线查看与验证工具：exif.tools」相关讨论。</p><div class="resource-foot">查看资源<i class="fas fa-arrow-up-right-from-square"></i></div></a><a class="resource-card" href="javascript:void(0);" target="_blank"><div class="resource-card-top"><span class="resource-type">资源链接</span><span class="resource-source">群聊提及</span></div><div class="resource-title" contenteditable="false">亚马逊品牌推广AI图片生成器 (内置合规)</div><p class="resource-desc" contenteditable="false">群内提及资源，用于延展「亚马逊品牌推广AI图片生成器 (内置合规)」相关讨论。</p><div class="resource-foot">查看资源<i class="fas fa-arrow-up-right-from-square"></i></div></a><a class="resource-card" href="javascript:void(0);" target="_blank"><div class="resource-card-top"><span class="resource-type">资源链接</span><span class="resource-source">群聊提及</span></div><div class="resource-title" contenteditable="false">亚马逊A+ AI Ready模块</div><p class="resource-desc" contenteditable="false">群内提及资源，用于延展「亚马逊A+ AI Ready模块」相关讨论。</p><div class="resource-foot">查看资源<i class="fas fa-arrow-up-right-from-square"></i></div></a><a class="resource-card" href="javascript:void(0);" target="_blank"><div class="resource-card-top"><span class="resource-type">资源链接</span><span class="resource-source">群聊提及</span></div><div class="resource-title" contenteditable="false">Google支付玻利维亚节点 (低价订阅GPT Plus)</div><p class="resource-desc" contenteditable="false">群内提及资源，用于延展「Google支付玻利维亚节点 (低价订阅GPT Plus)」相关讨论。</p><div class="resource-foot">查看资源<i class="fas fa-arrow-up-right-from-square"></i></div></a><a class="resource-card" href="javascript:void(0);" target="_blank"><div class="resource-card-top"><span class="resource-type">资源链接</span><span class="resource-source">群聊提及</span></div><div class="resource-title" contenteditable="false">PICC / 大地保险 (亚马逊商业保险推荐)</div><p class="resource-desc" contenteditable="false">群内提及资源，用于延展「PICC / 大地保险 (亚马逊商业保险推荐)」相关讨论。</p><div class="resource-foot">查看资源<i class="fas fa-arrow-up-right-from-square"></i></div></a></div><i class="fas fa-share-alt card-icon"></i></div></div><div class="insight-row insight-row-secondary"><div class="card stats-card">
+</div><div class="card links-card">
+<h2 contenteditable="false"><i class="fas fa-link"></i> 重要链接与资源</h2>
+<div class="link-item">
+<i class="fas fa-file link-icon"></i> <span class="link-title" contenteditable="false">暂无外部链接分享，群内以实操经验交流为主。</span>
+</div>
+<i class="fas fa-share-alt card-icon"></i>
+</div></div><div class="insight-row insight-row-secondary"><div class="card stats-card">
 <h2 contenteditable="false"><i class="fas fa-chart-line"></i> 活跃之星</h2>
 <table class="user-stats-table">
 <thead>
@@ -583,49 +586,49 @@
 </thead>
 <tbody>
 <tr>
-<td class="user-name-col" contenteditable="false" data-label="用户">@Andrew_Lee</td>
-<td class="message-count-col" contenteditable="false" data-label="发言数">14</td>
-<td class="contribution-col" contenteditable="false" data-label="主要贡献">分享亚马逊AI生图政策详情，解答保险及商标抢注问题</td>
+<td class="user-name-col" contenteditable="false" data-label="用户">@是盛夏呀～🥕</td>
+<td class="message-count-col" contenteditable="false" data-label="发言数">22</td>
+<td class="contribution-col" contenteditable="false" data-label="主要贡献">积极参与标题修改讨论，分享开Case实操经验及验证码接收技巧。</td>
 </tr>
 <tr>
-<td class="user-name-col" contenteditable="false" data-label="用户">@菜极熊</td>
-<td class="message-count-col" contenteditable="false" data-label="发言数">14</td>
-<td class="contribution-col" contenteditable="false" data-label="主要贡献">提供FBA临界尺寸包装优化建议，讨论保险赔付逻辑</td>
-</tr>
-<tr>
-<td class="user-name-col" contenteditable="false" data-label="用户">@鄂妹</td>
+<td class="user-name-col" contenteditable="false" data-label="用户">@遇见好天气～</td>
 <td class="message-count-col" contenteditable="false" data-label="发言数">11</td>
-<td class="contribution-col" contenteditable="false" data-label="主要贡献">分享AI图片元数据验证工具及查验风险提示</td>
+<td class="contribution-col" contenteditable="false" data-label="主要贡献">无私分享FBA入库缺陷费成功申诉的宝贵经验及话术思路。</td>
 </tr>
 <tr>
-<td class="user-name-col" contenteditable="false" data-label="用户">@Jason</td>
-<td class="message-count-col" contenteditable="false" data-label="发言数">11</td>
-<td class="contribution-col" contenteditable="false" data-label="主要贡献">提议用Vibe Coding开发自动打标图床，分享AI模型性价比</td>
-</tr>
-<tr>
-<td class="user-name-col" contenteditable="false" data-label="用户">@菠萝吹雪</td>
+<td class="user-name-col" contenteditable="false" data-label="用户">@S.mist</td>
 <td class="message-count-col" contenteditable="false" data-label="发言数">7</td>
-<td class="contribution-col" contenteditable="false" data-label="主要贡献">分享低成本订阅GPT Plus的玻利维亚节点方法</td>
+<td class="contribution-col" contenteditable="false" data-label="主要贡献">探讨亚马逊客服沟通难点，交流标题修改后的显示延迟问题。</td>
 </tr>
 <tr>
-<td class="user-name-col" contenteditable="false" data-label="用户">@W__</td>
+<td class="user-name-col" contenteditable="false" data-label="用户">@M_l and</td>
 <td class="message-count-col" contenteditable="false" data-label="发言数">6</td>
-<td class="contribution-col" contenteditable="false" data-label="主要贡献">讨论日本站销量趋势及Woot活动效果</td>
+<td class="contribution-col" contenteditable="false" data-label="主要贡献">分享开在线客服的方法，关注标题修改对单量的影响。</td>
 </tr>
 <tr>
-<td class="user-name-col" contenteditable="false" data-label="用户">@W</td>
+<td class="user-name-col" contenteditable="false" data-label="用户">@ひとり</td>
 <td class="message-count-col" contenteditable="false" data-label="发言数">5</td>
-<td class="contribution-col" contenteditable="false" data-label="主要贡献">详细列出亚马逊AI生图标记的各项合规要求</td>
+<td class="contribution-col" contenteditable="false" data-label="主要贡献">建议主动修改标题以防AI乱改，参与申诉理由的探讨。</td>
 </tr>
 <tr>
-<td class="user-name-col" contenteditable="false" data-label="用户">@Sophie</td>
+<td class="user-name-col" contenteditable="false" data-label="用户">@山木</td>
 <td class="message-count-col" contenteditable="false" data-label="发言数">5</td>
-<td class="contribution-col" contenteditable="false" data-label="主要贡献">提出FBA临界尺寸被判大件的问题并寻求解决方案</td>
+<td class="contribution-col" contenteditable="false" data-label="主要贡献">解答有品牌与无品牌在标题修改机制上的差异。</td>
 </tr>
 <tr>
-<td class="user-name-col" contenteditable="false" data-label="用户">@志在四方</td>
+<td class="user-name-col" contenteditable="false" data-label="用户">@缥缈</td>
 <td class="message-count-col" contenteditable="false" data-label="发言数">5</td>
-<td class="contribution-col" contenteditable="false" data-label="主要贡献">曝光国内商标被恶意抢注及海关扣货的黑产行为</td>
+<td class="contribution-col" contenteditable="false" data-label="主要贡献">分享AI工具订阅经验，推荐使用正规礼品卡渠道。</td>
+</tr>
+<tr>
+<td class="user-name-col" contenteditable="false" data-label="用户">@Rolarrr</td>
+<td class="message-count-col" contenteditable="false" data-label="发言数">5</td>
+<td class="contribution-col" contenteditable="false" data-label="主要贡献">参与入库缺陷费申诉难度的讨论，肯定群友的成功经验。</td>
+</tr>
+<tr>
+<td class="user-name-col" contenteditable="false" data-label="用户">@David｜邓荫嘉</td>
+<td class="message-count-col" contenteditable="false" data-label="发言数">5</td>
+<td class="contribution-col" contenteditable="false" data-label="主要贡献">探讨GPT价格及字节视频模型的使用体验。</td>
 </tr>
 </tbody>
 </table>
@@ -633,36 +636,21 @@
 </div><div class="card wordcloud-card">
 <h2 contenteditable="false"><i class="fas fa-cloud"></i> 词云</h2>
 <div class="wordcloud">
-<span class="wordcloud-item size-5" contenteditable="false" data-weight="5" style="--x:-62px;--y:-12px;--r:-6deg;">亚马逊合规</span>
-<span class="wordcloud-item size-5" contenteditable="false" data-weight="5" style="--x:68px;--y:-10px;--r:5deg;">AI生图标记</span>
-<span class="wordcloud-item size-4" contenteditable="false" data-weight="4" style="--x:-6px;--y:-78px;--r:2deg;">元数据</span>
-<span class="wordcloud-item size-4" contenteditable="false" data-weight="4" style="--x:-106px;--y:42px;--r:6deg;">FBA尺寸</span>
-<span class="wordcloud-item size-4" contenteditable="false" data-weight="4" style="--x:108px;--y:44px;--r:-5deg;">商业保险</span>
-<span class="wordcloud-item size-3" contenteditable="false" data-weight="3" style="--x:-8px;--y:70px;--r:-3deg;">商标抢注</span>
-<span class="wordcloud-item size-3" contenteditable="false" data-weight="3" style="--x:58px;--y:108px;--r:4deg;">海关扣货</span>
-<span class="wordcloud-item size-3" contenteditable="false" data-weight="3" style="--x:-122px;--y:-44px;--r:-8deg;">GPT Plus</span>
-<span class="wordcloud-item size-3" contenteditable="false" data-weight="3" style="--x:116px;--y:-50px;--r:7deg;">玻利维亚</span>
-<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:-142px;--y:4px;--r:6deg;">Vibe Coding</span>
-<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:142px;--y:8px;--r:-5deg;">日本站</span>
-<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:-66px;--y:116px;--r:-4deg;">Woot</span>
-<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:76px;--y:-104px;--r:4deg;">SIPP</span>
-<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:-22px;--y:132px;--r:0deg;">大地保险</span>
-<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:24px;--y:-124px;--r:-2deg;">PICC</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:-152px;--y:-86px;--r:-8deg;">图床</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:154px;--y:-84px;--r:7deg;">包装优化</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:-150px;--y:92px;--r:4deg;">索赔</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:152px;--y:94px;--r:-6deg;">逼真人物</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:-86px;--y:-122px;--r:6deg;">免赔额</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:92px;--y:132px;--r:-4deg;">土耳其节点</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:-34px;--y:-142px;--r:8deg;">恶意竞争</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:122px;--y:132px;--r:-6deg;">父子体合并</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:-126px;--y:132px;--r:5deg;">Vine佣金</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-hidden="true">无人机</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-hidden="true">服装面料</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-hidden="true">洗水唛</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-hidden="true">3.5 Pro</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-hidden="true">查验</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-hidden="true">旺季预留</span>
+<span class="wordcloud-item size-5" contenteditable="false" data-weight="5" style="--x:-62px;--y:-12px;--r:-6deg;">标题修改</span>
+<span class="wordcloud-item size-5" contenteditable="false" data-weight="5" style="--x:68px;--y:-10px;--r:5deg;">开Case</span>
+<span class="wordcloud-item size-4" contenteditable="false" data-weight="4" style="--x:-6px;--y:-78px;--r:2deg;">入库缺陷费</span>
+<span class="wordcloud-item size-4" contenteditable="false" data-weight="4" style="--x:-106px;--y:42px;--r:6deg;">AI生成</span>
+<span class="wordcloud-item size-3" contenteditable="false" data-weight="3" style="--x:108px;--y:44px;--r:-5deg;">申诉</span>
+<span class="wordcloud-item size-3" contenteditable="false" data-weight="3" style="--x:-8px;--y:70px;--r:-3deg;">豆包</span>
+<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:58px;--y:108px;--r:4deg;">GPT</span>
+<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:-122px;--y:-44px;--r:-8deg;">台风</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:116px;--y:-50px;--r:7deg;">礼品卡</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:-142px;--y:4px;--r:6deg;">验证码</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:142px;--y:8px;--r:-5deg;">WhatsApp</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:-66px;--y:116px;--r:-4deg;">欧洲站</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:76px;--y:-104px;--r:4deg;">塑料袋包装</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:-22px;--y:132px;--r:0deg;">品牌</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:24px;--y:-124px;--r:-2deg;">单量下滑</span>
 </div>
 <i class="fas fa-tags card-icon"></i>
 </div></div></div>
@@ -681,7 +669,8 @@
 <button id="modalZoomOutBtn"><i class="fas fa-search-minus"></i> 缩小</button>
 <button id="modalDownloadDiagramBtn"><i class="fas fa-download"></i> 下载 SVG</button>
 </div>
-<div class="kityminder-container" id="modalKityMinderContainer"></div>
+<div class="kityminder-container" id="modalKityMinderContainer">
+</div>
 <div id="mermaid-modal-feedback-message"></div>
 </div>
 </div>
@@ -703,9 +692,8 @@
     const showMessageDistributionChart = true;
     const isContentEditable = false;
     
-    const themeSwitcher = document.getElementById('theme-switcher');
-    const htmlEl = document.documentElement;
-    let activeUsersChartInstance, messageDistributionChartInstance;
+    const htmlEl = document.documentElement; 
+    let activeUsersChartInstance, messageDistributionChartInstance; 
 
     function applyThemeBasedOnTime() {
         const hour = new Date().getHours();
@@ -715,40 +703,26 @@
         return newTheme;
     }
 
-    function toggleTheme() {
-        const currentTheme = htmlEl.getAttribute('data-theme');
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-        htmlEl.setAttribute('data-theme', newTheme);
-        reinitializeKityMinderWithNewTheme(newTheme);
-        initializeAllCharts(newTheme); 
-    }
-    
-    if(themeSwitcher) {
-        themeSwitcher.addEventListener('click', toggleTheme);
-    }
-
-    let mainKM, modalKM;
+    let mainKM, modalKM; 
 
     const kityminderData = {
         root: {
-            data: { text: "亚马逊运营与AI工具", expandState: "expand" },
+            data: { text: "亚马逊运营交流", expandState: "expand" },
             children: [
-                { data: { text: "亚马逊合规", expandState: "expand" }, children: [
-                    { data: { text: "AI生图标记要求" } },
-                    { data: { text: "FBA临界尺寸重测" } },
-                    { data: { text: "高风险类目商业保险" } }
+                { data: { text: "政策与调整", expandState: "expand" }, children: [
+                    { data: { text: "标题75字符限制" } },
+                    { data: { text: "AI自动修改标题" } },
+                    { data: { text: "欧洲站包装新规" } }
                 ]},
-                { data: { text: "AI工具与订阅", expandState: "expand" }, children: [
-                    { data: { text: "GPT Plus玻利维亚节点" } },
-                    { data: { text: "Vibe Coding自动打标" } }
+                { data: { text: "日常运营实操", expandState: "expand" }, children: [
+                    { data: { text: "开Case沟通技巧" } },
+                    { data: { text: "FBA入库缺陷费申诉" } },
+                    { data: { text: "账号安全与验证码" } }
                 ]},
-                { data: { text: "品牌与侵权", expandState: "expand" }, children: [
-                    { data: { text: "国内商标恶意抢注" } },
-                    { data: { text: "海关扣货与联合起诉" } }
-                ]},
-                { data: { text: "市场与运营", expandState: "expand" }, children: [
-                    { data: { text: "日本站销量波动" } },
-                    { data: { text: "Woot活动效果评估" } }
+                { data: { text: "AI工具应用", expandState: "expand" }, children: [
+                    { data: { text: "豆包订阅费用" } },
+                    { data: { text: "GPT性价比" } },
+                    { data: { text: "正规礼品卡渠道" } }
                 ]}
             ]
         },
@@ -830,17 +804,17 @@
     }
     
     function setupKityMinderTouchEvents(km, container) {
-        let isPanning = false; let lastPanX, lastPanY;
-        let isPinching = false; let initialPinchDistance = 0;
+        let isPanning = false; let lastPanX, lastPanY; 
+        let isPinching = false; let initialPinchDistance = 0; 
         let lastPinchZoomValue = km.getZoomValue(); 
 
         container.addEventListener('touchstart', (e) => {
-            if (e.touches.length === 1) {
+            if (e.touches.length === 1) { 
                 isPanning = true; isPinching = false; 
                 const touch = e.touches[0];
                 lastPanX = touch.clientX; lastPanY = touch.clientY;
                 e.preventDefault(); 
-            } else if (e.touches.length === 2) {
+            } else if (e.touches.length === 2) { 
                 isPinching = true; isPanning = false; 
                 const touch1 = e.touches[0]; const touch2 = e.touches[1];
                 initialPinchDistance = Math.hypot(touch1.clientX - touch2.clientX, touch1.clientY - touch2.clientY);
@@ -850,7 +824,7 @@
         }, { passive: false });
 
         container.addEventListener('touchmove', (e) => {
-            if (isPanning && e.touches.length === 1) {
+            if (isPanning && e.touches.length === 1) { 
                 const touch = e.touches[0];
                 const dx = touch.clientX - lastPanX; const dy = touch.clientY - lastPanY;
                 const paper = km.getPaper();
@@ -860,13 +834,13 @@
                 }
                 lastPanX = touch.clientX; lastPanY = touch.clientY;
                 e.preventDefault();
-            } else if (isPinching && e.touches.length === 2) {
+            } else if (isPinching && e.touches.length === 2) { 
                 const touch1 = e.touches[0]; const touch2 = e.touches[1];
                 const currentPinchDistance = Math.hypot(touch1.clientX - touch2.clientX, touch1.clientY - touch2.clientY);
                 if (initialPinchDistance > 0) { 
                     const scaleFactor = currentPinchDistance / initialPinchDistance;
                     let newZoomLevelPercentage = lastPinchZoomValue * scaleFactor;
-                    newZoomLevelPercentage = Math.max(20, Math.min(newZoomLevelPercentage, 300));
+                    newZoomLevelPercentage = Math.max(20, Math.min(newZoomLevelPercentage, 300)); 
                     const rect = container.getBoundingClientRect();
                     const screenPinchCenterX = (touch1.clientX + touch2.clientX) / 2 - rect.left;
                     const screenPinchCenterY = (touch1.clientY + touch2.clientY) / 2 - rect.top;
@@ -883,9 +857,9 @@
         }, { passive: false });
 
         container.addEventListener('touchend', (e) => {
-            if (e.touches.length === 0) {
+            if (e.touches.length === 0) { 
                 isPanning = false; isPinching = false; initialPinchDistance = 0;
-            } else if (e.touches.length === 1) {
+            } else if (e.touches.length === 1) { 
                 if (isPinching) { 
                     isPinching = false; initialPinchDistance = 0;
                     isPanning = true; 
@@ -969,19 +943,6 @@
         });
     }
 
-    function reinitializeKityMinderWithNewTheme(newTheme) {
-        if (mainKityMinderContainer) {
-            initializeKityMinder(mainKityMinderContainer, kityminderData, mermaidMainFeedbackMessage, false, newTheme)
-                .then(kmInstance => mainKM = kmInstance)
-                .catch(err => console.error("重新初始化主思维导图失败:", err));
-        }
-        if (fullscreenModal.classList.contains('active') && modalKityMinderContainer) {
-             initializeKityMinder(modalKityMinderContainer, kityminderData, mermaidModalFeedbackMessage, true, newTheme)
-                .then(kmInstance => modalKM = kmInstance)
-                .catch(err => console.error("重新初始化模态框思维导图失败:", err));
-        }
-    }
-
     if(mainZoomInBtn) mainZoomInBtn.addEventListener('click', () => { if (mainKM) mainKM.execCommand('zoomIn'); });
     if(mainZoomOutBtn) mainZoomOutBtn.addEventListener('click', () => { if (mainKM) mainKM.execCommand('zoomOut'); });
     if(mainDownloadDiagramBtn) mainDownloadDiagramBtn.addEventListener('click', () => { downloadKityMinderAsSVG(mainKM, '核心概念关系图-主视图', mermaidMainFeedbackMessage); });
@@ -1007,15 +968,25 @@
             initializeKityMinder(mainKityMinderContainer, kityminderData, mermaidMainFeedbackMessage, false, theme)
                 .then(kmInstance => mainKM = kmInstance)
                 .catch(err => console.error("初始化主思维导图失败:", err));
+        } else {
+            console.error("KityMinder主容器未找到。");
         }
     }
     
     function initializeAllCharts(theme) {
-        if (activeUsersChartInstance) activeUsersChartInstance.destroy();
-        if (messageDistributionChartInstance) messageDistributionChartInstance.destroy();
+        if (activeUsersChartInstance) {
+            activeUsersChartInstance.destroy();
+        }
+        if (messageDistributionChartInstance) {
+            messageDistributionChartInstance.destroy();
+        }
         
-        if (showActiveUsersChart) createActiveUsersChart(theme);
-        if (showMessageDistributionChart) createMessageDistributionChart(theme);
+        if (showActiveUsersChart) {
+            createActiveUsersChart(theme);
+        }
+        if (showMessageDistributionChart) {
+            createMessageDistributionChart(theme);
+        }
     }
 
     function createActiveUsersChart(theme) {
@@ -1026,8 +997,8 @@
         const accentSecondaryColor = getCssVariable('--accent-secondary', '#ff8906');
 
         const userData = {
-            labels: ['Andrew_Lee', '菜极熊', '鄂妹', 'Jason', '菠萝吹雪', 'W__'],
-            counts: [14, 14, 11, 11, 7, 6]
+            labels: ['是盛夏呀～🥕', '遇见好天气～', 'S.mist', 'M_l and', 'ひとり', 'David｜邓荫嘉', '山木', 'Rolarrr'],
+            counts: [22, 11, 7, 6, 5, 5, 5, 5]
         };
 
         const yAxisMax = Math.ceil(Math.max(...userData.counts) * 1.2);
@@ -1050,18 +1021,30 @@
                 responsive: true,
                 maintainAspectRatio: false,
                 plugins: {
-                    legend: { display: false },
+                    legend: {
+                        display: false
+                    },
                     datalabels: {
-                        anchor: 'end', align: 'top', color: tickColor,
-                        font: { weight: 'bold' }, formatter: Math.round
+                        anchor: 'end',
+                        align: 'top',
+                        color: tickColor,
+                        font: {
+                            weight: 'bold'
+                        },
+                        formatter: Math.round
                     }
                 },
                 scales: {
                     y: {
-                        beginAtZero: true, ticks: { color: tickColor },
-                        grid: { color: gridColor }, max: yAxisMax
+                        beginAtZero: true,
+                        ticks: { color: tickColor },
+                        grid: { color: gridColor },
+                        max: yAxisMax
                     },
-                    x: { ticks: { color: tickColor }, grid: { display: false } }
+                    x: {
+                        ticks: { color: tickColor },
+                        grid: { display: false }
+                    }
                 }
             }
         });
@@ -1073,7 +1056,7 @@
         const gridColor = getCssVariable('--chart-grid-color', 'rgba(0, 0, 0, 0.1)');
         const accentColor = getCssVariable('--accent-blue', '#007EFF');
 
-        const messageData = [0, 0, 0, 0, 0, 0, 5, 12, 25, 35, 42, 28, 15, 10, 18, 22, 10, 5, 2, 1, 0, 2, 0, 0];
+        const messageData = [0, 0, 0, 0, 0, 0, 0, 5, 25, 45, 30, 15, 10, 8, 12, 20, 15, 8, 5, 2, 1, 0, 0, 0];
         
         const yAxisMax = Math.ceil(Math.max(...messageData) * 1.25);
 
@@ -1097,90 +1080,45 @@
                 responsive: true,
                 maintainAspectRatio: false,
                 plugins: {
-                    legend: { display: false },
+                    legend: {
+                        display: false
+                    },
                     datalabels: {
                         align: 'top',
                         backgroundColor: (context) => {
                            return htmlEl.getAttribute('data-theme') === 'dark' ? 'rgba(0,0,0,0.5)' : null;
                         },
-                        borderRadius: 4, color: tickColor,
-                        font: { weight: 'bold' }, formatter: Math.round, padding: 4
+                        borderRadius: 4,
+                        color: tickColor,
+                        font: {
+                            weight: 'bold'
+                        },
+                        formatter: Math.round,
+                        padding: 4
                     }
                 },
                 scales: {
                     y: {
-                        beginAtZero: true, ticks: { color: tickColor },
-                        grid: { color: gridColor }, max: yAxisMax
+                        beginAtZero: true,
+                        ticks: { color: tickColor },
+                        grid: { color: gridColor },
+                        max: yAxisMax
                     },
-                    x: { ticks: { color: tickColor }, grid: { color: gridColor } }
+                    x: {
+                        ticks: { color: tickColor },
+                        grid: { color: gridColor }
+                    }
                 }
             }
         });
     }
 
-    function updateCardVisibility(mode) {
-        const qiaomuCards = [
-            document.querySelector('.group-intro-card'),
-            document.querySelector('.more-groups-intro-card'),
-            document.querySelector('.qr-code-container-card')
-        ];
-        const marketingCards = [
-            document.querySelector('.champions-wrapper')
-        ];
-        const activeUsersChartCard = document.querySelector('.active-users-chart-card');
-        const messageDistributionChartCard = document.querySelector('.message-distribution-chart-card');
-        
-        const setVisibility = (elements, visible) => {
-            const elementsArray = Array.isArray(elements) ? elements : [elements];
-            elementsArray.forEach(el => {
-                if (el) el.style.display = visible ? '' : 'none';
-            });
-        };
-        
-        switch (mode) {
-            case 'general':
-                setVisibility(qiaomuCards, false);
-                setVisibility(marketingCards, false);
-                break;
-            case 'marketing':
-                setVisibility(qiaomuCards, false);
-                setVisibility(marketingCards, true);
-                break;
-            case 'qiaomu':
-                setVisibility(qiaomuCards, true);
-                setVisibility(marketingCards, false);
-                break;
-            case 'education':
-            case 'medical':
-            default:
-                setVisibility(qiaomuCards, true);
-                setVisibility(marketingCards, true);
-                break;
-        }
-
-        setVisibility(activeUsersChartCard, showActiveUsersChart);
-        setVisibility(messageDistributionChartCard, showMessageDistributionChart);
-    }
-
     document.addEventListener('DOMContentLoaded', () => {
         const initialTheme = applyThemeBasedOnTime();
-        updateCardVisibility(reportMode);
+        
         initializeAllCharts(initialTheme);
-
-        const mindmapCard = document.querySelector('.mindmap-card-container');
-        if (mindmapCard) {
-            const observer = new IntersectionObserver((entries, obs) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        initializeMainKityMinderDiagram(initialTheme);
-                        obs.disconnect();
-                    }
-                });
-            }, { threshold: 0.1 });
-            observer.observe(mindmapCard);
-        }
-
-        if (isContentEditable) {
+        initializeMainKityMinderDiagram(initialTheme);
+if (isContentEditable) {
             const editableElements = document.querySelectorAll('[contenteditable]');
             editableElements.forEach(el => {
                 el.setAttribute('contenteditable', 'true');

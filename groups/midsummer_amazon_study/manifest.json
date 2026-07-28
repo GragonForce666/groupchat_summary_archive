@@ -2,9 +2,17 @@
   "group_set": "midsummer_amazon_study",
   "display_name": "盛夏-亚马逊学习交流群",
   "slug": "midsummer_amazon_study",
-  "generated_at": "2026-07-27T09:35:56",
+  "generated_at": "2026-07-28T09:35:17",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260727",
+      "title": "盛夏-亚马逊学习交流群日报",
+      "summary": "今日群聊重点围绕亚马逊最新标题修改政策（75字符限制及AI自动修改机制）展开了热烈讨论。此外，群友们还分享了FBA入库缺陷费申诉成功经验、开Case沟通技巧，以及AI工具订阅费用等实用话题，展现了浓厚的互助氛围。",
+      "source_html": "data/20260727/midsummer_amazon_study/MODE2_20260727_盛夏-亚马逊学习交流群_20260728_093345.html",
+      "path": "groups/midsummer_amazon_study/days/20260727.html",
+      "mtime": "2026-07-28T09:35:13"
+    },
     {
       "date": "20260726",
       "title": "亚马逊后台帮助文档参考",
@@ -79,6 +87,7 @@
     }
   ],
   "urls": {
+    "20260727": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260727.html",
     "20260726": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260726.html",
     "20260725": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260725.html",
     "20260724": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260724.html",

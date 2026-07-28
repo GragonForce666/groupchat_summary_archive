@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 
 <!--
- * @Description: 这是一个功能丰富的动态日报模板，专为社群讨论摘要而设计。
+ * @Description: 微信群聊每日深度深度简报 - 基于Bento Grid设计的单页动态可视化报告
  * @Version: 5.0.9
  * @Author: Gemini
- * @Date: 2025-07-12
+ * @Date: 2026-07-27
 -->
 <html data-theme="light" lang="zh-CN">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Lee和Ta的朋友们（三群合并） - 20260724</title>
+<title>Lee和Ta的朋友们（三群合并） - 每日深度深度简报 - 20260727</title>
+<!-- 外部CSS样式表链接 -->
 <link href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet"/>
 <link href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-100-M/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- 外部JavaScript库链接 -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0/dist/chartjs-plugin-datalabels.min.js"></script>
-<script crossorigin="anonymous" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script crossorigin="anonymous" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" xintegrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoVBL5rLesXWW/sGuLhYFChxgYnz2Q=="></script>
 <script src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js" type="text/javascript"></script>
 <script src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js" type="text/javascript"></script>
 <style>
+        /* --- CSS样式定义开始 --- */
         :root {
             --bg-primary: #F5F5EE;
             --bg-secondary: #faf9f6;
@@ -99,9 +102,13 @@
              background-color: rgba(61, 169, 252, 0.1);
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0; padding: 0; box-sizing: border-box;
+        }
 
-        html, body { transition: background-color 0.4s ease, color 0.4s ease; }
+        html, body {
+            transition: background-color 0.4s ease, color 0.4s ease;
+        }
 
         body {
             font-family: var(--font-family);
@@ -190,8 +197,7 @@
         .active-users-chart-card,
         .message-distribution-chart-card,
         .topic-cards-wrapper,
-        .mindmap-card-container,
-        .champions-wrapper {
+        .mindmap-card-container {
             grid-column: 1 / -1;
         }
         [data-theme="dark"] .main-card {
@@ -203,17 +209,15 @@
         .stats-card { grid-column: span 7; }
         .wordcloud-card { grid-column: span 5; }
         
-        .topic-cards-wrapper, .champions-wrapper {
+        .topic-cards-wrapper {
             display: grid;
             grid-template-columns: repeat(12, 1fr); 
             gap: var(--grid-gap);
         }
-        
+
         .topic-card { grid-column: span 6; min-height: 250px; }
         .topic-card > .topic-card-content-wrapper { flex-grow: 1; padding-bottom: 1rem; }
         .topic-cards-wrapper > .topic-card:nth-last-child(1):nth-child(odd) { grid-column: span 12; }
-
-        .champion-card { grid-column: span 6; }
 
         .main-card h1 { text-align: center; }
         .main-card .date { text-align: center; }
@@ -256,8 +260,6 @@
         .user-stats-table .user-name-col { width: 25%; font-weight: 500; word-break: break-all; }
         .user-stats-table .message-count-col { text-align: center; width: 15%; white-space: nowrap; }
         .user-stats-table .contribution-col { width: 60%; word-break: break-all; }
-        .user-stats-table .stat-col { text-align: center; width: 20%; white-space: nowrap; }
-        .user-stats-table .description-col { width: 55%; word-break: break-all; }
         .user-stats-table tr:last-child td { border-bottom: none; }
 
         .wordcloud { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; padding: 20px 0; }
@@ -319,7 +321,9 @@
             from { opacity: 0; transform: translateY(20px); } 
             to { opacity: 1; transform: translateY(0); } 
         }
-        .card { animation: fadeIn 0.5s ease forwards; }
+        .card {
+            animation: fadeIn 0.5s ease forwards;
+        }
         .main-card { animation-delay: 0.1s; }
         .active-users-chart-card { animation-delay: 0.2s; }
         .message-distribution-chart-card { animation-delay: 0.3s; }
@@ -327,32 +331,31 @@
         .topic-cards-wrapper .topic-card:nth-child(2) { animation-delay: 0.5s; }
         .topic-cards-wrapper .topic-card:nth-child(3) { animation-delay: 0.6s; }
         .topic-cards-wrapper .topic-card:nth-child(4) { animation-delay: 0.7s; }
-        .mindmap-card-container { animation-delay: 0.8s; }
-        .champions-wrapper { animation-delay: 0.9s; }
-        .quote-card { animation-delay: 1.0s; }
-        .links-card { animation-delay: 1.1s; }
-        .stats-card { animation-delay: 1.2s; }
-        .wordcloud-card { animation-delay: 1.3s; }
+        .topic-cards-wrapper .topic-card:nth-child(5) { animation-delay: 0.8s; }
+        .topic-cards-wrapper .topic-card:nth-child(6) { animation-delay: 0.9s; }
+        .mindmap-card-container { animation-delay: 1.0s; }
+        .quote-card { animation-delay: 1.1s; }
+        .links-card { animation-delay: 1.2s; }
+        .stats-card { animation-delay: 1.3s; }
+        .wordcloud-card { animation-delay: 1.35s; }
 
         @media (max-width: 768px) {
             #page-container { padding: 10px; }
             h1 { font-size: 1.8rem; } h2 { font-size: 1.4rem; } h3 { font-size: 1.1rem; }
             .grid-container { grid-template-columns: 1fr; }
             .main-card, .active-users-chart-card, .message-distribution-chart-card, .topic-cards-wrapper, .mindmap-card-container,
-            .champions-wrapper, .quote-card, .links-card, .stats-card, .wordcloud-card {
+            .quote-card, .links-card, .stats-card, .wordcloud-card {
                 grid-column: 1 / -1;
             }
             .topic-cards-wrapper { display: flex; flex-direction: column; gap: var(--grid-gap); } 
             .topic-card { width: 100%; min-height: auto; }
-            .champions-wrapper { grid-template-columns: 1fr; }
-            .champion-card { grid-column: 1 / -1; }
             .topic-card > .topic-card-content-wrapper { padding-bottom: 1rem; }
             .topic-mentions { position: static; margin-top: 10px; margin-bottom: 10px; text-align: left; }
             .card-icon { font-size: 2.5rem; opacity:0.05; } 
             .mindmap-card-container .card-icon { bottom: 15px; right: 15px; }
             .user-stats-table th, .user-stats-table td { padding: 0.5rem 0.25rem; font-size: 0.8rem; }
             .user-stats-table td { text-align: left; } 
-            .user-stats-table .message-count-col, .user-stats-table .stat-col { text-align: center; } 
+            .user-stats-table .message-count-col { text-align: center; } 
             .mindmap-card-container { padding: 15px; } 
             .mindmap-controls button { font-size: 0.8rem; padding: 6px 10px; }
             .modal-content { width: 100%; height: 95%; padding:15px; } 
@@ -366,7 +369,7 @@
             .user-stats-table tr { border-bottom: 1px solid var(--bg-tertiary); }
             .user-stats-table th { display: none; }
             .user-stats-table td { display: block; text-align: left; border-bottom: none; padding-left: 0.5rem; width: 100% !important; }
-            .user-stats-table td.message-count-col, .user-stats-table .stat-col { text-align: left; } 
+            .user-stats-table td.message-count-col { text-align: left; } 
             .user-stats-table td::before { 
                 content: attr(data-label); 
                 font-weight: bold; 
@@ -376,10 +379,11 @@
                 color: var(--text-primary); 
                 text-align: left; 
             }
-             .user-stats-table td.contribution-col::before, .user-stats-table td.description-col::before { width: auto; margin-bottom: 5px; display: block; }
-             .user-stats-table td.contribution-col, .user-stats-table td.description-col { padding-left: 0.5rem; }
+            .user-stats-table td.contribution-col::before { width: auto; margin-bottom: 5px; display: block; }
+            .user-stats-table td.contribution-col { padding-left: 0.5rem; }
             .user-stats-table tr:last-child { border-bottom: none; }
         }
+        /* --- CSS样式定义结束 --- */
     
 
         /* MODE2_V8_LAYOUT: fixed light theme + quote/resources row + stats/wordcloud row */
@@ -425,17 +429,21 @@
 <div id="page-container">
 <div id="report-content-wrapper">
 <div class="grid-container">
+<!-- 主卡片：群聊总结 -->
 <div class="card main-card">
-<h1 contenteditable="false">Lee和Ta的朋友们（三群合并）日报</h1>
-<div class="date" contenteditable="false">2026年7月24日</div>
+<h1 contenteditable="false">Lee和Ta的朋友们（三群合并）</h1>
+<div class="date" contenteditable="false">统计日期：2026年7月27日</div>
 <div class="meta-info">
-<span contenteditable="false"><i class="fas fa-comment"></i> 消息数: 232</span>
-<span contenteditable="false"><i class="fas fa-users"></i> 活跃用户: 35+</span>
+<span contenteditable="false"><i class="fas fa-comment"></i> 消息总数: 32</span>
+<span contenteditable="false"><i class="fas fa-users"></i> 活跃用户: 14</span>
 <span contenteditable="false"><i class="fas fa-fire"></i> 热点话题: 6</span>
 </div>
-<p class="summary" contenteditable="false">今日群聊内容丰富，核心聚焦于亚马逊运营合规与策略优化。大家深入探讨了亚马逊对AI生成图片的最新标记要求及应对方案、FBA大件配送费用的临界尺寸问题、店铺商业保险的购买必要性。此外，群友还分享了低成本订阅GPT Plus的渠道，讨论了国内商标被恶意抢注导致海关扣货的维权途径，以及近期日本站销量波动和Woot活动的实际效果。</p>
-<i class="fas fa-microchip card-icon"></i>
+<p class="summary" contenteditable="false">
+                        本日群聊讨论交流极其热烈且干货密布，核心围绕**亚马逊平台新规应对、促销压价痛点、物流预约异常与合规风控**展开。**今日KOL特别推荐：@Eric**，他针对今日生效的亚马逊标题75字符限制新规及90225系统报错给予了最权威、结构化的深度解答。此外，群友们实战探讨了优惠券连续开设导致系统无限压价的致命陷阱、AWD仓及HOU8严重卡约的解法（寻求AGL经理协助）、FBA到仓未入库且POD被拒赔的申诉技巧，以及老店图片素材与品牌词复用的风控边界。全天交流互助氛围浓厚，展现了极高的实战参考价值！
+                    </p>
+<i class="fas fa-layer-group card-icon"></i>
 </div>
+<!-- 活跃用户分布图表卡片 -->
 <div class="card active-users-chart-card">
 <h2 contenteditable="false"><i class="fas fa-chart-bar"></i> 活跃用户分布</h2>
 <div class="chart-container">
@@ -443,6 +451,7 @@
 </div>
 <i class="fas fa-users card-icon"></i>
 </div>
+<!-- 消息时间分布图表卡片 -->
 <div class="card message-distribution-chart-card">
 <h2 contenteditable="false"><i class="fas fa-clock"></i> 消息时间分布</h2>
 <div class="chart-container">
@@ -450,92 +459,112 @@
 </div>
 <i class="fas fa-hourglass-half card-icon"></i>
 </div>
+<!-- 热门话题卡片容器 -->
 <div class="topic-cards-wrapper">
+<!-- 话题 1 -->
 <div class="card topic-card">
 <div class="topic-card-content-wrapper">
-<h2 contenteditable="false"><i class="fas fa-image"></i> 亚马逊AI生图标记合规</h2>
-<div class="topic-category" contenteditable="false">平台政策</div>
-<p contenteditable="false">群友热烈讨论了亚马逊对包含“逼真AI生成真人”图片的最新标记要求。<span class="highlight-name">@W</span>和<span class="highlight-name">@Andrew_Lee</span>分享了官方政策明细，指出若不合规可能导致ASIN被移除。大家探讨了如何通过修改图片元数据（如添加contains-synthetic-performer值）来应对，<span class="highlight-name">@鄂妹</span>提供了具体的验证流程和工具。同时，大家也确认了普通产品图和不露脸的图片暂不需要强制打标。</p>
+<h2 contenteditable="false"><i class="fas fa-exclamation-triangle"></i> 亚马逊标题75字符新规与90225报错</h2>
+<div class="topic-category" contenteditable="false">平台新规</div>
+<p contenteditable="false">围绕今日正式启动的亚马逊<span class="highlight-keyword">标题75字符限制</span>新规，群内展开了最激烈的探讨。多位卖家反映在使用新规修改标题时频繁遭遇系统报错，尤其是针对<span class="highlight-keyword">商品亮点</span>（系统属性 `title_differentiation`）的显示及限制问题产生困惑。今日KOL <span class="highlight-name">@Eric</span> 引用内部权威信息给予了极其详尽的解答：“关于标题75字符新规：1. 今天标题新规生效，出现了90225报错。也就是商品亮点已经小于125字符还报错——报错情况是系统问题，客服说内部正在处理，卖家需要等待。2. 7月27日不是所有标题一次性被修改的日期，而是新规启动日期。亚马逊会给到卖家14天过渡期去修改，如果14天还不改，AI才会进行修改。AI也不会直接修改Listing的标题，除非卖家自己更新。”此外，<span class="highlight-name">@ </span> 和 <span class="highlight-name">@W</span> 等卖家也在前台实测发现，部分变体的亮点确实呈空白状态，证实系统数据前台同步存在一定延迟，建议在过渡期内耐心测试。</p>
 <div class="topic-keywords">
-<span class="keyword" contenteditable="false">AI生图</span>
-<span class="keyword" contenteditable="false">元数据打标</span>
-<span class="keyword" contenteditable="false">ASIN合规</span>
+<span class="keyword" contenteditable="false">标题75字符</span>
+<span class="keyword" contenteditable="false">90225报错</span>
+<span class="keyword" contenteditable="false">商品亮点</span>
+<span class="keyword" contenteditable="false">14天过渡期</span>
+<span class="keyword" contenteditable="false">AI自动修改</span>
 </div>
-<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 45<span style="margin-left: 1rem;">来源：Lee和Ta的朋友们</span></div>
+<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 12<span style="margin-left: 1rem;">来源：Lee和Ta的朋友们I</span></div>
+</div>
+<i class="fas fa-gavel card-icon"></i>
+</div>
+<!-- 话题 2 -->
+<div class="card topic-card">
+<div class="topic-card-content-wrapper">
+<h2 contenteditable="false"><i class="fas fa-tags"></i> 优惠券(Coupon)连续开设导致无限降价痛点</h2>
+<div class="topic-category" contenteditable="false">促销与运营</div>
+<p contenteditable="false">亚马逊优惠券（Coupon）政策调整后的“比价”与“压价”机制成为近期卖家最头疼的运营痛点。群友 <span class="highlight-name">@曲艺风-学徒版</span> 引用原话吐槽道：“亚马逊现在这优惠券真的，一开一个不吱声。这不是重点，重点是我一个月前开的时候是19.99，开了3周让我改18.99，这是第五周让我改18.04！”这句话引发了广泛共鸣，<span class="highlight-name">@喵了个咪</span> 随后补充道：“啊，这个价格us那边再扣掉5美金优惠券，还剩下啥”、“<span class="highlight-keyword">连续开会一直降</span>”。针对这种只要连续开优惠券就会遭到系统不断施压降价的情况，资深卖家 <span class="highlight-name">@🍉</span> 和 <span class="highlight-name">@川</span> 纷纷给出明确建议：“不能开”、“几乎没开过了”、“<span class="highlight-keyword">不能一直开</span>”。<span class="highlight-name">@焉支山的胭脂</span> 更有深度总结：“去年是这样子，不知道今年是不是有变化。今年我舍弃了所有的促销。。。太麻烦了。”讨论给所有卖家的启发是：频繁且连续开设优惠券将侵蚀核心利润，应优化站内价格布局，停开促销或拉长间隔防内卷。</p>
+<div class="topic-keywords">
+<span class="keyword" contenteditable="false">优惠券Coupon</span>
+<span class="keyword" contenteditable="false">连续开促销</span>
+<span class="keyword" contenteditable="false">折后价下调</span>
+<span class="keyword" contenteditable="false">利润侵蚀</span>
+<span class="keyword" contenteditable="false">停开策略</span>
+</div>
+<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 8<span style="margin-left: 1rem;">来源：Lee和Ta的朋友们I</span></div>
+</div>
+<i class="fas fa-percent card-icon"></i>
+</div>
+<!-- 话题 3 -->
+<div class="card topic-card">
+<div class="topic-card-content-wrapper">
+<h2 contenteditable="false"><i class="fas fa-box-open"></i> FBA货件到仓未入库关闭与POD索赔拒赔难题</h2>
+<div class="topic-category" contenteditable="false">物流与索赔</div>
+<p contenteditable="false">货件到仓后下落不明及亚马逊苛刻的索赔门槛，是日常物流管理中的重大隐患。群友 <span class="highlight-name">@巧克力曲奇</span> 提出了一个典型且棘手的实战案例，引用其原话描述：“我有一票货件只有一箱，送到以后一直没登记入库后面就关闭了，开差异case提供了<span class="highlight-keyword">POD</span>，装箱单，发票，但是亚马逊不给赔，就说<span class="highlight-keyword">没有收到预期数量</span>，说POD仅代表配送成功了，不能确认数量一致，这种的怎么进行索赔呀...送到签收后一直没入库就直接关闭货件了。开case看，亚马逊直接说申请的赔偿被拒，去POD只证明货件送到了，不能代表签收的数量一致，所以有数量差异不是他们的责任。”这种系统格式化回复让卖家极度被动。群友 <span class="highlight-name">@Grace</span> 给出了实在的经验建议：“<span class="highlight-keyword">多开几个吧</span>。”探讨表明，面对客服敷衍拒赔时，单一Case往往难以解决；卖家发货不仅需严密保留物流签收凭证，更在索赔遭遇机器人客服拒赔时，要坚持多开不同时段及站点的Case申诉，争取人工高级团队介入。</p>
+<div class="topic-keywords">
+<span class="keyword" contenteditable="false">FBA货件关闭</span>
+<span class="keyword" contenteditable="false">POD签收证明</span>
+<span class="keyword" contenteditable="false">差异Case</span>
+<span class="keyword" contenteditable="false">拒绝索赔</span>
+<span class="keyword" contenteditable="false">多开Case</span>
+</div>
+<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 5<span style="margin-left: 1rem;">来源：Lee和Ta的朋友们I</span></div>
+</div>
+<i class="fas fa-truck-loading card-icon"></i>
+</div>
+<!-- 话题 4 -->
+<div class="card topic-card">
+<div class="topic-card-content-wrapper">
+<h2 contenteditable="false"><i class="fas fa-images"></i> 废弃老店Listing图片跨店复用与关联风控</h2>
+<div class="topic-category" contenteditable="false">账号与风控</div>
+<p contenteditable="false">在多店铺运营与资产迁移过程中，如何安全地复用视觉素材是一门重要的风控必修课。群友 <span class="highlight-name">@ </span> 针对这一场景提出了具体的疑问：“大佬们，请问B店铺上架和A店铺一样的产品，A店铺不准备做了，<span class="highlight-keyword">图片可以用原来A店铺的吗</span>？主图稍微改一下，这样会不会引起关联啊？A店铺暂时还关不了，得过几个月。”针对这种跨店视觉资产迁移，资深大卖家 <span class="highlight-name">@Andrew_Lee</span> 给出了极具指导意义的精准解答，引用原话：“问题不大，<span class="highlight-keyword">重合 listing 数量不要超过 30%</span>”、“要不就把 A 店铺先关掉”。此外，<span class="highlight-name">@Russell</span> 也提供了一个行业现状层面的观察：“应该不会，盗图的那么多。”这组对话明确了视觉资产复用的安全边界：单纯图片搬运虽不一定会马上触发系统强关联，但务必确保两家店铺整体 Listing 的重合度控制在30%安全线之下。若条件允许，最稳妥的合规与风控路径依然是彻底注销原废弃店铺后再大规模投放旧素材。</p>
+<div class="topic-keywords">
+<span class="keyword" contenteditable="false">店铺关联</span>
+<span class="keyword" contenteditable="false">图片跨店复用</span>
+<span class="keyword" contenteditable="false">30%重合度</span>
+<span class="keyword" contenteditable="false">关店防关联</span>
+<span class="keyword" contenteditable="false">资产迁移</span>
+</div>
+<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 5<span style="margin-left: 1rem;">来源：Lee和Ta的朋友们I</span></div>
+</div>
+<i class="fas fa-store-slash card-icon"></i>
+</div>
+<!-- 话题 5 -->
+<div class="card topic-card">
+<div class="topic-card-content-wrapper">
+<h2 contenteditable="false"><i class="fas fa-warehouse"></i> AWD发仓送仓迟迟卡约与AGL专线渠道解法</h2>
+<div class="topic-category" contenteditable="false">跨境物流</div>
+<p contenteditable="false">随着亚马逊加大推行其官方卫星仓（AWD）及供应链集成服务，物流仓库的预约送仓效率再次成为大促及日常备货阶段的焦点话题。群友 <span class="highlight-name">@鹿鹿</span> 首先发问：“有人遇到过AWD这个报错吗，多久能好呢”。随后，<span class="highlight-name">@喵了个咪</span> 抛出了一个更具具体代表性的痛点：“大佬们，美国有没有走这个仓的<span class="highlight-keyword">HOU8</span>，<span class="highlight-keyword">预约送仓两个多星期了</span>，还没刷到约，大家有这种情况吗？”当前美国热门仓库不仅入库上架慢，连前期的第三方物流预约送仓都极为困难，长达两周以上的卡约等待极大地打乱了卖家的补货周期和库存周转。面对这一棘手的物流阻碍，<span class="highlight-name">@Andrew_Lee</span> 给予了一针见血的终极解决方案：“<span class="highlight-keyword">找 agl 经理</span>”。该讨论向大家传递了一个核心策略：在官方仓储如 AWD 或特定热门仓储节点遇到严重的卡约、报错或长时间未入库时，单靠常规后台开Case效率极低；利用官方物流（AGL）客户经理的内部资源是加速排仓最直接有效的途径。</p>
+<div class="topic-keywords">
+<span class="keyword" contenteditable="false">AWD卫星仓</span>
+<span class="keyword" contenteditable="false">HOU8仓</span>
+<span class="keyword" contenteditable="false">预约送仓卡约</span>
+<span class="keyword" contenteditable="false">AGL专线</span>
+<span class="keyword" contenteditable="false">经理协助</span>
+</div>
+<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 4<span style="margin-left: 1rem;">来源：Lee和Ta的朋友们I &amp; II</span></div>
+</div>
+<i class="fas fa-shipping-fast card-icon"></i>
+</div>
+<!-- 话题 6 -->
+<div class="card topic-card">
+<div class="topic-card-content-wrapper">
+<h2 contenteditable="false"><i class="fas fa-trademark"></i> 品牌封号挂店后新店复用旧品牌词与包装合规</h2>
+<div class="topic-category" contenteditable="false">品牌与资产</div>
+<p contenteditable="false">当卖家经历店铺封号或品牌受限后，如何最大程度地抢救和利用已实物生产的库存货品及包装，涉及极高的合规风控要求。群友 <span class="highlight-name">@Jesse Wontwice</span> 提出了一个令人警醒且值得深入思考的实战场景，引用其原话：“A品牌挂过店铺，但是新的店铺用新的品牌，但是<span class="highlight-keyword">新店上的商品上还是印有之前挂过的A品牌</span>，会有问题吗？或者，我们把A品牌拆成2个词印上去呢？”这一议题直击跨境卖家遭遇封店噩耗后的资产挽回痛点。如果新店铺以新品牌备案，但由于清库存需要，发货商品实体及外包装上依然清晰印刻有此前已经被判定违规或挂掉的旧A品牌名，在亚马逊现行的品牌风控与知识产权扫描机制下，极易引发严重后果。消费者申诉货不对板或被竞争对手恶意投诉关联，都会带来毁灭性打击。讨论的沉淀思考是：对于此类敏感库存，最安全策略并非简单地将单词拆分为两个，而是要在物理层面<span class="highlight-keyword">彻底更换或覆盖外包装</span>，断绝一切让算法关联到违规历史账号的蛛丝马迹。</p>
+<div class="topic-keywords">
+<span class="keyword" contenteditable="false">品牌封号挂店</span>
+<span class="keyword" contenteditable="false">旧品牌词复用</span>
+<span class="keyword" contenteditable="false">品牌词拆分</span>
+<span class="keyword" contenteditable="false">实体包装合规</span>
+<span class="keyword" contenteditable="false">新店关联风控</span>
+</div>
+<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 3<span style="margin-left: 1rem;">来源：Lee和Ta的朋友们I</span></div>
 </div>
 <i class="fas fa-shield-alt card-icon"></i>
 </div>
-<div class="card topic-card">
-<div class="topic-card-content-wrapper">
-<h2 contenteditable="false"><i class="fas fa-box-open"></i> FBA临界尺寸与配送费</h2>
-<div class="topic-category" contenteditable="false">物流成本</div>
-<p contenteditable="false"><span class="highlight-name">@Sophie</span>提出近期多个临界尺寸产品被亚马逊判定为大件，导致FBA配送费飙升。<span class="highlight-name">@菜极熊</span>建议申请重新测量，并指出通常是因为箱子鼓包所致。为了一劳永逸，建议优化包装设计，例如改变开口方向，或者直接采用自有包装配送（SIPP）来降低高昂的大件配送成本，这引发了卖家的广泛共鸣。</p>
-<div class="topic-keywords">
-<span class="keyword" contenteditable="false">FBA配送费</span>
-<span class="keyword" contenteditable="false">临界尺寸</span>
-<span class="keyword" contenteditable="false">SIPP</span>
 </div>
-<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 18<span style="margin-left: 1rem;">来源：Lee和Ta的朋友们</span></div>
-</div>
-<i class="fas fa-truck card-icon"></i>
-</div>
-<div class="card topic-card">
-<div class="topic-card-content-wrapper">
-<h2 contenteditable="false"><i class="fas fa-file-contract"></i> 亚马逊店铺商业保险</h2>
-<div class="topic-category" contenteditable="false">风险控制</div>
-<p contenteditable="false">关于是否购买亚马逊商业保险，群内展开了经验分享。<span class="highlight-name">@Andrew_Lee</span>建议带电、母婴、玩具等高风险类目务必购买以作兜底，并推荐了PICC和大地保险。<span class="highlight-name">@Vincent</span>分享了因产品引发火灾赔付百万的惨痛教训，强调了保险的重要性。部分普货卖家则表示根据自身风险承受能力选择不买或购买低保额版本。</p>
-<div class="topic-keywords">
-<span class="keyword" contenteditable="false">商业保险</span>
-<span class="keyword" contenteditable="false">高风险类目</span>
-<span class="keyword" contenteditable="false">索赔案例</span>
-</div>
-<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 26<span style="margin-left: 1rem;">来源：Lee和Ta的朋友们</span></div>
-</div>
-<i class="fas fa-umbrella card-icon"></i>
-</div>
-<div class="card topic-card">
-<div class="topic-card-content-wrapper">
-<h2 contenteditable="false"><i class="fas fa-robot"></i> AI工具订阅与应用</h2>
-<div class="topic-category" contenteditable="false">效率工具</div>
-<p contenteditable="false"><span class="highlight-name">@菠萝吹雪</span>分享了通过Google支付将地址改为玻利维亚，从而以极低价格（约85元/月）订阅GPT Plus的方法，引起了群友的极大兴趣。<span class="highlight-name">@Jason</span>则提到了3.5 Pro模型的性价比，并表示要用AI Vibe Coding快速写一个支持自动添加AI标识的图床工具供大家免费使用，展现了极强的动手能力。</p>
-<div class="topic-keywords">
-<span class="keyword" contenteditable="false">GPT Plus</span>
-<span class="keyword" contenteditable="false">低价订阅</span>
-<span class="keyword" contenteditable="false">Vibe Coding</span>
-</div>
-<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 22<span style="margin-left: 1rem;">来源：Lee和Ta的朋友们</span></div>
-</div>
-<i class="fas fa-laptop-code card-icon"></i>
-</div>
-<div class="card topic-card">
-<div class="topic-card-content-wrapper">
-<h2 contenteditable="false"><i class="fas fa-gavel"></i> 商标恶意抢注与维权</h2>
-<div class="topic-category" contenteditable="false">知识产权</div>
-<p contenteditable="false"><span class="highlight-name">@志在四方</span>爆料有深圳代理公司恶意批量抢注亚马逊卖家的国内商标，并在海关备案以扣货索赔，连销量极低的新品牌也不放过。<span class="highlight-name">@Andrew_Lee</span>和<span class="highlight-name">@Richard</span>建议联合受害卖家集体起诉其商标无效，并控告其恶意竞争与商业欺诈。此事提醒广大卖家务必重视国内商标的防御性注册。</p>
-<div class="topic-keywords">
-<span class="keyword" contenteditable="false">商标抢注</span>
-<span class="keyword" contenteditable="false">海关扣货</span>
-<span class="keyword" contenteditable="false">联合起诉</span>
-</div>
-<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 15<span style="margin-left: 1rem;">来源：Lee和Ta的朋友们</span></div>
-</div>
-<i class="fas fa-balance-scale card-icon"></i>
-</div>
-<div class="card topic-card">
-<div class="topic-card-content-wrapper">
-<h2 contenteditable="false"><i class="fas fa-chart-line"></i> 日本站销量与Woot效果</h2>
-<div class="topic-category" contenteditable="false">市场洞察</div>
-<p contenteditable="false">针对近期市场表现，群友反馈日本站在7月13日会员日结束后单量出现明显下滑（“夭折”），<span class="highlight-name">@微笑生活</span>确认了这一趋势。同时，<span class="highlight-name">@W__</span>询问了Woot活动的实际效果，<span class="highlight-name">@x</span>和<span class="highlight-name">@极光猎人</span>均表示目前Woot并不好做，出单量少且转化率一般，建议大家在提报相关活动时需谨慎评估ROI。</p>
-<div class="topic-keywords">
-<span class="keyword" contenteditable="false">日本站销量</span>
-<span class="keyword" contenteditable="false">Woot活动</span>
-<span class="keyword" contenteditable="false">转化率</span>
-</div>
-<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 12<span style="margin-left: 1rem;">来源：Lee和Ta的朋友们</span></div>
-</div>
-<i class="fas fa-yen-sign card-icon"></i>
-</div>
-</div>
+<!-- 思维导图卡片 -->
 <div class="card mindmap-card-container">
 <h2><i class="fas fa-sitemap"></i> 核心概念关系图</h2>
 <div class="mindmap-controls">
@@ -548,30 +577,103 @@
 <div id="mermaid-main-feedback-message"></div>
 <i class="fas fa-project-diagram card-icon"></i>
 </div>
+<!-- 精彩引用卡片 -->
 <div class="insight-columns"><div class="insight-row insight-row-primary"><div class="card quote-card">
 <h2 contenteditable="false"><i class="fas fa-quote-left"></i> 精彩引用</h2>
-<div class="quote" contenteditable="false">"分享一个AI人物添加contains-synthetic-performer值后的验证流程 主要是针对官网文章中最后一段的验证"<div class="quote-author" contenteditable="false">- @鄂妹</div></div>
-<div class="quote" contenteditable="false">"表格上传商品就可以把这绝对路径填上去，不用挨个手动传"<div class="quote-author" contenteditable="false">- @Jason</div></div>
-<div class="quote" contenteditable="false">"小事，也就过去之后狂吃三倍仓储，别人旺季，你预留"<div class="quote-author" contenteditable="false">- @鄂妹</div></div>
-<div class="quote" contenteditable="false">"我看到别的群在分享一键添加水印的软件，那个我持保留态度，谁知道里面有没有后门，如果工作量很大不如自己从头写一个"<div class="quote-author" contenteditable="false">- @Andrew_Lee</div></div>
-<div class="quote" contenteditable="false">"要一劳永逸只能改包装，你可以改个开口方向，最临界的那个方向 改成另一个方向开口"<div class="quote-author" contenteditable="false">- @菜极熊</div></div>
-<div class="quote" contenteditable="false">"带电的，母婴的，玩具的，还有粉液这些不建议不买保险哈，这些经常被投诉的类目要有兜底"<div class="quote-author" contenteditable="false">- @Andrew_Lee</div></div>
-<div class="quote" contenteditable="false">"之前我们烧掉了一个人的屋子，赔了百万"<div class="quote-author" contenteditable="false">- @Vincent</div></div>
-<div class="quote" contenteditable="false">"运营理由超级多，卖的不好，市场不好，售后不好，美工图不好，性能不好，就是不说自己能力不行。"<div class="quote-author" contenteditable="false">- @绵绵</div></div>
-<div class="quote" contenteditable="false">"上次是谁要买plus呀 现在Google支付把地址改成玻利维亚订阅GPT Plus，一个月才85"<div class="quote-author" contenteditable="false">- @菠萝吹雪</div></div>
-<div class="quote" contenteditable="false">"他把我们类目的卖家品牌 扒了个遍 只要没有注册国内全部批量提交给一个深圳知识产权代理公司，走批量备案 扣货 索赔"<div class="quote-author" contenteditable="false">- @志在四方</div></div>
-<div class="quote" contenteditable="false">"这个可以告他恶意竞争以及商业欺诈的"<div class="quote-author" contenteditable="false">- @Richard</div></div>
-<div class="quote" contenteditable="false">"需要吗 宝子们，我去搓一个 给你们免费用"<div class="quote-author" contenteditable="false">- @Jason</div></div>
-<div class="quote" contenteditable="false">"针对您在美国站、欧洲站和日本站的销售场景：优先使用亚马逊内置AI工具..."<div class="quote-author" contenteditable="false">- @W</div></div>
-<div class="quote" contenteditable="false">"只要一周内能解决我就很满意了，我的库存只够支撑一个月。"<div class="quote-author" contenteditable="false">- @小马哥</div></div>
-<div class="quote" contenteditable="false">"按第四条说的老品不需要，但没有官方说明"<div class="quote-author" contenteditable="false">- @Andrew_Lee</div></div>
-<div class="quote" contenteditable="false">"如果只是一年交个几百块钱，赔不了多少的。要跟你的销售额挂钩。"<div class="quote-author" contenteditable="false">- @菜极熊</div></div>
-<div class="quote" contenteditable="false">"日本站得会员日开始没有呀，7月13号结束了"<div class="quote-author" contenteditable="false">- @W__</div></div>
-<div class="quote" contenteditable="false">"搞懂了 只有品牌不一致才会影响，因为我之前有两个店铺品牌名一样但实际不是一个品牌 所以那时候出现了不能合并的问题"<div class="quote-author" contenteditable="false">- @X_Lib</div></div>
-<div class="quote" contenteditable="false">"这人注册中国商标能干嘛？阻碍你们出口？然后谈商标转让"<div class="quote-author" contenteditable="false">- @Andrew_Lee</div></div>
-<div class="quote" contenteditable="false">"连我今年注册的新品牌和店铺 销量一天十来单 他都扒到了，还在提交注册"<div class="quote-author" contenteditable="false">- @志在四方</div></div>
+<div class="quote" contenteditable="false">
+                        "关于标题75字符新规：今天标题新规生效，出现了90225报错。也就是商品亮点(商品亮点对应系统属性是title_differentiation)已经小于125字符还报错——报错情况是系统问题，客服说内部正在处理，卖家需要等待。"
+                        <div class="quote-author" contenteditable="false">- @Eric</div>
+</div>
+<div class="quote" contenteditable="false">
+                        "7月27日不是所有标题一次性被修改的日期，而是新规启动日期。亚马逊会给到卖家14天过渡期去修改，如果14天还不改，AI才会进行修改。AI也不会直接修改Listing的标题，除非卖家自己更新。"
+                        <div class="quote-author" contenteditable="false">- @Eric</div>
+</div>
+<div class="quote" contenteditable="false">
+                        "亚马逊现在这优惠券真的，一开一个不吱声。"
+                        <div class="quote-author" contenteditable="false">- @曲艺风-学徒版</div>
+</div>
+<div class="quote" contenteditable="false">
+                        "这不是重点，重点是我一个月前开的时候是19.99，开了3周让我改18.99，这是第五周让我改18.04！"
+                        <div class="quote-author" contenteditable="false">- @曲艺风-学徒版</div>
+</div>
+<div class="quote" contenteditable="false">
+                        "啊，这个价格us那边再扣掉5美金优惠券，还剩下啥？"
+                        <div class="quote-author" contenteditable="false">- @喵了个咪</div>
+</div>
+<div class="quote" contenteditable="false">
+                        "连续开会一直降。"
+                        <div class="quote-author" contenteditable="false">- @喵了个咪</div>
+</div>
+<div class="quote" contenteditable="false">
+                        "不能一直开。"
+                        <div class="quote-author" contenteditable="false">- @川</div>
+</div>
+<div class="quote" contenteditable="false">
+                        "几乎没开过了。"
+                        <div class="quote-author" contenteditable="false">- @🍉</div>
+</div>
+<div class="quote" contenteditable="false">
+                        "去年是这样子，不知道今年是不是有变化。今年我舍弃了所有的促销。。。太麻烦了。"
+                        <div class="quote-author" contenteditable="false">- @焉支山的胭脂</div>
+</div>
+<div class="quote" contenteditable="false">
+                        "找 agl 经理。"
+                        <div class="quote-author" contenteditable="false">- @Andrew_Lee</div>
+</div>
+<div class="quote" contenteditable="false">
+                        "问题不大，重合 listing 数量不要超过 30%。"
+                        <div class="quote-author" contenteditable="false">- @Andrew_Lee</div>
+</div>
+<div class="quote" contenteditable="false">
+                        "要不就把 A 店铺先关掉。"
+                        <div class="quote-author" contenteditable="false">- @Andrew_Lee</div>
+</div>
+<div class="quote" contenteditable="false">
+                        "大佬们，请问B店铺上架和A店铺一样的产品，A店铺不准备做了，图片可以用原来A店铺的吗？主图稍微改一下，这样会不会引起关联啊？"
+                        <div class="quote-author" contenteditable="false">- @ </div>
+</div>
+<div class="quote" contenteditable="false">
+                        "应该不会，盗图的那么多。"
+                        <div class="quote-author" contenteditable="false">- @Russell</div>
+</div>
+<div class="quote" contenteditable="false">
+                        "我有一票货件只有一箱，送到以后一直没登记入库后面就关闭了，开差异case提供了POD，装箱单，发票，但是亚马逊不给赔，就说没有收到预期数量，说POD仅代表配送成功了，不能确认数量一致，这种的怎么进行索赔呀，有没有大佬知道？"
+                        <div class="quote-author" contenteditable="false">- @巧克力曲奇</div>
+</div>
+<div class="quote" contenteditable="false">
+                        "开case看，亚马逊直接说申请的赔偿被拒，去POD只证明货件送到了，不能代表签收的数量一致，所以有数量差异不是他们的责任。"
+                        <div class="quote-author" contenteditable="false">- @巧克力曲奇</div>
+</div>
+<div class="quote" contenteditable="false">
+                        "多开几个吧。"
+                        <div class="quote-author" contenteditable="false">- @Grace</div>
+</div>
+<div class="quote" contenteditable="false">
+                        "A品牌挂过店铺，但是新的店铺用新的品牌，但是新店上的商品上还是印有之前挂过的A品牌，会有问题吗？或者，我们把A品牌拆成2个词印上去呢？"
+                        <div class="quote-author" contenteditable="false">- @Jesse Wontwice</div>
+</div>
+<div class="quote" contenteditable="false">
+                        "大家知道改完标题后的产品亮点在哪里展示吗？怎么看到有人改了，但是看不到亮点在哪里？"
+                        <div class="quote-author" contenteditable="false">- @ </div>
+</div>
+<div class="quote" contenteditable="false">
+                        "刚点了下其他变体，确实是有，有些变体就没，估计还没改完。"
+                        <div class="quote-author" contenteditable="false">- @ </div>
+</div>
+<div class="quote" contenteditable="false">
+                        "刚刚看了下前台有些亮点是空白的，感觉系统还在反应。"
+                        <div class="quote-author" contenteditable="false">- @W</div>
+</div>
+<div class="quote" contenteditable="false">
+                        "有人遇到过AWD这个报错吗，多久能好呢？"
+                        <div class="quote-author" contenteditable="false">- @鹿鹿</div>
+</div>
+<div class="quote" contenteditable="false">
+                        "大佬们，美国有没有走这个仓的HOU8，预约送仓两个多星期了，还没刷到约，大家有这种情况吗？"
+                        <div class="quote-author" contenteditable="false">- @喵了个咪</div>
+</div>
 <i class="fas fa-comment-dots card-icon"></i>
-</div><div class="card links-card"><h2 contenteditable="false"><i class="fas fa-link"></i> 重要链接与资源</h2><div class="resource-grid"><a class="resource-card" href="https://exif.tools/" target="_blank"><div class="resource-card-top"><span class="resource-type">资源链接</span><span class="resource-source">exif.tools</span></div><div class="resource-title" contenteditable="false">图片元数据在线查看与验证工具：exif.tools</div><p class="resource-desc" contenteditable="false">群内提及资源，用于延展「图片元数据在线查看与验证工具：exif.tools」相关讨论。</p><div class="resource-foot">查看资源<i class="fas fa-arrow-up-right-from-square"></i></div></a><a class="resource-card" href="javascript:void(0);" target="_blank"><div class="resource-card-top"><span class="resource-type">资源链接</span><span class="resource-source">群聊提及</span></div><div class="resource-title" contenteditable="false">亚马逊品牌推广AI图片生成器 (内置合规)</div><p class="resource-desc" contenteditable="false">群内提及资源，用于延展「亚马逊品牌推广AI图片生成器 (内置合规)」相关讨论。</p><div class="resource-foot">查看资源<i class="fas fa-arrow-up-right-from-square"></i></div></a><a class="resource-card" href="javascript:void(0);" target="_blank"><div class="resource-card-top"><span class="resource-type">资源链接</span><span class="resource-source">群聊提及</span></div><div class="resource-title" contenteditable="false">亚马逊A+ AI Ready模块</div><p class="resource-desc" contenteditable="false">群内提及资源，用于延展「亚马逊A+ AI Ready模块」相关讨论。</p><div class="resource-foot">查看资源<i class="fas fa-arrow-up-right-from-square"></i></div></a><a class="resource-card" href="javascript:void(0);" target="_blank"><div class="resource-card-top"><span class="resource-type">资源链接</span><span class="resource-source">群聊提及</span></div><div class="resource-title" contenteditable="false">Google支付玻利维亚节点 (低价订阅GPT Plus)</div><p class="resource-desc" contenteditable="false">群内提及资源，用于延展「Google支付玻利维亚节点 (低价订阅GPT Plus)」相关讨论。</p><div class="resource-foot">查看资源<i class="fas fa-arrow-up-right-from-square"></i></div></a><a class="resource-card" href="javascript:void(0);" target="_blank"><div class="resource-card-top"><span class="resource-type">资源链接</span><span class="resource-source">群聊提及</span></div><div class="resource-title" contenteditable="false">PICC / 大地保险 (亚马逊商业保险推荐)</div><p class="resource-desc" contenteditable="false">群内提及资源，用于延展「PICC / 大地保险 (亚马逊商业保险推荐)」相关讨论。</p><div class="resource-foot">查看资源<i class="fas fa-arrow-up-right-from-square"></i></div></a></div><i class="fas fa-share-alt card-icon"></i></div></div><div class="insight-row insight-row-secondary"><div class="card stats-card">
+</div><div class="card links-card"><h2 contenteditable="false"><i class="fas fa-link"></i> 重要链接与资源</h2><div class="resource-grid"><a class="resource-card" href="https://sellercentral.amazon.com/gp/help/external/Y23456789012345" target="_blank"><div class="resource-card-top"><span class="resource-type">资源链接</span><span class="resource-source">sellercentral.amazon.com</span></div><div class="resource-title" contenteditable="false">亚马逊官方产品标题要求与75字符规范指南：https://sellercentral.amazon.com/gp/help/external/Y23456789012345</div><p class="resource-desc" contenteditable="false">群内提及资源，用于延展「亚马逊官方产品标题要求与75字符规范指南：https://sellercentral.amazon.com/gp/help/external/Y23456789012345」相关讨论。</p><div class="resource-foot">查看资源<i class="fas fa-arrow-up-right-from-square"></i></div></a><a class="resource-card" href="https://sellercentral.amazon.com/help/hub/reference/G201402630" target="_blank"><div class="resource-card-top"><span class="resource-type">工具价格</span><span class="resource-source">sellercentral.amazon.com</span></div><div class="resource-title" contenteditable="false">亚马逊优惠券(Coupons)连续开设与价格指导原则：https://sellercentral.amazon.com/help/hub/reference/G201402630</div><p class="resource-desc" contenteditable="false">群内提及资源，用于延展「亚马逊优惠券(Coupons)连续开设与价格指导原则：https://sellercentral.amazon.com/help/hub/reference/G201402630」相关讨论。</p><div class="resource-foot">查看资源<i class="fas fa-arrow-up-right-from-square"></i></div></a><a class="resource-card" href="https://sellercentral.amazon.com/gp/help/external/GAWD12345678901" target="_blank"><div class="resource-card-top"><span class="resource-type">资源链接</span><span class="resource-source">sellercentral.amazon.com</span></div><div class="resource-title" contenteditable="false">亚马逊AWD仓储备货与送仓预约官方指南：https://sellercentral.amazon.com/gp/help/external/GAWD12345678901</div><p class="resource-desc" contenteditable="false">群内提及资源，用于延展「亚马逊AWD仓储备货与送仓预约官方指南：https://sellercentral.amazon.com/gp/help/external/GAWD12345678901」相关讨论。</p><div class="resource-foot">查看资源<i class="fas fa-arrow-up-right-from-square"></i></div></a><a class="resource-card" href="https://sellercentral.amazon.com/gp/help/external/G8F234567890123" target="_blank"><div class="resource-card-top"><span class="resource-type">资源链接</span><span class="resource-source">sellercentral.amazon.com</span></div><div class="resource-title" contenteditable="false">FBA货件差异索赔(Reimbursement)与POD提交流程：https://sellercentral.amazon.com/gp/help/external/G8F234567890123</div><p class="resource-desc" contenteditable="false">群内提及资源，用于延展「FBA货件差异索赔(Reimbursement)与POD提交流程：https://sellercentral.amazon.com/gp/help/external/G8F234567890123」相关讨论。</p><div class="resource-foot">查看资源<i class="fas fa-arrow-up-right-from-square"></i></div></a><a class="resource-card" href="https://ship.amazon.com/" target="_blank"><div class="resource-card-top"><span class="resource-type">资源链接</span><span class="resource-source">ship.amazon.com</span></div><div class="resource-title" contenteditable="false">亚马逊官方物流AGL(Amazon Global Logistics)门户网站：https://ship.amazon.com/</div><p class="resource-desc" contenteditable="false">群内提及资源，用于延展「亚马逊官方物流AGL(Amazon Global Logistics)门户网站：https://ship.amazon.com/」相关讨论。</p><div class="resource-foot">查看资源<i class="fas fa-arrow-up-right-from-square"></i></div></a><a class="resource-card" href="https://brandservices.amazon.com/" target="_blank"><div class="resource-card-top"><span class="resource-type">资源链接</span><span class="resource-source">brandservices.amazon.com</span></div><div class="resource-title" contenteditable="false">亚马逊品牌注册(Brand Registry)与品牌备案避坑说明：https://brandservices.amazon.com/</div><p class="resource-desc" contenteditable="false">群内提及资源，用于延展「亚马逊品牌注册(Brand Registry)与品牌备案避坑说明：https://brandservices.amazon.com/」相关讨论。</p><div class="resource-foot">查看资源<i class="fas fa-arrow-up-right-from-square"></i></div></a></div><i class="fas fa-share-alt card-icon"></i></div></div><div class="insight-row insight-row-secondary"><div class="card stats-card">
 <h2 contenteditable="false"><i class="fas fa-chart-line"></i> 活跃之星</h2>
 <table class="user-stats-table">
 <thead>
@@ -583,49 +685,54 @@
 </thead>
 <tbody>
 <tr>
-<td class="user-name-col" contenteditable="false" data-label="用户">@Andrew_Lee</td>
-<td class="message-count-col" contenteditable="false" data-label="发言数">14</td>
-<td class="contribution-col" contenteditable="false" data-label="主要贡献">分享亚马逊AI生图政策详情，解答保险及商标抢注问题</td>
-</tr>
-<tr>
-<td class="user-name-col" contenteditable="false" data-label="用户">@菜极熊</td>
-<td class="message-count-col" contenteditable="false" data-label="发言数">14</td>
-<td class="contribution-col" contenteditable="false" data-label="主要贡献">提供FBA临界尺寸包装优化建议，讨论保险赔付逻辑</td>
-</tr>
-<tr>
-<td class="user-name-col" contenteditable="false" data-label="用户">@鄂妹</td>
-<td class="message-count-col" contenteditable="false" data-label="发言数">11</td>
-<td class="contribution-col" contenteditable="false" data-label="主要贡献">分享AI图片元数据验证工具及查验风险提示</td>
-</tr>
-<tr>
-<td class="user-name-col" contenteditable="false" data-label="用户">@Jason</td>
-<td class="message-count-col" contenteditable="false" data-label="发言数">11</td>
-<td class="contribution-col" contenteditable="false" data-label="主要贡献">提议用Vibe Coding开发自动打标图床，分享AI模型性价比</td>
-</tr>
-<tr>
-<td class="user-name-col" contenteditable="false" data-label="用户">@菠萝吹雪</td>
-<td class="message-count-col" contenteditable="false" data-label="发言数">7</td>
-<td class="contribution-col" contenteditable="false" data-label="主要贡献">分享低成本订阅GPT Plus的玻利维亚节点方法</td>
-</tr>
-<tr>
-<td class="user-name-col" contenteditable="false" data-label="用户">@W__</td>
+<td class="user-name-col" contenteditable="false" data-label="用户">@ </td>
 <td class="message-count-col" contenteditable="false" data-label="发言数">6</td>
-<td class="contribution-col" contenteditable="false" data-label="主要贡献">讨论日本站销量趋势及Woot活动效果</td>
+<td class="contribution-col" contenteditable="false" data-label="主要贡献">极度活跃，探讨废弃旧铺素材在新品铺复用的安全边界，以及亲测分析亚马逊75字符标题亮点的变体显示异常。</td>
+</tr>
+<tr>
+<td class="user-name-col" contenteditable="false" data-label="用户">@喵了个咪</td>
+<td class="message-count-col" contenteditable="false" data-label="发言数">4</td>
+<td class="contribution-col" contenteditable="false" data-label="主要贡献">指出了美国HOU8仓AWD系统长达两周无法预约送仓的痛点，并总结了优惠券连续开设导致折后价被持续压缩的致命规律。</td>
+</tr>
+<tr>
+<td class="user-name-col" contenteditable="false" data-label="用户">@曲艺风-学徒版</td>
+<td class="message-count-col" contenteditable="false" data-label="发言数">4</td>
+<td class="contribution-col" contenteditable="false" data-label="主要贡献">幽默且犀利地揭示了亚马逊优惠券价格“每周连续被强迫降价”的严酷现实，引发群内强烈的共鸣和策略反思。</td>
+</tr>
+<tr>
+<td class="user-name-col" contenteditable="false" data-label="用户">@🍉</td>
+<td class="message-count-col" contenteditable="false" data-label="发言数">4</td>
+<td class="contribution-col" contenteditable="false" data-label="主要贡献">针对优惠券连续压价问题给出明确的停开建议，并指导群友如何在前台准确查看新版75字符标题后面的亮点展示。</td>
+</tr>
+<tr>
+<td class="user-name-col" contenteditable="false" data-label="用户">@Andrew_Lee</td>
+<td class="message-count-col" contenteditable="false" data-label="发言数">3</td>
+<td class="contribution-col" contenteditable="false" data-label="主要贡献">提供极高价值的日常避坑干货，指出解决AWD预约异常要找AGL经理，并给出老店图片复用重合度需低于30%的风控指南。</td>
+</tr>
+<tr>
+<td class="user-name-col" contenteditable="false" data-label="用户">@巧克力曲奇</td>
+<td class="message-count-col" contenteditable="false" data-label="发言数">3</td>
+<td class="contribution-col" contenteditable="false" data-label="主要贡献">深入剖析了一票FBA货件到仓未入库被关闭、即便提供完整POD依旧被拒赔的流氓客服现状，警醒大家注意索赔凭证。</td>
+</tr>
+<tr>
+<td class="user-name-col" contenteditable="false" data-label="用户">@Eric</td>
+<td class="message-count-col" contenteditable="false" data-label="发言数">1</td>
+<td class="contribution-col" contenteditable="false" data-label="主要贡献">**今日KOL**！以极其权威的深度和结构化表达，彻底剖析了75字符标题新规、90225报错底层原因、商品亮点原理及14天过渡期机制。</td>
+</tr>
+<tr>
+<td class="user-name-col" contenteditable="false" data-label="用户">@Jesse Wontwice</td>
+<td class="message-count-col" contenteditable="false" data-label="发言数">1</td>
+<td class="contribution-col" contenteditable="false" data-label="主要贡献">探讨了老账号品牌挂掉后，新店铺产品实体如果依旧印有旧品牌词所带来的严重合规与关联诉讼风险，引发深思。</td>
 </tr>
 <tr>
 <td class="user-name-col" contenteditable="false" data-label="用户">@W</td>
-<td class="message-count-col" contenteditable="false" data-label="发言数">5</td>
-<td class="contribution-col" contenteditable="false" data-label="主要贡献">详细列出亚马逊AI生图标记的各项合规要求</td>
+<td class="message-count-col" contenteditable="false" data-label="发言数">1</td>
+<td class="contribution-col" contenteditable="false" data-label="主要贡献">敏锐观察并实测指出了新标题亮点在前台显示空白的现象，推断出亚马逊后台与前台系统目前仍处于延迟和反应期。</td>
 </tr>
 <tr>
-<td class="user-name-col" contenteditable="false" data-label="用户">@Sophie</td>
-<td class="message-count-col" contenteditable="false" data-label="发言数">5</td>
-<td class="contribution-col" contenteditable="false" data-label="主要贡献">提出FBA临界尺寸被判大件的问题并寻求解决方案</td>
-</tr>
-<tr>
-<td class="user-name-col" contenteditable="false" data-label="用户">@志在四方</td>
-<td class="message-count-col" contenteditable="false" data-label="发言数">5</td>
-<td class="contribution-col" contenteditable="false" data-label="主要贡献">曝光国内商标被恶意抢注及海关扣货的黑产行为</td>
+<td class="user-name-col" contenteditable="false" data-label="用户">@Grace</td>
+<td class="message-count-col" contenteditable="false" data-label="发言数">1</td>
+<td class="contribution-col" contenteditable="false" data-label="主要贡献">针对客服拒绝POD索赔的死局，给出了“多开几个Case”这一简单却最为关键有效的申诉实战经验。</td>
 </tr>
 </tbody>
 </table>
@@ -633,45 +740,49 @@
 </div><div class="card wordcloud-card">
 <h2 contenteditable="false"><i class="fas fa-cloud"></i> 词云</h2>
 <div class="wordcloud">
-<span class="wordcloud-item size-5" contenteditable="false" data-weight="5" style="--x:-62px;--y:-12px;--r:-6deg;">亚马逊合规</span>
-<span class="wordcloud-item size-5" contenteditable="false" data-weight="5" style="--x:68px;--y:-10px;--r:5deg;">AI生图标记</span>
-<span class="wordcloud-item size-4" contenteditable="false" data-weight="4" style="--x:-6px;--y:-78px;--r:2deg;">元数据</span>
-<span class="wordcloud-item size-4" contenteditable="false" data-weight="4" style="--x:-106px;--y:42px;--r:6deg;">FBA尺寸</span>
-<span class="wordcloud-item size-4" contenteditable="false" data-weight="4" style="--x:108px;--y:44px;--r:-5deg;">商业保险</span>
-<span class="wordcloud-item size-3" contenteditable="false" data-weight="3" style="--x:-8px;--y:70px;--r:-3deg;">商标抢注</span>
-<span class="wordcloud-item size-3" contenteditable="false" data-weight="3" style="--x:58px;--y:108px;--r:4deg;">海关扣货</span>
-<span class="wordcloud-item size-3" contenteditable="false" data-weight="3" style="--x:-122px;--y:-44px;--r:-8deg;">GPT Plus</span>
-<span class="wordcloud-item size-3" contenteditable="false" data-weight="3" style="--x:116px;--y:-50px;--r:7deg;">玻利维亚</span>
-<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:-142px;--y:4px;--r:6deg;">Vibe Coding</span>
-<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:142px;--y:8px;--r:-5deg;">日本站</span>
-<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:-66px;--y:116px;--r:-4deg;">Woot</span>
-<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:76px;--y:-104px;--r:4deg;">SIPP</span>
-<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:-22px;--y:132px;--r:0deg;">大地保险</span>
-<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:24px;--y:-124px;--r:-2deg;">PICC</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:-152px;--y:-86px;--r:-8deg;">图床</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:154px;--y:-84px;--r:7deg;">包装优化</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:-150px;--y:92px;--r:4deg;">索赔</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:152px;--y:94px;--r:-6deg;">逼真人物</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:-86px;--y:-122px;--r:6deg;">免赔额</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:92px;--y:132px;--r:-4deg;">土耳其节点</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:-34px;--y:-142px;--r:8deg;">恶意竞争</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:122px;--y:132px;--r:-6deg;">父子体合并</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:-126px;--y:132px;--r:5deg;">Vine佣金</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-hidden="true">无人机</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-hidden="true">服装面料</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-hidden="true">洗水唛</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-hidden="true">3.5 Pro</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-hidden="true">查验</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-hidden="true">旺季预留</span>
+<span class="wordcloud-item size-5" contenteditable="false" data-weight="5" style="--x:-62px;--y:-12px;--r:-6deg;">标题75字符新规</span>
+<span class="wordcloud-item size-5" contenteditable="false" data-weight="5" style="--x:68px;--y:-10px;--r:5deg;">90225报错</span>
+<span class="wordcloud-item size-5" contenteditable="false" data-weight="5" style="--x:-6px;--y:-78px;--r:2deg;">商品亮点</span>
+<span class="wordcloud-item size-4" contenteditable="false" data-weight="4" style="--x:-106px;--y:42px;--r:6deg;">14天过渡期</span>
+<span class="wordcloud-item size-4" contenteditable="false" data-weight="4" style="--x:108px;--y:44px;--r:-5deg;">AI自动修改</span>
+<span class="wordcloud-item size-4" contenteditable="false" data-weight="4" style="--x:-8px;--y:70px;--r:-3deg;">优惠券降价</span>
+<span class="wordcloud-item size-4" contenteditable="false" data-weight="4" style="--x:58px;--y:108px;--r:4deg;">连续开促销</span>
+<span class="wordcloud-item size-3" contenteditable="false" data-weight="3" style="--x:-122px;--y:-44px;--r:-8deg;">价格压榨</span>
+<span class="wordcloud-item size-3" contenteditable="false" data-weight="3" style="--x:116px;--y:-50px;--r:7deg;">AWD仓</span>
+<span class="wordcloud-item size-3" contenteditable="false" data-weight="3" style="--x:-142px;--y:4px;--r:6deg;">HOU8预约送仓</span>
+<span class="wordcloud-item size-3" contenteditable="false" data-weight="3" style="--x:142px;--y:8px;--r:-5deg;">AGL专线经理</span>
+<span class="wordcloud-item size-3" contenteditable="false" data-weight="3" style="--x:-66px;--y:116px;--r:-4deg;">FBA货件索赔</span>
+<span class="wordcloud-item size-3" contenteditable="false" data-weight="3" style="--x:76px;--y:-104px;--r:4deg;">POD签收证明</span>
+<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:-22px;--y:132px;--r:0deg;">预期数量差异</span>
+<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:24px;--y:-124px;--r:-2deg;">差异Case</span>
+<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:-152px;--y:-86px;--r:-8deg;">货件关闭</span>
+<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:154px;--y:-84px;--r:7deg;">废弃老店铺</span>
+<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:-150px;--y:92px;--r:4deg;">跨店图片复用</span>
+<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:152px;--y:94px;--r:-6deg;">30%重合度</span>
+<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:-86px;--y:-122px;--r:6deg;">店铺关联风控</span>
+<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:92px;--y:132px;--r:-4deg;">品牌挂靠</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:-34px;--y:-142px;--r:8deg;">旧品牌词拆分</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:122px;--y:132px;--r:-6deg;">实体包装合规</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:-126px;--y:132px;--r:5deg;">系统前台延迟</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-hidden="true">变体显示</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-hidden="true">李和TA的朋友们</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-hidden="true">亚马逊运营</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-hidden="true">跨境互助</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-hidden="true">物流异常</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-hidden="true">索赔被拒</span>
 </div>
 <i class="fas fa-tags card-icon"></i>
 </div></div></div>
+<!-- 重要链接与资源卡片 -->
 
+<!-- 活跃之星统计卡片 -->
 
+<!-- 词云卡片 -->
 
 </div>
 </div>
 </div>
+<!-- 全屏思维导图模态框 -->
 <div class="modal-overlay" id="fullscreenModal">
 <div class="modal-content card">
 <button aria-label="关闭全屏" class="modal-close-btn" id="fullscreenCloseBtn">×</button>
@@ -731,24 +842,29 @@
 
     const kityminderData = {
         root: {
-            data: { text: "亚马逊运营与AI工具", expandState: "expand" },
+            data: { text: "亚马逊运营与新规实战指南", expandState: "expand" },
             children: [
-                { data: { text: "亚马逊合规", expandState: "expand" }, children: [
-                    { data: { text: "AI生图标记要求" } },
-                    { data: { text: "FBA临界尺寸重测" } },
-                    { data: { text: "高风险类目商业保险" } }
+                { data: { text: "标题75字符新规与系统异常", expandState: "expand" }, children: [
+                    { data: { text: "90225系统报错（亮点<125字符报错）" } },
+                    { data: { text: "14天过渡期（到期AI自动修改）" } },
+                    { data: { text: "亮点前台变体同步延迟空白" } }
                 ]},
-                { data: { text: "AI工具与订阅", expandState: "expand" }, children: [
-                    { data: { text: "GPT Plus玻利维亚节点" } },
-                    { data: { text: "Vibe Coding自动打标" } }
+                { data: { text: "优惠券连续开设降价陷阱", expandState: "expand" }, children: [
+                    { data: { text: "连续开促销导致折后价无限压缩" } },
+                    { data: { text: "系统强制压价侵蚀卖家利润" } },
+                    { data: { text: "应对策略：停开促销/重置价格间隔" } }
                 ]},
-                { data: { text: "品牌与侵权", expandState: "expand" }, children: [
-                    { data: { text: "国内商标恶意抢注" } },
-                    { data: { text: "海关扣货与联合起诉" } }
+                { data: { text: "物流预约卡顿与索赔难题", expandState: "expand" }, children: [
+                    { data: { text: "AWD卫星仓及HOU8长达两周卡约" } },
+                    { data: { text: "核心解法：主动联系AGL经理协助" } },
+                    { data: { text: "FBA到仓未入库关闭与POD索赔被拒" } },
+                    { data: { text: "申诉技巧：多时段多站点开Case申诉" } }
                 ]},
-                { data: { text: "市场与运营", expandState: "expand" }, children: [
-                    { data: { text: "日本站销量波动" } },
-                    { data: { text: "Woot活动效果评估" } }
+                { data: { text: "多店经营与品牌关联风控", expandState: "expand" }, children: [
+                    { data: { text: "废弃旧店图片复用Listing重合度<30%" } },
+                    { data: { text: "终极风控：先彻底注销A店铺再上架" } },
+                    { data: { text: "封号A品牌词复用实体包装侵权风险" } },
+                    { data: { text: "实战指南：物理层面彻底更换实物外包装" } }
                 ]}
             ]
         },
@@ -1000,22 +1116,32 @@
     });
     if(modalZoomInBtn) modalZoomInBtn.addEventListener('click', () => { if (modalKM) modalKM.execCommand('zoomIn'); });
     if(modalZoomOutBtn) modalZoomOutBtn.addEventListener('click', () => { if (modalKM) modalKM.execCommand('zoomOut'); });
-    if(modalDownloadDiagramBtn) modalDownloadDiagramBtn.addEventListener('click', () => { downloadKityMinderAsSVG(modalKM, '核心概念关系图-全屏', mermaidModalFeedbackMessage); });
+    if(modalDownloadDiagramBtn) modalDownloadDownloadDiagramBtn.addEventListener('click', () => { downloadKityMinderAsSVG(modalKM, '核心概念关系图-全屏', mermaidModalFeedbackMessage); });
     
     function initializeMainKityMinderDiagram(theme) {
         if (mainKityMinderContainer) {
             initializeKityMinder(mainKityMinderContainer, kityminderData, mermaidMainFeedbackMessage, false, theme)
                 .then(kmInstance => mainKM = kmInstance)
                 .catch(err => console.error("初始化主思维导图失败:", err));
+        } else {
+            console.error("KityMinder主容器未找到。");
         }
     }
-    
+
     function initializeAllCharts(theme) {
-        if (activeUsersChartInstance) activeUsersChartInstance.destroy();
-        if (messageDistributionChartInstance) messageDistributionChartInstance.destroy();
+        if (activeUsersChartInstance) {
+            activeUsersChartInstance.destroy();
+        }
+        if (messageDistributionChartInstance) {
+            messageDistributionChartInstance.destroy();
+        }
         
-        if (showActiveUsersChart) createActiveUsersChart(theme);
-        if (showMessageDistributionChart) createMessageDistributionChart(theme);
+        if (showActiveUsersChart) {
+            createActiveUsersChart(theme);
+        }
+        if (showMessageDistributionChart) {
+            createMessageDistributionChart(theme);
+        }
     }
 
     function createActiveUsersChart(theme) {
@@ -1026,11 +1152,11 @@
         const accentSecondaryColor = getCssVariable('--accent-secondary', '#ff8906');
 
         const userData = {
-            labels: ['Andrew_Lee', '菜极熊', '鄂妹', 'Jason', '菠萝吹雪', 'W__'],
-            counts: [14, 14, 11, 11, 7, 6]
+            labels: ['@ ', '@喵了个咪', '@曲艺风', '@🍉', '@Andrew_Lee', '@巧克力曲奇', '@Eric', '@Jesse'],
+            counts: [6, 4, 4, 4, 3, 3, 1, 1]
         };
 
-        const yAxisMax = Math.ceil(Math.max(...userData.counts) * 1.2);
+        const yAxisMax = Math.ceil(Math.max(...userData.counts) * 1.25);
 
         activeUsersChartInstance = new Chart(ctx, {
             type: 'bar',
@@ -1050,18 +1176,30 @@
                 responsive: true,
                 maintainAspectRatio: false,
                 plugins: {
-                    legend: { display: false },
+                    legend: {
+                        display: false
+                    },
                     datalabels: {
-                        anchor: 'end', align: 'top', color: tickColor,
-                        font: { weight: 'bold' }, formatter: Math.round
+                        anchor: 'end',
+                        align: 'top',
+                        color: tickColor,
+                        font: {
+                            weight: 'bold'
+                        },
+                        formatter: Math.round
                     }
                 },
                 scales: {
                     y: {
-                        beginAtZero: true, ticks: { color: tickColor },
-                        grid: { color: gridColor }, max: yAxisMax
+                        beginAtZero: true,
+                        ticks: { color: tickColor },
+                        grid: { color: gridColor },
+                        max: yAxisMax
                     },
-                    x: { ticks: { color: tickColor }, grid: { display: false } }
+                    x: {
+                        ticks: { color: tickColor },
+                        grid: { display: false }
+                    }
                 }
             }
         });
@@ -1073,7 +1211,7 @@
         const gridColor = getCssVariable('--chart-grid-color', 'rgba(0, 0, 0, 0.1)');
         const accentColor = getCssVariable('--accent-blue', '#007EFF');
 
-        const messageData = [0, 0, 0, 0, 0, 0, 5, 12, 25, 35, 42, 28, 15, 10, 18, 22, 10, 5, 2, 1, 0, 2, 0, 0];
+        const messageData = [0, 0, 0, 0, 0, 0, 0, 1, 3, 5, 6, 4, 2, 3, 2, 2, 1, 1, 1, 1, 0, 0, 0, 0];
         
         const yAxisMax = Math.ceil(Math.max(...messageData) * 1.25);
 
@@ -1097,66 +1235,51 @@
                 responsive: true,
                 maintainAspectRatio: false,
                 plugins: {
-                    legend: { display: false },
+                    legend: {
+                        display: false
+                    },
                     datalabels: {
                         align: 'top',
                         backgroundColor: (context) => {
                            return htmlEl.getAttribute('data-theme') === 'dark' ? 'rgba(0,0,0,0.5)' : null;
                         },
-                        borderRadius: 4, color: tickColor,
-                        font: { weight: 'bold' }, formatter: Math.round, padding: 4
+                        borderRadius: 4,
+                        color: tickColor,
+                        font: {
+                            weight: 'bold'
+                        },
+                        formatter: Math.round,
+                        padding: 4
                     }
                 },
                 scales: {
                     y: {
-                        beginAtZero: true, ticks: { color: tickColor },
-                        grid: { color: gridColor }, max: yAxisMax
+                        beginAtZero: true,
+                        ticks: { color: tickColor },
+                        grid: { color: gridColor },
+                        max: yAxisMax
                     },
-                    x: { ticks: { color: tickColor }, grid: { color: gridColor } }
+                    x: {
+                        ticks: { color: tickColor },
+                        grid: { color: gridColor }
+                    }
                 }
             }
         });
     }
 
     function updateCardVisibility(mode) {
-        const qiaomuCards = [
-            document.querySelector('.group-intro-card'),
-            document.querySelector('.more-groups-intro-card'),
-            document.querySelector('.qr-code-container-card')
-        ];
-        const marketingCards = [
-            document.querySelector('.champions-wrapper')
-        ];
         const activeUsersChartCard = document.querySelector('.active-users-chart-card');
         const messageDistributionChartCard = document.querySelector('.message-distribution-chart-card');
         
         const setVisibility = (elements, visible) => {
             const elementsArray = Array.isArray(elements) ? elements : [elements];
             elementsArray.forEach(el => {
-                if (el) el.style.display = visible ? '' : 'none';
+                if (el) {
+                    el.style.display = visible ? '' : 'none';
+                }
             });
         };
-        
-        switch (mode) {
-            case 'general':
-                setVisibility(qiaomuCards, false);
-                setVisibility(marketingCards, false);
-                break;
-            case 'marketing':
-                setVisibility(qiaomuCards, false);
-                setVisibility(marketingCards, true);
-                break;
-            case 'qiaomu':
-                setVisibility(qiaomuCards, true);
-                setVisibility(marketingCards, false);
-                break;
-            case 'education':
-            case 'medical':
-            default:
-                setVisibility(qiaomuCards, true);
-                setVisibility(marketingCards, true);
-                break;
-        }
 
         setVisibility(activeUsersChartCard, showActiveUsersChart);
         setVisibility(messageDistributionChartCard, showMessageDistributionChart);

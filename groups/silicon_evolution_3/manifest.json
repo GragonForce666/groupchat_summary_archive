@@ -2,9 +2,17 @@
   "group_set": "silicon_evolution_3",
   "display_name": "10x效率|硅基进化论③",
   "slug": "silicon_evolution_3",
-  "generated_at": "2026-07-27T09:38:09",
+  "generated_at": "2026-07-28T09:36:57",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260727",
+      "title": "Pro 极高模式算力消耗评测 (示例)",
+      "summary": "今日群聊由 @丁博 的“天才程序员已下线”引发，大家围绕AI工具的Token消耗、ChatGPT Plus与Pro版本的订阅痛点、API中转站替代方案以及GG卡接码等技术话题展开了热烈讨论。今日KOL为 @丁博，其发言引发了广泛共鸣与探讨。",
+      "source_html": "data/20260727/silicon_evolution_3/MODE2_20260727_10x效率_硅基进化论__20260728_093517.html",
+      "path": "groups/silicon_evolution_3/days/20260727.html",
+      "mtime": "2026-07-28T09:36:52"
+    },
     {
       "date": "20260726",
       "title": "李木子推荐：Trae AI工具官网",
@@ -79,6 +87,7 @@
     }
   ],
   "urls": {
+    "20260727": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260727.html",
     "20260726": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260726.html",
     "20260725": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260725.html",
     "20260724": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260724.html",

@@ -2,9 +2,17 @@
   "group_set": "lee_friends",
   "display_name": "Lee和Ta的朋友们（三群合并）",
   "slug": "lee_friends",
-  "generated_at": "2026-08-04T10:11:04",
+  "generated_at": "2026-08-04T10:27:53",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260803",
+      "title": "欧洲税务合规指南",
+      "summary": "今日群聊主要围绕亚马逊运营实操、美客多选品、税务合规及工具使用展开。大家探讨了广告预算报错的排查方法、紫鸟注册店铺的风险、木制品出口欧洲的合规要求，以及卖家精灵评论下载功能的变动。此外，还涉及了买家号抓取数据的限制问题，整体讨论氛围务实，干货满满。",
+      "source_html": "data/20260803/lee_friends/MODE2_20260803_Lee和Ta的朋友们_三群合并__20260804_102518.html",
+      "path": "groups/lee_friends/days/20260803.html",
+      "mtime": "2026-08-04T10:27:47"
+    },
     {
       "date": "20260727",
       "title": "亚马逊品牌注册(Brand Registry)与品牌备案避坑说明：https://brandservices.amazon.com/",
@@ -87,6 +95,7 @@
     }
   ],
   "urls": {
+    "20260803": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260803.html",
     "20260727": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260727.html",
     "20260726": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260726.html",
     "20260725": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260725.html",

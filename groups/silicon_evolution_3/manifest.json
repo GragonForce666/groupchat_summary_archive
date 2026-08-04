@@ -2,9 +2,17 @@
   "group_set": "silicon_evolution_3",
   "display_name": "10x效率|硅基进化论③",
   "slug": "silicon_evolution_3",
-  "generated_at": "2026-08-04T10:17:03",
+  "generated_at": "2026-08-04T10:33:05",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260803",
+      "title": "AGI杠杆理论深度解析",
+      "summary": "今日群聊围绕AI大模型API成本、AI辅助编程工具体验、AI相关书籍出版现状、行业巨头算力资源分配以及本地视频生成等前沿话题展开了深入讨论。今日推荐KOL为 @MaNia 和 @絮絮 ，他们分别在API成本分析与本地视频生成技术方面提供了极具价值的见解。",
+      "source_html": "data/20260803/silicon_evolution_3/MODE2_20260803_10x效率_硅基进化论__20260804_103031.html",
+      "path": "groups/silicon_evolution_3/days/20260803.html",
+      "mtime": "2026-08-04T10:32:59"
+    },
     {
       "date": "20260727",
       "title": "Pro 极高模式算力消耗评测 (示例)",
@@ -87,6 +95,7 @@
     }
   ],
   "urls": {
+    "20260803": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260803.html",
     "20260727": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260727.html",
     "20260726": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260726.html",
     "20260725": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260725.html",

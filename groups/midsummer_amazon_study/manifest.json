@@ -2,9 +2,17 @@
   "group_set": "midsummer_amazon_study",
   "display_name": "盛夏-亚马逊学习交流群",
   "slug": "midsummer_amazon_study",
-  "generated_at": "2026-08-04T10:14:03",
+  "generated_at": "2026-08-04T10:30:31",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260803",
+      "title": "USPTO美国专利商标局查询",
+      "summary": "今日群聊聚焦亚马逊日常运营实操，核心KOL @豆腐 深度分享了价格折扣与参考价恢复的实战经验。此外，群友们围绕店铺绩效通知、新店广告限额、链接异常变更及FBA发货等热点问题展开了互助讨论，展现了浓厚的学习与交流氛围。",
+      "source_html": "data/20260803/midsummer_amazon_study/MODE2_20260803_盛夏-亚马逊学习交流群_20260804_102753.html",
+      "path": "groups/midsummer_amazon_study/days/20260803.html",
+      "mtime": "2026-08-04T10:30:25"
+    },
     {
       "date": "20260727",
       "title": "盛夏-亚马逊学习交流群日报",
@@ -87,6 +95,7 @@
     }
   ],
   "urls": {
+    "20260803": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260803.html",
     "20260727": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260727.html",
     "20260726": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260726.html",
     "20260725": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260725.html",

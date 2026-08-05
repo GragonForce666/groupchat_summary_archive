@@ -2,9 +2,17 @@
   "group_set": "midsummer_amazon_study",
   "display_name": "盛夏-亚马逊学习交流群",
   "slug": "midsummer_amazon_study",
-  "generated_at": "2026-08-04T10:30:31",
+  "generated_at": "2026-08-05T11:04:19",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260804",
+      "title": "亚马逊卖家官方论坛",
+      "summary": "今日群聊围绕亚马逊运营实操展开，KOL @Taemin's Sirius 深入解答了修改标题对出单稳定性的影响。其他热议话题包括欧洲站广告费结算周期、奥特莱斯促销的低CPC捡漏广告策略、TikTok Shop封店风险、加拿大站婴儿产品误判申诉，以及多品牌合并发货的报关注意事项。大家在吐槽单量异常的同时，也积极分享了实用的运营技巧。",
+      "source_html": "data/20260804/midsummer_amazon_study/MODE2_20260804_盛夏-亚马逊学习交流群_20260805_110134.html",
+      "path": "groups/midsummer_amazon_study/days/20260804.html",
+      "mtime": "2026-08-05T11:04:14"
+    },
     {
       "date": "20260803",
       "title": "USPTO美国专利商标局查询",
@@ -95,6 +103,7 @@
     }
   ],
   "urls": {
+    "20260804": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260804.html",
     "20260803": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260803.html",
     "20260727": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260727.html",
     "20260726": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260726.html",

@@ -2,9 +2,17 @@
   "group_set": "lee_friends",
   "display_name": "Lee和Ta的朋友们（三群合并）",
   "slug": "lee_friends",
-  "generated_at": "2026-08-04T10:27:53",
+  "generated_at": "2026-08-05T11:01:34",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260804",
+      "title": "ExifTool (图片元数据编辑工具)",
+      "summary": "今日群聊主要围绕亚马逊运营的薪资待遇、跳槽建议、AI在平台上的应用及政策影响，以及税务报表的下载实操展开了热烈讨论。大家分享了真实的职场经历与实用工具。",
+      "source_html": "data/20260804/lee_friends/MODE2_20260804_Lee和Ta的朋友们_三群合并__20260805_105926.html",
+      "path": "groups/lee_friends/days/20260804.html",
+      "mtime": "2026-08-05T11:01:27"
+    },
     {
       "date": "20260803",
       "title": "欧洲税务合规指南",
@@ -95,6 +103,7 @@
     }
   ],
   "urls": {
+    "20260804": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260804.html",
     "20260803": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260803.html",
     "20260727": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260727.html",
     "20260726": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260726.html",

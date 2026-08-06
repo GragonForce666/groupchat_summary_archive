@@ -2,9 +2,17 @@
   "group_set": "lee_friends",
   "display_name": "Lee和Ta的朋友们（三群合并）",
   "slug": "lee_friends",
-  "generated_at": "2026-08-05T11:01:34",
+  "generated_at": "2026-08-06T09:33:53",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260805",
+      "title": "亚马逊库存移除指南",
+      "summary": "今日群聊主要围绕欧洲包装法与VAT合规、亚马逊广告费返还政策、旺季物流与AWD中转、冗余库存清理方案、Listing埋词权重以及SKU/ASIN共享规则等核心电商运营话题展开。群友们积极分享实操经验与避坑指南，讨论氛围热烈。",
+      "source_html": "data/20260805/lee_friends/MODE2_20260805_Lee和Ta的朋友们_三群合并__20260806_093127.html",
+      "path": "groups/lee_friends/days/20260805.html",
+      "mtime": "2026-08-06T09:33:48"
+    },
     {
       "date": "20260804",
       "title": "ExifTool (图片元数据编辑工具)",
@@ -103,6 +111,7 @@
     }
   ],
   "urls": {
+    "20260805": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260805.html",
     "20260804": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260804.html",
     "20260803": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260803.html",
     "20260727": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260727.html",

@@ -2,9 +2,17 @@
   "group_set": "midsummer_amazon_study",
   "display_name": "盛夏-亚马逊学习交流群",
   "slug": "midsummer_amazon_study",
-  "generated_at": "2026-08-05T11:04:19",
+  "generated_at": "2026-08-06T09:36:06",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260805",
+      "title": "盛夏-亚马逊学习交流群 日报",
+      "summary": "今日群聊主要围绕亚马逊运营实操展开，热点话题包括链接翻新方法、主图AI标识合规要求、欧洲站运费尺寸更新、意大利站点企业购发票问题以及广告分时预算设置等实操问题。群友们积极分享经验与工具，讨论氛围热烈。",
+      "source_html": "data/20260805/midsummer_amazon_study/MODE2_20260805_盛夏-亚马逊学习交流群_20260806_093353.html",
+      "path": "groups/midsummer_amazon_study/days/20260805.html",
+      "mtime": "2026-08-06T09:35:57"
+    },
     {
       "date": "20260804",
       "title": "亚马逊卖家官方论坛",
@@ -103,6 +111,7 @@
     }
   ],
   "urls": {
+    "20260805": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260805.html",
     "20260804": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260804.html",
     "20260803": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260803.html",
     "20260727": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260727.html",

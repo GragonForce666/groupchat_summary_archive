@@ -2,9 +2,17 @@
   "group_set": "lee_friends",
   "display_name": "Lee和Ta的朋友们（三群合并）",
   "slug": "lee_friends",
-  "generated_at": "2026-08-07T09:30:35",
+  "generated_at": "2026-08-08T09:33:45",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260807",
+      "title": "亚马逊 I/X 系列仓点的入仓政策说明",
+      "summary": "今日群聊讨论热烈，主要围绕亚马逊运营中的实际痛点展开。大家深入探讨了订单统计时间的变化、差评处理的难点、品牌备案异常的应对策略，以及亚马逊内部仓库建仓的系统BUG。此外，关于运营与开发部门在产品质量和退货率上的矛盾引发了广泛共鸣，同时群友们也分享了提高转化率的多个关键因素和自动化工具的使用风险。",
+      "source_html": "data/20260807/lee_friends/MODE2_20260807_Lee和Ta的朋友们_三群合并__20260808_093127.html",
+      "path": "groups/lee_friends/days/20260807.html",
+      "mtime": "2026-08-08T09:33:40"
+    },
     {
       "date": "20260805",
       "title": "亚马逊库存移除指南",
@@ -111,6 +119,7 @@
     }
   ],
   "urls": {
+    "20260807": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260807.html",
     "20260805": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260805.html",
     "20260804": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260804.html",
     "20260803": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260803.html",

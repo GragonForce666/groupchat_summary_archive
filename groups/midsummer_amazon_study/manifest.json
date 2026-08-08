@@ -2,9 +2,17 @@
   "group_set": "midsummer_amazon_study",
   "display_name": "盛夏-亚马逊学习交流群",
   "slug": "midsummer_amazon_study",
-  "generated_at": "2026-08-07T09:30:39",
+  "generated_at": "2026-08-08T09:36:16",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260807",
+      "title": "新品上架合规性审核(100521报错)申诉模板（暂无真实链接）",
+      "summary": "今日群聊讨论热烈，核心聚焦于亚马逊近期的系统异常与政策变动。卖家们广泛交流了广告效果波动、内部仓建仓Bug、视频验证流程、AI图片标签合规要求以及加拿大站高退货率等实操痛点。群内KOL如@浅蓝丶、@好多米积极分享经验，为群友提供了宝贵的应对策略与见解。",
+      "source_html": "data/20260807/midsummer_amazon_study/MODE2_20260807_盛夏-亚马逊学习交流群_20260808_093345.html",
+      "path": "groups/midsummer_amazon_study/days/20260807.html",
+      "mtime": "2026-08-08T09:36:11"
+    },
     {
       "date": "20260805",
       "title": "盛夏-亚马逊学习交流群 日报",
@@ -111,6 +119,7 @@
     }
   ],
   "urls": {
+    "20260807": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260807.html",
     "20260805": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260805.html",
     "20260804": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260804.html",
     "20260803": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260803.html",

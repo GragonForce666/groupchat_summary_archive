@@ -2,118 +2,19 @@
   "group_set": "silicon_evolution_3",
   "display_name": "10x效率|硅基进化论③",
   "slug": "silicon_evolution_3",
-  "generated_at": "2026-08-08T09:38:11",
+  "generated_at": "2026-08-12T09:01:37",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
     {
-      "date": "20260807",
-      "title": "亚马逊商品链接分享",
-      "summary": "今日群内讨论轻松，主要围绕一个亚马逊链接展开，大家分享了周末前的轻松时刻。",
-      "source_html": "data/20260807/silicon_evolution_3/MODE2_20260807_10x效率_硅基进化论__20260808_093616.html",
-      "path": "groups/silicon_evolution_3/days/20260807.html",
-      "mtime": "2026-08-08T09:38:07"
-    },
-    {
-      "date": "20260803",
-      "title": "AGI杠杆理论深度解析",
-      "summary": "今日群聊围绕AI大模型API成本、AI辅助编程工具体验、AI相关书籍出版现状、行业巨头算力资源分配以及本地视频生成等前沿话题展开了深入讨论。今日推荐KOL为 @MaNia 和 @絮絮 ，他们分别在API成本分析与本地视频生成技术方面提供了极具价值的见解。",
-      "source_html": "data/20260803/silicon_evolution_3/MODE2_20260803_10x效率_硅基进化论__20260804_103031.html",
-      "path": "groups/silicon_evolution_3/days/20260803.html",
-      "mtime": "2026-08-04T10:32:59"
-    },
-    {
-      "date": "20260727",
-      "title": "Pro 极高模式算力消耗评测 (示例)",
-      "summary": "今日群聊由 @丁博 的“天才程序员已下线”引发，大家围绕AI工具的Token消耗、ChatGPT Plus与Pro版本的订阅痛点、API中转站替代方案以及GG卡接码等技术话题展开了热烈讨论。今日KOL为 @丁博，其发言引发了广泛共鸣与探讨。",
-      "source_html": "data/20260727/silicon_evolution_3/MODE2_20260727_10x效率_硅基进化论__20260728_093517.html",
-      "path": "groups/silicon_evolution_3/days/20260727.html",
-      "mtime": "2026-07-28T09:36:52"
-    },
-    {
-      "date": "20260726",
-      "title": "李木子推荐：Trae AI工具官网",
-      "summary": "今日群聊围绕着AI工具的更新与使用体验展开了热烈讨论。核心KOL @MaNia 和 @硅基妙妙屋- Morgan 分享了关于Grok、Codex、GLM 5.2等工具的深度见解与实操经验。大家对AI工具的限制、注册机的使用、以及各类羊毛福利表现出极高兴趣，展现了群内浓厚的“硅基进化”探索氛围。",
-      "source_html": "data/20260726/silicon_evolution_3/MODE2_20260726_10x效率_硅基进化论__20260727_093556.html",
-      "path": "groups/silicon_evolution_3/days/20260726.html",
-      "mtime": "2026-07-27T09:38:04"
-    },
-    {
-      "date": "20260725",
-      "title": "SIF 官网 (亚马逊运营工具)",
-      "summary": "今日群聊聚焦于AI工具的最新动态与实操经验。大家热烈讨论了Codex与ChatGPT的同步更新、Grok模型的图像生成限制、以及各类AI工具（如Kimi、GLM、Trae）的性能对比与福利。同时，针对亚马逊运营工具（SIF、H10）的MCP插件应用也进行了深入交流。群内技术分享氛围浓厚，干货满满。",
-      "source_html": "data/20260725/silicon_evolution_3/MODE2_20260725_10x效率_硅基进化论__20260726_094038.html",
-      "path": "groups/silicon_evolution_3/days/20260725.html",
-      "mtime": "2026-07-26T09:42:45"
-    },
-    {
-      "date": "20260724",
-      "title": "飞书文档: 梁文锋投资者交流会-文字稿.pdf",
-      "summary": "今日群聊聚焦于各类AI工具的更新与体验，包括codex的自动更新问题、grok的内容限制、Sif MCP及Hermes的流量分析应用、Gemini改图的token消耗，以及glm 5.2在实际场景中的表现。群友们积极分享工具使用心得、薅羊毛资源及行业前沿资讯，展现了浓厚的“硅基进化”氛围。",
-      "source_html": "data/20260724/silicon_evolution_3/MODE2_20260724_10x效率_硅基进化论__20260725_093542.html",
-      "path": "groups/silicon_evolution_3/days/20260724.html",
-      "mtime": "2026-07-25T09:37:42"
-    },
-    {
-      "date": "20260723",
-      "title": "Grok AI 官网",
-      "summary": "今日群聊由KOL @硅基妙妙屋- Morgan 领衔，围绕AI工具（Codex、Grok、Gemini等）的最新更新与实操技巧展开了热烈讨论。大家不仅分享了解决Codex登录问题的方法，还探讨了Sif MCP在电商数据分析中的应用。此外，腾讯新推出的设计平台Miora也引发了“薅羊毛”热潮。整体氛围技术硬核且充满互助精神。",
-      "source_html": "data/20260723/silicon_evolution_3/MODE2_20260723_10x效率_硅基进化论__20260724_093924.html",
-      "path": "groups/silicon_evolution_3/days/20260723.html",
-      "mtime": "2026-07-24T09:41:45"
-    },
-    {
-      "date": "20260722",
-      "title": "Codex CLI 安装与配置指南",
-      "summary": "今日群聊围绕AI工具的最新更新展开，特别是Codex的同步问题、Grok的内容限制、以及Gemini和Miora在绘图上的消耗。同时，群友们也探讨了跨境电商工具（如SIF、Helium10）的使用体验，以及科学上网的必要性。@谢谢你提醒我 和 @硅基妙妙屋- Morgan 贡献了大量高价值的工具测试反馈与解决方案。",
-      "source_html": "data/20260722/silicon_evolution_3/MODE2_20260722_10x效率_硅基进化论__20260723_093543.html",
-      "path": "groups/silicon_evolution_3/days/20260722.html",
-      "mtime": "2026-07-23T09:36:50"
-    },
-    {
-      "date": "20260721",
-      "title": "ChatGPT: Veterans Claim",
-      "summary": "今日群聊由KOL @硅基妙妙屋- Morgan 领衔，大家围绕Codex更新同步、AI模型实测体验、科学上网故障排查以及亚马逊选品工具MCP应用展开了热烈讨论。群友们分享了解决Codex登录问题的实用方法，并探讨了中美医疗差异等生活话题，展现了“蝗虫”文化对新工具的敏锐嗅觉与互助精神。",
-      "source_html": "data/20260721/silicon_evolution_3/MODE2_20260721_10x效率_硅基进化论__20260722_093510.html",
-      "path": "groups/silicon_evolution_3/days/20260721.html",
-      "mtime": "2026-07-22T09:37:11"
-    },
-    {
-      "date": "20260720",
-      "title": "SIF 跨境电商工具",
-      "summary": "今日群聊主要围绕Codex的自动更新与同步功能、各类AI模型（Kimi, GPT, Claude, Grok）的使用体验与限制、科学上网的必要性，以及跨境电商工具MCP的比较展开了深入探讨。群友们积极分享排障经验与工具评测，展现了对AI效率工具的高度关注与依赖。",
-      "source_html": "data/20260720/silicon_evolution_3/MODE2_20260720_10x效率_硅基进化论__20260721_100513.html",
-      "path": "groups/silicon_evolution_3/days/20260720.html",
-      "mtime": "2026-07-21T10:07:00"
-    },
-    {
-      "date": "20260719",
-      "title": "GitHub Copilot",
-      "summary": "今日群聊主要围绕 @谢谢你提醒我 提出的 Codex 更新及数据同步问题展开，大家分享了盲盒式更新体验。同时， @丁博 提起了对 Kimi k3 模型的讨论，探讨了国产模型的实用性与部分工具的访问风险。",
-      "source_html": "data/20260719/silicon_evolution_3/MODE2_20260719_10x效率_硅基进化论__20260720_143205.html",
-      "path": "groups/silicon_evolution_3/days/20260719.html",
-      "mtime": "2026-07-20T14:34:21"
-    },
-    {
-      "date": "20260716",
-      "title": "Ultra 模型相关资讯搜索",
-      "summary": "今日群聊围绕AI工具更新与模型体验展开。KOL @谢谢你提醒我 引发了关于Codex自动更新及数据同步的热烈讨论。大家还交流了Kimi的K3模型使用感受，以及GPT会员与国产模型的价值对比，展现了群友对前沿AI工具的高度关注与实践探索。",
-      "source_html": "data/20260716/silicon_evolution_3/MODE2_20260716_10x效率_硅基进化论__20260717_172803.html",
-      "path": "groups/silicon_evolution_3/days/20260716.html",
-      "mtime": "2026-07-17T17:30:21"
+      "date": "20260811",
+      "title": "硅基流动 (参考)",
+      "summary": "今日群内主要围绕腾讯AI产品Workbuddy的深度使用体验展开讨论，大家对其功能表示认可。同时，群友们也交流了关于GPT账号验证、Codex封号以及GG卡失效等账号风控问题。",
+      "source_html": "data/20260811/silicon_evolution_3/MODE2_20260811_10x效率_硅基进化论__20260812_085858.html",
+      "path": "groups/silicon_evolution_3/days/20260811.html",
+      "mtime": "2026-08-12T09:01:32"
     }
   ],
   "urls": {
-    "20260807": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260807.html",
-    "20260803": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260803.html",
-    "20260727": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260727.html",
-    "20260726": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260726.html",
-    "20260725": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260725.html",
-    "20260724": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260724.html",
-    "20260723": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260723.html",
-    "20260722": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260722.html",
-    "20260721": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260721.html",
-    "20260720": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260720.html",
-    "20260719": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260719.html",
-    "20260716": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260716.html"
+    "20260811": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260811.html"
   }
 }

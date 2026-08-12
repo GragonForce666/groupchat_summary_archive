@@ -2,136 +2,28 @@
   "group_set": "lee_friends",
   "display_name": "Lee和Ta的朋友们（三群合并）",
   "slug": "lee_friends",
-  "generated_at": "2026-08-08T09:33:45",
+  "generated_at": "2026-08-12T08:56:35",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
     {
-      "date": "20260807",
-      "title": "亚马逊 I/X 系列仓点的入仓政策说明",
-      "summary": "今日群聊讨论热烈，主要围绕亚马逊运营中的实际痛点展开。大家深入探讨了订单统计时间的变化、差评处理的难点、品牌备案异常的应对策略，以及亚马逊内部仓库建仓的系统BUG。此外，关于运营与开发部门在产品质量和退货率上的矛盾引发了广泛共鸣，同时群友们也分享了提高转化率的多个关键因素和自动化工具的使用风险。",
-      "source_html": "data/20260807/lee_friends/MODE2_20260807_Lee和Ta的朋友们_三群合并__20260808_093127.html",
-      "path": "groups/lee_friends/days/20260807.html",
-      "mtime": "2026-08-08T09:33:40"
+      "date": "20260811",
+      "title": "西柚 官网 (群友提及的运营工具)",
+      "summary": "今日群聊围绕AI工具在亚马逊运营中的深度应用展开了热烈讨论。核心KOL @Andrew_Lee 分享了大量关于构建AI工作流、SOP落地、数据分析预警的实操经验，强调了“干中学”和结合具体业务场景的重要性。此外，群友们还探讨了亚马逊店铺视频验证、广告推广费占比预估、入库缺陷费申诉等实务问题。",
+      "source_html": "data/20260811/lee_friends/MODE2_20260811_Lee和Ta的朋友们_三群合并__20260812_085357.html",
+      "path": "groups/lee_friends/days/20260811.html",
+      "mtime": "2026-08-12T08:56:30"
     },
     {
-      "date": "20260805",
-      "title": "亚马逊库存移除指南",
-      "summary": "今日群聊主要围绕欧洲包装法与VAT合规、亚马逊广告费返还政策、旺季物流与AWD中转、冗余库存清理方案、Listing埋词权重以及SKU/ASIN共享规则等核心电商运营话题展开。群友们积极分享实操经验与避坑指南，讨论氛围热烈。",
-      "source_html": "data/20260805/lee_friends/MODE2_20260805_Lee和Ta的朋友们_三群合并__20260806_093127.html",
-      "path": "groups/lee_friends/days/20260805.html",
-      "mtime": "2026-08-06T09:33:48"
-    },
-    {
-      "date": "20260804",
-      "title": "ExifTool (图片元数据编辑工具)",
-      "summary": "今日群聊主要围绕亚马逊运营的薪资待遇、跳槽建议、AI在平台上的应用及政策影响，以及税务报表的下载实操展开了热烈讨论。大家分享了真实的职场经历与实用工具。",
-      "source_html": "data/20260804/lee_friends/MODE2_20260804_Lee和Ta的朋友们_三群合并__20260805_105926.html",
-      "path": "groups/lee_friends/days/20260804.html",
-      "mtime": "2026-08-05T11:01:27"
-    },
-    {
-      "date": "20260803",
-      "title": "欧洲税务合规指南",
-      "summary": "今日群聊主要围绕亚马逊运营实操、美客多选品、税务合规及工具使用展开。大家探讨了广告预算报错的排查方法、紫鸟注册店铺的风险、木制品出口欧洲的合规要求，以及卖家精灵评论下载功能的变动。此外，还涉及了买家号抓取数据的限制问题，整体讨论氛围务实，干货满满。",
-      "source_html": "data/20260803/lee_friends/MODE2_20260803_Lee和Ta的朋友们_三群合并__20260804_102518.html",
-      "path": "groups/lee_friends/days/20260803.html",
-      "mtime": "2026-08-04T10:27:47"
-    },
-    {
-      "date": "20260727",
-      "title": "亚马逊品牌注册(Brand Registry)与品牌备案避坑说明：https://brandservices.amazon.com/",
-      "summary": "本日群聊讨论交流极其热烈且干货密布，核心围绕**亚马逊平台新规应对、促销压价痛点、物流预约异常与合规风控**展开。**今日KOL特别推荐：@Eric**，他针对今日生效的亚马逊标题75字符限制新规及90225系统报错给予了最权威、结构化的深度解答。此外，群友们实战探讨了优惠券连续开设导致系统无限压价的致命陷阱、AWD仓及HOU8严重卡约的解法（寻求AGL经理协助）、FBA到仓未入库且POD被拒赔的申诉技巧，以及老店图片素材与品牌词复用的风控边界。全天交流互助氛围浓厚，展现了极高的实战参考价值！",
-      "source_html": "data/20260727/lee_friends/MODE2_20260727_Lee和Ta的朋友们_三群合并__20260728_093055.html",
-      "path": "groups/lee_friends/days/20260727.html",
-      "mtime": "2026-07-28T09:33:26"
-    },
-    {
-      "date": "20260726",
-      "title": "EXIF Tools (用于验证AI图片元数据)",
-      "summary": "今日群聊由KOL @胡程 领衔，深入探讨了亚马逊运营在当前内卷环境下的出路，提出“六边形战士”与副业模式。同时，群友们针对税务合规（0申报风险）、AI生图打标新规、奇葩的运营提成算法、以及近期股市大跌等话题展开了热烈讨论。",
-      "source_html": "data/20260726/lee_friends/MODE2_20260726_Lee和Ta的朋友们_三群合并__20260727_093111.html",
-      "path": "groups/lee_friends/days/20260726.html",
-      "mtime": "2026-07-27T09:33:24"
-    },
-    {
-      "date": "20260725",
-      "title": "AI图片元数据验证工具",
-      "summary": "今日群聊围绕亚马逊运营的多个核心维度展开深度讨论。KOL @胡程 提出了“六边形战士”与副业防御策略，引发广泛共鸣；@Andrew_Lee 与多位卖家深入探讨了9810报关与财税合规实操。此外，亚马逊AI生图标记新规、新版后台Bug、运营提成算法以及近期的股市波动也成为群内热议焦点。",
-      "source_html": "data/20260725/lee_friends/MODE2_20260725_Lee和Ta的朋友们_三群合并__20260726_093104.html",
-      "path": "groups/lee_friends/days/20260725.html",
-      "mtime": "2026-07-26T09:33:25"
-    },
-    {
-      "date": "20260724",
-      "title": "PICC / 大地保险 (亚马逊商业保险推荐)",
-      "summary": "今日群聊内容丰富，核心聚焦于亚马逊运营合规与策略优化。大家深入探讨了亚马逊对AI生成图片的最新标记要求及应对方案、FBA大件配送费用的临界尺寸问题、店铺商业保险的购买必要性。此外，群友还分享了低成本订阅GPT Plus的渠道，讨论了国内商标被恶意抢注导致海关扣货的维权途径，以及近期日本站销量波动和Woot活动的实际效果。",
-      "source_html": "data/20260724/lee_friends/MODE2_20260724_Lee和Ta的朋友们_三群合并__20260728_083810.html",
-      "path": "groups/lee_friends/days/20260724.html",
-      "mtime": "2026-07-28T08:39:46"
-    },
-    {
-      "date": "20260723",
-      "title": "微信文章链接",
-      "summary": "今日群聊讨论热烈，核心聚焦于亚马逊运营实操（如标题新规、变体拆分）、跨境税务合规（0申报与增值税风险）、以及个人卖家在当前大环境下的生存策略。此外，群友们也对近期股市表现进行了热烈交流。",
-      "source_html": "data/20260723/lee_friends/MODE2_20260723_Lee和Ta的朋友们_三群合并__20260724_093400.html",
-      "path": "groups/lee_friends/days/20260723.html",
-      "mtime": "2026-07-24T09:36:34"
-    },
-    {
-      "date": "20260722",
-      "title": "LinkFox AI渠道专属推广链接",
-      "summary": "今日群聊由 @胡程 主导，深入探讨了亚马逊“六边形战士”与副业的平衡，以及税务合规等高价值话题。大家对大麦进场、利润压缩、9810报关单免税实操等进行了热烈交流。此外，股市大跌、ChatGPT Plus订阅等日常话题也引发了广泛共鸣。整体氛围活跃，干货满满，展现了跨境电商从业者在合规与内卷环境下的深刻思考。",
-      "source_html": "data/20260722/lee_friends/MODE2_20260722_Lee和Ta的朋友们_三群合并__20260723_093103.html",
-      "path": "groups/lee_friends/days/20260722.html",
-      "mtime": "2026-07-23T09:33:09"
-    },
-    {
-      "date": "20260721",
-      "title": "中国法律服务网律师查询",
-      "summary": "今日群聊内容丰富，涵盖了亚马逊中小卖家生存现状、税务合规风险、9810报关实操、股市行情吐槽以及ChatGPT订阅等多个热门话题。群友们积极分享经验，讨论深入，展现了极高的专业素养与互助精神。",
-      "source_html": "data/20260721/lee_friends/MODE2_20260721_Lee和Ta的朋友们_三群合并__20260722_111549.html",
-      "path": "groups/lee_friends/days/20260721.html",
-      "mtime": "2026-07-22T11:18:32"
-    },
-    {
-      "date": "20260720",
-      "title": "中国法律服务网（查询律师信息）",
-      "summary": "今日群聊讨论热烈，主要聚焦于亚马逊运营合规（税务、0申报风险、大卖竞争）、股市行情吐槽（大A、纳指、黄金下跌）以及ChatGPT Plus订阅与美区苹果ID支付等实用技巧。群友们在吐槽与互助中展现了极高的活跃度与专业性。",
-      "source_html": "data/20260720/lee_friends/MODE2_20260720_Lee和Ta的朋友们_三群合并__20260721_100149.html",
-      "path": "groups/lee_friends/days/20260720.html",
-      "mtime": "2026-07-21T10:03:25"
-    },
-    {
-      "date": "20260719",
-      "title": "知无不言：关于投资与副业的探讨",
-      "summary": "今日群聊围绕亚马逊合规与税务风险、大麦降维打击与中小卖家生存之道、副业的意义与创业风险等话题展开了深度探讨。KOL @胡程 输出了大量关于税务0申报风险、六边形战士模式的深刻见解，引发群友强烈共鸣。此外，群内还交流了ChatGPT Plus订阅教程、股市行情吐槽及亚马逊标题新规等实用信息。",
-      "source_html": "data/20260719/lee_friends/MODE2_20260719_Lee和Ta的朋友们_三群合并__20260720_142704.html",
-      "path": "groups/lee_friends/days/20260719.html",
-      "mtime": "2026-07-20T14:29:19"
-    },
-    {
-      "date": "20260716",
-      "title": "跨境电商论坛问答：https://www.wearesellers.com/question/121108",
-      "summary": "今日群聊围绕亚马逊中小卖家生存现状、大卖降维打击、税务合规风险（0申报与增值税）、ChatGPT Plus订阅难题、以及股市投资吐槽等话题展开了深度探讨。KOL @胡程 输出了大量关于副业、合规与六边形战士的高价值观点，引发群友强烈共鸣。",
-      "source_html": "data/20260716/lee_friends/MODE2_20260716_Lee和Ta的朋友们_三群合并__20260717_170857.html",
-      "path": "groups/lee_friends/days/20260716.html",
-      "mtime": "2026-07-17T17:11:28"
+      "date": "20260810",
+      "title": "跨境电商9810出口报关指南：https://www.customs.gov.cn/",
+      "summary": "今日群聊主要围绕财税2.0发票风险、亚马逊客服转人工技巧、9810推单系统及自动化程序开发等话题展开。今日KOL推荐为 @海川 和 @Andrew_Lee ，海川分享了关于使用Codex开发推单程序的见解，展现了较高的技术启发性；Andrew_Lee则以幽默活跃了群内气氛。",
+      "source_html": "data/20260810/lee_friends/MODE2_20260810_Lee和Ta的朋友们_三群合并__20260811_175858.html",
+      "path": "groups/lee_friends/days/20260810.html",
+      "mtime": "2026-08-11T18:01:44"
     }
   ],
   "urls": {
-    "20260807": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260807.html",
-    "20260805": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260805.html",
-    "20260804": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260804.html",
-    "20260803": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260803.html",
-    "20260727": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260727.html",
-    "20260726": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260726.html",
-    "20260725": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260725.html",
-    "20260724": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260724.html",
-    "20260723": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260723.html",
-    "20260722": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260722.html",
-    "20260721": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260721.html",
-    "20260720": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260720.html",
-    "20260719": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260719.html",
-    "20260716": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260716.html"
+    "20260811": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260811.html",
+    "20260810": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260810.html"
   }
 }

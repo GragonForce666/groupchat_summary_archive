@@ -190,7 +190,8 @@
         .active-users-chart-card,
         .message-distribution-chart-card,
         .topic-cards-wrapper,
-        .mindmap-card-container {
+        .mindmap-card-container,
+        .champions-wrapper {
             grid-column: 1 / -1;
         }
         [data-theme="dark"] .main-card {
@@ -202,7 +203,7 @@
         .stats-card { grid-column: span 7; }
         .wordcloud-card { grid-column: span 5; }
         
-        .topic-cards-wrapper {
+        .topic-cards-wrapper, .champions-wrapper {
             display: grid;
             grid-template-columns: repeat(12, 1fr); 
             gap: var(--grid-gap);
@@ -211,6 +212,10 @@
         .topic-card { grid-column: span 6; min-height: 250px; }
         .topic-card > .topic-card-content-wrapper { flex-grow: 1; padding-bottom: 1rem; }
         .topic-cards-wrapper > .topic-card:nth-last-child(1):nth-child(odd) { grid-column: span 12; }
+
+        .champion-card {
+            grid-column: span 6;
+        }
 
         .main-card h1 { text-align: center; }
         .main-card .date { text-align: center; }
@@ -253,6 +258,8 @@
         .user-stats-table .user-name-col { width: 25%; font-weight: 500; word-break: break-all; }
         .user-stats-table .message-count-col { text-align: center; width: 15%; white-space: nowrap; }
         .user-stats-table .contribution-col { width: 60%; word-break: break-all; }
+        .user-stats-table .stat-col { text-align: center; width: 20%; white-space: nowrap; }
+        .user-stats-table .description-col { width: 55%; word-break: break-all; }
         .user-stats-table tr:last-child td { border-bottom: none; }
 
         .wordcloud { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; padding: 20px 0; }
@@ -314,37 +321,38 @@
             from { opacity: 0; transform: translateY(20px); } 
             to { opacity: 1; transform: translateY(0); } 
         }
-        .card {
-            animation: fadeIn 0.5s ease forwards;
-        }
+        .card { animation: fadeIn 0.5s ease forwards; }
         .main-card { animation-delay: 0.1s; }
         .active-users-chart-card { animation-delay: 0.2s; }
         .message-distribution-chart-card { animation-delay: 0.3s; }
         .topic-cards-wrapper .topic-card:nth-child(1) { animation-delay: 0.4s; }
         .topic-cards-wrapper .topic-card:nth-child(2) { animation-delay: 0.5s; }
         .mindmap-card-container { animation-delay: 0.6s; }
-        .quote-card { animation-delay: 0.7s; }
-        .links-card { animation-delay: 0.8s; }
-        .stats-card { animation-delay: 0.9s; }
-        .wordcloud-card { animation-delay: 1.0s; }
+        .champions-wrapper { animation-delay: 0.7s; }
+        .quote-card { animation-delay: 0.8s; }
+        .links-card { animation-delay: 0.9s; }
+        .stats-card { animation-delay: 1.0s; }
+        .wordcloud-card { animation-delay: 1.1s; }
 
         @media (max-width: 768px) {
             #page-container { padding: 10px; }
             h1 { font-size: 1.8rem; } h2 { font-size: 1.4rem; } h3 { font-size: 1.1rem; }
             .grid-container { grid-template-columns: 1fr; }
             .main-card, .active-users-chart-card, .message-distribution-chart-card, .topic-cards-wrapper, .mindmap-card-container,
-            .quote-card, .links-card, .stats-card, .wordcloud-card {
+            .champions-wrapper, .quote-card, .links-card, .stats-card, .wordcloud-card {
                 grid-column: 1 / -1;
             }
             .topic-cards-wrapper { display: flex; flex-direction: column; gap: var(--grid-gap); } 
             .topic-card { width: 100%; min-height: auto; }
+            .champions-wrapper { grid-template-columns: 1fr; }
+            .champion-card { grid-column: 1 / -1; }
             .topic-card > .topic-card-content-wrapper { padding-bottom: 1rem; }
             .topic-mentions { position: static; margin-top: 10px; margin-bottom: 10px; text-align: left; }
             .card-icon { font-size: 2.5rem; opacity:0.05; } 
             .mindmap-card-container .card-icon { bottom: 15px; right: 15px; }
             .user-stats-table th, .user-stats-table td { padding: 0.5rem 0.25rem; font-size: 0.8rem; }
             .user-stats-table td { text-align: left; } 
-            .user-stats-table .message-count-col { text-align: center; } 
+            .user-stats-table .message-count-col, .user-stats-table .stat-col { text-align: center; } 
             .mindmap-card-container { padding: 15px; } 
             .mindmap-controls button { font-size: 0.8rem; padding: 6px 10px; }
             .modal-content { width: 100%; height: 95%; padding:15px; } 
@@ -358,7 +366,7 @@
             .user-stats-table tr { border-bottom: 1px solid var(--bg-tertiary); }
             .user-stats-table th { display: none; }
             .user-stats-table td { display: block; text-align: left; border-bottom: none; padding-left: 0.5rem; width: 100% !important; }
-            .user-stats-table td.message-count-col { text-align: left; } 
+            .user-stats-table td.message-count-col, .user-stats-table .stat-col { text-align: left; } 
             .user-stats-table td::before { 
                 content: attr(data-label); 
                 font-weight: bold; 
@@ -368,8 +376,8 @@
                 color: var(--text-primary); 
                 text-align: left; 
             }
-             .user-stats-table td.contribution-col::before { width: auto; margin-bottom: 5px; display: block; }
-             .user-stats-table td.contribution-col { padding-left: 0.5rem; }
+             .user-stats-table td.contribution-col::before, .user-stats-table td.description-col::before { width: auto; margin-bottom: 5px; display: block; }
+             .user-stats-table td.contribution-col, .user-stats-table td.description-col { padding-left: 0.5rem; }
             .user-stats-table tr:last-child { border-bottom: none; }
         }
     
@@ -417,6 +425,7 @@
 <div id="page-container">
 <div id="report-content-wrapper">
 <div class="grid-container">
+<!-- 主报告信息卡片 -->
 <div class="card main-card">
 <h1 contenteditable="false">盛夏-亚马逊学习交流群日报</h1>
 <div class="date" contenteditable="false">2026年08月16日</div>
@@ -425,9 +434,10 @@
 <span contenteditable="false"><i class="fas fa-users"></i> 活跃用户: 4</span>
 <span contenteditable="false"><i class="fas fa-fire"></i> 热点话题: 2</span>
 </div>
-<p class="summary" contenteditable="false">今日群内主要讨论了苹果订阅的支付方式，包括第三方平台购买礼品卡及Visa卡直付的风险对比；同时多位卖家反馈亚马逊广告系统出现崩溃情况。</p>
+<p class="summary" contenteditable="false">今日群内主要交流了苹果订阅的支付方式及风险，同时多位卖家反馈亚马逊广告后台出现崩溃异常，提醒大家注意系统状态。</p>
 <i class="fas fa-microchip card-icon"></i>
 </div>
+<!-- 活跃用户分布图表卡片 -->
 <div class="card active-users-chart-card">
 <h2 contenteditable="false"><i class="fas fa-chart-bar"></i> 活跃用户分布</h2>
 <div class="chart-container">
@@ -435,6 +445,7 @@
 </div>
 <i class="fas fa-users card-icon"></i>
 </div>
+<!-- 消息时间分布图表卡片 -->
 <div class="card message-distribution-chart-card">
 <h2 contenteditable="false"><i class="fas fa-clock"></i> 消息时间分布</h2>
 <div class="chart-container">
@@ -442,36 +453,41 @@
 </div>
 <i class="fas fa-hourglass-half card-icon"></i>
 </div>
+<!-- 热门话题卡片容器 -->
 <div class="topic-cards-wrapper">
+<!-- 话题卡片 1 -->
 <div class="card topic-card">
 <div class="topic-card-content-wrapper">
-<h2 contenteditable="false"><i class="fas fa-lightbulb"></i> 苹果订阅支付方式</h2>
-<div class="topic-category" contenteditable="false">支付技巧</div>
-<p contenteditable="false">关于<span class="highlight-keyword">苹果订阅</span>的讨论，<span class="highlight-name">@Tony-Li</span>提到通过第三方平台购买礼品卡，而<span class="highlight-name">@缥缈</span>指出第三方平台有封号风险，建议使用Visa卡。</p>
+<h2 contenteditable="false"><i class="fas fa-lightbulb"></i> 苹果订阅支付方式探讨</h2>
+<div class="topic-category" contenteditable="false">经验分享</div>
+<p contenteditable="false">关于<span class="highlight-keyword">苹果订阅支付</span>的探讨，<span class="highlight-name">@Tony-Li</span> 建议通过第三方平台购买礼品卡兑换，而 <span class="highlight-name">@缥缈</span> 提醒第三方平台有<span class="highlight-keyword">封号风险</span>，建议直接使用Visa卡在官网支付。</p>
 <div class="topic-keywords">
-<span class="keyword" contenteditable="false">苹果礼品卡</span>
+<span class="keyword" contenteditable="false">苹果订阅</span>
+<span class="keyword" contenteditable="false">礼品卡</span>
 <span class="keyword" contenteditable="false">Visa卡</span>
 <span class="keyword" contenteditable="false">封号风险</span>
 </div>
-<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 2<span style="margin-left: 1rem;">来源：盛夏-亚马逊学习交流群</span></div>
+<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 2</div>
 </div>
 <i class="fas fa-tools card-icon"></i>
 </div>
+<!-- 话题卡片 2 -->
 <div class="card topic-card">
 <div class="topic-card-content-wrapper">
-<h2 contenteditable="false"><i class="fas fa-rocket"></i> 亚马逊广告系统崩溃</h2>
+<h2 contenteditable="false"><i class="fas fa-rocket"></i> 亚马逊广告后台崩溃</h2>
 <div class="topic-category" contenteditable="false">系统异常</div>
-<p contenteditable="false"><span class="highlight-name">@燚</span>反馈<span class="highlight-keyword">亚马逊广告系统</span>出现崩溃，<span class="highlight-name">@花园里的猫🐈</span>表示遇到了相同的情况。</p>
+<p contenteditable="false"><span class="highlight-name">@燚</span> 反馈<span class="highlight-keyword">亚马逊</span>及<span class="highlight-keyword">广告后台</span>系统出现崩溃，<span class="highlight-name">@花园里的猫🐈</span> 确认了该异常情况，提醒大家注意系统状态。</p>
 <div class="topic-keywords">
-<span class="keyword" contenteditable="false">亚马逊崩了</span>
-<span class="keyword" contenteditable="false">广告系统</span>
-<span class="keyword" contenteditable="false">系统异常</span>
+<span class="keyword" contenteditable="false">亚马逊</span>
+<span class="keyword" contenteditable="false">广告后台</span>
+<span class="keyword" contenteditable="false">系统崩溃</span>
 </div>
-<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 3<span style="margin-left: 1rem;">来源：盛夏-亚马逊学习交流群</span></div>
+<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 2</div>
 </div>
 <i class="fas fa-star card-icon"></i>
 </div>
 </div>
+<!-- 思维导图卡片 -->
 <div class="card mindmap-card-container">
 <h2><i class="fas fa-sitemap"></i> 核心概念关系图</h2>
 <div class="mindmap-controls">
@@ -480,11 +496,54 @@
 <button id="downloadDiagramBtn"><i class="fas fa-download"></i> 下载 SVG</button>
 <button class="fullscreen-toggle-btn" id="fullscreenOpenBtn"><i class="fas fa-expand"></i> 全屏</button>
 </div>
-<div class="kityminder-container" id="mainKityMinderContainer">
-</div>
+<div class="kityminder-container" id="mainKityMinderContainer"></div>
 <div id="mermaid-main-feedback-message"></div>
 <i class="fas fa-project-diagram card-icon"></i>
 </div>
+<!-- 销冠领航星 & 明日潜力星 卡片容器 (由JS控制隐藏) -->
+<div class="champions-wrapper">
+<div class="card champion-card">
+<h2 contenteditable="false"><i class="fas fa-crown"></i> 销冠领航星</h2>
+<table class="user-stats-table">
+<thead>
+<tr>
+<th class="user-name-col">群成员</th>
+<th class="stat-col">业绩/表现</th>
+<th class="description-col">评语</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="user-name-col" contenteditable="false" data-label="群成员">暂无</td>
+<td class="stat-col" contenteditable="false" data-label="业绩/表现">-</td>
+<td class="description-col" contenteditable="false" data-label="评语">-</td>
+</tr>
+</tbody>
+</table>
+<i class="fas fa-trophy card-icon"></i>
+</div>
+<div class="card champion-card">
+<h2 contenteditable="false"><i class="fas fa-star-half-alt"></i> 明日潜力星</h2>
+<table class="user-stats-table">
+<thead>
+<tr>
+<th class="user-name-col">群成员</th>
+<th class="stat-col">潜力方向</th>
+<th class="description-col">评语</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="user-name-col" contenteditable="false" data-label="群成员">暂无</td>
+<td class="stat-col" contenteditable="false" data-label="潜力方向">-</td>
+<td class="description-col" contenteditable="false" data-label="评语">-</td>
+</tr>
+</tbody>
+</table>
+<i class="fas fa-rocket card-icon"></i>
+</div>
+</div>
+<!-- 精彩引用卡片 -->
 <div class="insight-columns"><div class="insight-row insight-row-primary"><div class="card quote-card">
 <h2 contenteditable="false"><i class="fas fa-quote-left"></i> 精彩引用</h2>
 <div class="quote" contenteditable="false">
@@ -492,18 +551,18 @@
                         <div class="quote-author" contenteditable="false">- @缥缈</div>
 </div>
 <div class="quote" contenteditable="false">
-                        "亚马逊崩了，广告崩了"
-                        <div class="quote-author" contenteditable="false">- @燚</div>
-</div>
-<div class="quote" contenteditable="false">
                         "得通过了第三方平台买苹果礼品卡在兑换到苹果在订阅"
                         <div class="quote-author" contenteditable="false">- @Tony-Li</div>
+</div>
+<div class="quote" contenteditable="false">
+                        "亚马逊崩了，广告崩了"
+                        <div class="quote-author" contenteditable="false">- @燚</div>
 </div>
 <i class="fas fa-comment-dots card-icon"></i>
 </div><div class="card links-card">
 <h2 contenteditable="false"><i class="fas fa-link"></i> 重要链接与资源</h2>
 <div class="link-item">
-<i class="fas fa-info-circle link-icon"></i> <span class="link-title" contenteditable="false">今日暂无分享链接</span>
+<i class="fas fa-info-circle link-icon"></i> <span class="link-title" contenteditable="false">今日暂无链接分享</span>
 </div>
 <i class="fas fa-share-alt card-icon"></i>
 </div></div><div class="insight-row insight-row-secondary"><div class="card stats-card">
@@ -520,22 +579,17 @@
 <tr>
 <td class="user-name-col" contenteditable="false" data-label="用户">@燚</td>
 <td class="message-count-col" contenteditable="false" data-label="发言数">2</td>
-<td class="contribution-col" contenteditable="false" data-label="主要贡献">反馈亚马逊广告系统崩溃</td>
+<td class="contribution-col" contenteditable="false" data-label="主要贡献">及时同步亚马逊广告后台崩溃信息</td>
 </tr>
 <tr>
 <td class="user-name-col" contenteditable="false" data-label="用户">@Tony-Li</td>
 <td class="message-count-col" contenteditable="false" data-label="发言数">1</td>
-<td class="contribution-col" contenteditable="false" data-label="主要贡献">分享苹果订阅第三方礼品卡支付方法</td>
+<td class="contribution-col" contenteditable="false" data-label="主要贡献">分享苹果订阅的第三方礼品卡支付方式</td>
 </tr>
 <tr>
 <td class="user-name-col" contenteditable="false" data-label="用户">@缥缈</td>
 <td class="message-count-col" contenteditable="false" data-label="发言数">1</td>
-<td class="contribution-col" contenteditable="false" data-label="主要贡献">提示第三方平台支付的封号风险</td>
-</tr>
-<tr>
-<td class="user-name-col" contenteditable="false" data-label="用户">@花园里的猫🐈</td>
-<td class="message-count-col" contenteditable="false" data-label="发言数">1</td>
-<td class="contribution-col" contenteditable="false" data-label="主要贡献">确认亚马逊系统异常</td>
+<td class="contribution-col" contenteditable="false" data-label="主要贡献">提示第三方平台风险并分享Visa卡支付经验</td>
 </tr>
 </tbody>
 </table>
@@ -543,26 +597,49 @@
 </div><div class="card wordcloud-card">
 <h2 contenteditable="false"><i class="fas fa-cloud"></i> 词云</h2>
 <div class="wordcloud">
-<span class="wordcloud-item size-5" contenteditable="false" data-weight="5" style="--x:-62px;--y:-12px;--r:-6deg;">苹果礼品卡</span>
+<span class="wordcloud-item size-5" contenteditable="false" data-weight="5" style="--x:-62px;--y:-12px;--r:-6deg;">苹果</span>
 <span class="wordcloud-item size-5" contenteditable="false" data-weight="5" style="--x:68px;--y:-10px;--r:5deg;">亚马逊</span>
-<span class="wordcloud-item size-4" contenteditable="false" data-weight="4" style="--x:-6px;--y:-78px;--r:2deg;">广告</span>
-<span class="wordcloud-item size-4" contenteditable="false" data-weight="4" style="--x:-106px;--y:42px;--r:6deg;">崩溃</span>
-<span class="wordcloud-item size-3" contenteditable="false" data-weight="3" style="--x:108px;--y:44px;--r:-5deg;">Visa卡</span>
-<span class="wordcloud-item size-3" contenteditable="false" data-weight="3" style="--x:-8px;--y:70px;--r:-3deg;">封号风险</span>
-<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:58px;--y:108px;--r:4deg;">第三方平台</span>
-<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:-122px;--y:-44px;--r:-8deg;">订阅</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:116px;--y:-50px;--r:7deg;">支付</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:-142px;--y:4px;--r:6deg;">官网</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:142px;--y:8px;--r:-5deg;">异常</span>
+<span class="wordcloud-item size-5" contenteditable="false" data-weight="5" style="--x:-6px;--y:-78px;--r:2deg;">礼品卡</span>
+<span class="wordcloud-item size-4" contenteditable="false" data-weight="4" style="--x:-106px;--y:42px;--r:6deg;">订阅</span>
+<span class="wordcloud-item size-4" contenteditable="false" data-weight="4" style="--x:108px;--y:44px;--r:-5deg;">封号</span>
+<span class="wordcloud-item size-4" contenteditable="false" data-weight="4" style="--x:-8px;--y:70px;--r:-3deg;">广告</span>
+<span class="wordcloud-item size-4" contenteditable="false" data-weight="4" style="--x:58px;--y:108px;--r:4deg;">崩了</span>
+<span class="wordcloud-item size-3" contenteditable="false" data-weight="3" style="--x:-122px;--y:-44px;--r:-8deg;">visa卡</span>
+<span class="wordcloud-item size-3" contenteditable="false" data-weight="3" style="--x:116px;--y:-50px;--r:7deg;">官网</span>
+<span class="wordcloud-item size-3" contenteditable="false" data-weight="3" style="--x:-142px;--y:4px;--r:6deg;">支付</span>
+<span class="wordcloud-item size-3" contenteditable="false" data-weight="3" style="--x:142px;--y:8px;--r:-5deg;">第三方平台</span>
+<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:-66px;--y:116px;--r:-4deg;">兑换</span>
+<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:76px;--y:-104px;--r:4deg;">异常</span>
+<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:-22px;--y:132px;--r:0deg;">风险</span>
+<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:24px;--y:-124px;--r:-2deg;">账号</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:-152px;--y:-86px;--r:-8deg;">充值</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:154px;--y:-84px;--r:7deg;">苹果商店</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:-150px;--y:92px;--r:4deg;">开发者</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:152px;--y:94px;--r:-6deg;">信用卡</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:-86px;--y:-122px;--r:6deg;">绑卡</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:92px;--y:132px;--r:-4deg;">故障</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:-34px;--y:-142px;--r:8deg;">宕机</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:122px;--y:132px;--r:-6deg;">卖家后台</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:-126px;--y:132px;--r:5deg;">运营</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-hidden="true">交流</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-hidden="true">学习</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-hidden="true">盛夏</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-hidden="true">跨境电商</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-hidden="true">经验</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-hidden="true">分享</span>
 </div>
 <i class="fas fa-tags card-icon"></i>
 </div></div></div>
+<!-- 重要链接与资源卡片 -->
 
+<!-- 活跃之星统计卡片 -->
 
+<!-- 词云卡片 -->
 
 </div>
 </div>
 </div>
+<!-- 全屏思维导图模态框 -->
 <div class="modal-overlay" id="fullscreenModal">
 <div class="modal-content card">
 <button aria-label="关闭全屏" class="modal-close-btn" id="fullscreenCloseBtn">×</button>
@@ -572,8 +649,7 @@
 <button id="modalZoomOutBtn"><i class="fas fa-search-minus"></i> 缩小</button>
 <button id="modalDownloadDiagramBtn"><i class="fas fa-download"></i> 下载 SVG</button>
 </div>
-<div class="kityminder-container" id="modalKityMinderContainer">
-</div>
+<div class="kityminder-container" id="modalKityMinderContainer"></div>
 <div id="mermaid-modal-feedback-message"></div>
 </div>
 </div>
@@ -595,9 +671,8 @@
     const showMessageDistributionChart = true;
     const isContentEditable = false;
     
-    const themeSwitcher = document.getElementById('theme-switcher');
-    const htmlEl = document.documentElement; 
-    let activeUsersChartInstance, messageDistributionChartInstance; 
+    const htmlEl = document.documentElement;
+    let activeUsersChartInstance, messageDistributionChartInstance;
 
     function applyThemeBasedOnTime() {
         const hour = new Date().getHours();
@@ -607,32 +682,20 @@
         return newTheme;
     }
 
-    function toggleTheme() {
-        const currentTheme = htmlEl.getAttribute('data-theme');
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-        htmlEl.setAttribute('data-theme', newTheme);
-        reinitializeKityMinderWithNewTheme(newTheme);
-        initializeAllCharts(newTheme); 
-    }
-    
-    if(themeSwitcher) {
-        themeSwitcher.addEventListener('click', toggleTheme);
-    }
-
-    let mainKM, modalKM; 
+    let mainKM, modalKM;
 
     const kityminderData = {
         root: {
-            data: { text: "盛夏-亚马逊学习交流", expandState: "expand" },
+            data: { text: "盛夏-亚马逊学习交流群", expandState: "expand" },
             children: [
                 { data: { text: "苹果订阅支付", expandState: "expand" }, children: [
                     { data: { text: "第三方平台礼品卡" } },
-                    { data: { text: "Visa卡官网直付" } },
-                    { data: { text: "第三方封号风险" } }
+                    { data: { text: "Visa卡官网支付" } },
+                    { data: { text: "第三方代充封号风险" } }
                 ]},
                 { data: { text: "亚马逊系统异常", expandState: "expand" }, children: [
-                    { data: { text: "亚马逊前台崩了" } },
-                    { data: { text: "广告系统崩溃" } }
+                    { data: { text: "亚马逊后台崩溃" } },
+                    { data: { text: "广告系统宕机" } }
                 ]}
             ]
         },
@@ -714,17 +777,17 @@
     }
     
     function setupKityMinderTouchEvents(km, container) {
-        let isPanning = false; let lastPanX, lastPanY; 
-        let isPinching = false; let initialPinchDistance = 0; 
+        let isPanning = false; let lastPanX, lastPanY;
+        let isPinching = false; let initialPinchDistance = 0;
         let lastPinchZoomValue = km.getZoomValue(); 
 
         container.addEventListener('touchstart', (e) => {
-            if (e.touches.length === 1) { 
+            if (e.touches.length === 1) {
                 isPanning = true; isPinching = false; 
                 const touch = e.touches[0];
                 lastPanX = touch.clientX; lastPanY = touch.clientY;
                 e.preventDefault(); 
-            } else if (e.touches.length === 2) { 
+            } else if (e.touches.length === 2) {
                 isPinching = true; isPanning = false; 
                 const touch1 = e.touches[0]; const touch2 = e.touches[1];
                 initialPinchDistance = Math.hypot(touch1.clientX - touch2.clientX, touch1.clientY - touch2.clientY);
@@ -734,7 +797,7 @@
         }, { passive: false });
 
         container.addEventListener('touchmove', (e) => {
-            if (isPanning && e.touches.length === 1) { 
+            if (isPanning && e.touches.length === 1) {
                 const touch = e.touches[0];
                 const dx = touch.clientX - lastPanX; const dy = touch.clientY - lastPanY;
                 const paper = km.getPaper();
@@ -744,13 +807,13 @@
                 }
                 lastPanX = touch.clientX; lastPanY = touch.clientY;
                 e.preventDefault();
-            } else if (isPinching && e.touches.length === 2) { 
+            } else if (isPinching && e.touches.length === 2) {
                 const touch1 = e.touches[0]; const touch2 = e.touches[1];
                 const currentPinchDistance = Math.hypot(touch1.clientX - touch2.clientX, touch1.clientY - touch2.clientY);
                 if (initialPinchDistance > 0) { 
                     const scaleFactor = currentPinchDistance / initialPinchDistance;
                     let newZoomLevelPercentage = lastPinchZoomValue * scaleFactor;
-                    newZoomLevelPercentage = Math.max(20, Math.min(newZoomLevelPercentage, 300)); 
+                    newZoomLevelPercentage = Math.max(20, Math.min(newZoomLevelPercentage, 300));
                     const rect = container.getBoundingClientRect();
                     const screenPinchCenterX = (touch1.clientX + touch2.clientX) / 2 - rect.left;
                     const screenPinchCenterY = (touch1.clientY + touch2.clientY) / 2 - rect.top;
@@ -767,9 +830,9 @@
         }, { passive: false });
 
         container.addEventListener('touchend', (e) => {
-            if (e.touches.length === 0) { 
+            if (e.touches.length === 0) {
                 isPanning = false; isPinching = false; initialPinchDistance = 0;
-            } else if (e.touches.length === 1) { 
+            } else if (e.touches.length === 1) {
                 if (isPinching) { 
                     isPinching = false; initialPinchDistance = 0;
                     isPanning = true; 
@@ -853,19 +916,6 @@
         });
     }
 
-    function reinitializeKityMinderWithNewTheme(newTheme) {
-        if (mainKityMinderContainer) {
-            initializeKityMinder(mainKityMinderContainer, kityminderData, mermaidMainFeedbackMessage, false, newTheme)
-                .then(kmInstance => mainKM = kmInstance)
-                .catch(err => console.error("重新初始化主思维导图失败:", err));
-        }
-        if (fullscreenModal.classList.contains('active') && modalKityMinderContainer) {
-             initializeKityMinder(modalKityMinderContainer, kityminderData, mermaidModalFeedbackMessage, true, newTheme)
-                .then(kmInstance => modalKM = kmInstance)
-                .catch(err => console.error("重新初始化模态框思维导图失败:", err));
-        }
-    }
-
     if(mainZoomInBtn) mainZoomInBtn.addEventListener('click', () => { if (mainKM) mainKM.execCommand('zoomIn'); });
     if(mainZoomOutBtn) mainZoomOutBtn.addEventListener('click', () => { if (mainKM) mainKM.execCommand('zoomOut'); });
     if(mainDownloadDiagramBtn) mainDownloadDiagramBtn.addEventListener('click', () => { downloadKityMinderAsSVG(mainKM, '核心概念关系图-主视图', mermaidMainFeedbackMessage); });
@@ -895,7 +945,7 @@
             console.error("KityMinder主容器未找到。");
         }
     }
-    
+
     function initializeAllCharts(theme) {
         if (activeUsersChartInstance) {
             activeUsersChartInstance.destroy();
@@ -979,9 +1029,9 @@
         const gridColor = getCssVariable('--chart-grid-color', 'rgba(0, 0, 0, 0.1)');
         const accentColor = getCssVariable('--accent-blue', '#007EFF');
 
-        const messageData = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        const messageData = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 1, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0];
         
-        const yAxisMax = Math.ceil(Math.max(...messageData) * 1.25);
+        const yAxisMax = Math.ceil(Math.max(...messageData) * 1.25) || 5;
 
         messageDistributionChartInstance = new Chart(ctx, {
             type: 'line',
@@ -1037,11 +1087,6 @@
     }
 
     function updateCardVisibility(mode) {
-        const qiaomuCards = [
-            document.querySelector('.group-intro-card'),
-            document.querySelector('.more-groups-intro-card'),
-            document.querySelector('.qr-code-container-card')
-        ];
         const marketingCards = [
             document.querySelector('.champions-wrapper')
         ];
@@ -1059,21 +1104,12 @@
         
         switch (mode) {
             case 'general':
-                setVisibility(qiaomuCards, false);
                 setVisibility(marketingCards, false);
                 break;
             case 'marketing':
-                setVisibility(qiaomuCards, false);
                 setVisibility(marketingCards, true);
                 break;
-            case 'qiaomu':
-                setVisibility(qiaomuCards, true);
-                setVisibility(marketingCards, false);
-                break;
-            case 'education':
-            case 'medical':
             default:
-                setVisibility(qiaomuCards, true);
                 setVisibility(marketingCards, true);
                 break;
         }

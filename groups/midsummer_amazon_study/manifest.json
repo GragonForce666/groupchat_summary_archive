@@ -2,9 +2,17 @@
   "group_set": "midsummer_amazon_study",
   "display_name": "盛夏-亚马逊学习交流群",
   "slug": "midsummer_amazon_study",
-  "generated_at": "2026-08-12T08:58:58",
+  "generated_at": "2026-08-17T16:53:53",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260816",
+      "title": "盛夏-亚马逊学习交流群日报",
+      "summary": "今日群内主要讨论了苹果订阅的支付方式，包括第三方平台购买礼品卡及Visa卡直付的风险对比；同时多位卖家反馈亚马逊广告系统出现崩溃情况。",
+      "source_html": "data/20260816/midsummer_amazon_study/MODE2_20260816_盛夏-亚马逊学习交流群_20260817_164729.html",
+      "path": "groups/midsummer_amazon_study/days/20260816.html",
+      "mtime": "2026-08-17T16:53:50"
+    },
     {
       "date": "20260811",
       "title": "盛夏-亚马逊学习交流群日报",
@@ -15,6 +23,7 @@
     }
   ],
   "urls": {
+    "20260816": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260816.html",
     "20260811": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260811.html"
   }
 }

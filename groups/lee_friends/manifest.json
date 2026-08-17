@@ -2,9 +2,17 @@
   "group_set": "lee_friends",
   "display_name": "Lee和Ta的朋友们（三群合并）",
   "slug": "lee_friends",
-  "generated_at": "2026-08-12T08:56:35",
+  "generated_at": "2026-08-17T16:47:29",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260816",
+      "title": "Lee和Ta的朋友们（三群合并）日报",
+      "summary": "今日群内主要确认了广告系统的访问状态，系统已恢复正常。",
+      "source_html": "data/20260816/lee_friends/MODE2_20260816_Lee和Ta的朋友们_三群合并__20260817_164536.html",
+      "path": "groups/lee_friends/days/20260816.html",
+      "mtime": "2026-08-17T16:47:25"
+    },
     {
       "date": "20260811",
       "title": "西柚 官网 (群友提及的运营工具)",
@@ -23,6 +31,7 @@
     }
   ],
   "urls": {
+    "20260816": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260816.html",
     "20260811": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260811.html",
     "20260810": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260810.html"
   }

@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 
+<!--
+ * @Description: 这是一个功能丰富的动态日报模板，专为社群讨论摘要而设计。
+ * @Version: 5.0.9
+ * @Author: Gemini
+ * @Date: 2025-07-12
+-->
 <html data-theme="light" lang="zh-CN">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Lee和Ta的朋友们（三群合并）日报 - 2026年8月17日</title>
+<title>盛夏-亚马逊学习交流群日报 - 20260817</title>
 <link href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet"/>
 <link href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-100-M/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -95,7 +101,15 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html, body { transition: background-color 0.4s ease, color 0.4s ease; }
-        body { font-family: var(--font-family); background-color: var(--bg-primary); color: var(--text-primary); line-height: 1.6; font-size: 16px; width: 100%; }
+        body {
+            font-family: var(--font-family);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            font-size: 16px;
+            width: 100%;
+        }
+        
         #page-container { max-width: 1000px; margin: 0 auto; padding: 20px; }
         body.modal-active { overflow: hidden; }
 
@@ -104,26 +118,86 @@
         h2 { font-size: 1.75rem; margin-bottom: 1rem; color: var(--accent-primary); }
         h3 { font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--accent-blue); }
         
-        [data-theme="dark"] h1 { color: var(--accent-primary); background: none; background-clip: unset; -webkit-background-clip: unset; -webkit-text-fill-color: unset; text-shadow: none; }
+        [data-theme="dark"] h1 {
+            color: var(--accent-primary); background: none; background-clip: unset;
+            -webkit-background-clip: unset; -webkit-text-fill-color: unset; text-shadow: none;
+        }
         
-        .grid-container { display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-flow: dense; gap: var(--grid-gap); margin-top: 20px; }
+        .grid-container {
+            display: grid; 
+            grid-template-columns: repeat(12, 1fr);
+            grid-auto-flow: dense;
+            gap: var(--grid-gap);
+            margin-top: 20px;
+        }
 
-        .card { background-color: var(--bg-secondary); border-radius: var(--card-radius); padding: var(--card-padding); box-shadow: var(--card-shadow); position: relative; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.4s ease; display: flex; flex-direction: column; }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); }
-        [data-theme="dark"] .card:hover { box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35); }
-        .card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: var(--accent-primary); transition: background 0.4s ease; }
-        [data-theme="dark"] .card::before { background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple)); }
-        .card-icon { position: absolute; bottom: var(--card-padding); right: var(--card-padding); font-size: 4rem; opacity: 0.07; color: var(--accent-primary); z-index: 0; transition: color 0.4s ease; }
+        .card {
+            background-color: var(--bg-secondary); 
+            border-radius: var(--card-radius);
+            padding: var(--card-padding); 
+            box-shadow: var(--card-shadow);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.4s ease;
+            display: flex; 
+            flex-direction: column;
+        }
+        .card:hover { 
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); 
+        }
+        [data-theme="dark"] .card:hover { 
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35); 
+        }
+
+        .card::before {
+            content: ''; 
+            position: absolute; 
+            top: 0; 
+            left: 0;
+            width: 100%; 
+            height: 3px; 
+            background: var(--accent-primary);
+            transition: background 0.4s ease;
+        }
+        [data-theme="dark"] .card::before {
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+        }
+        
+        .card-icon {
+            position: absolute; 
+            bottom: var(--card-padding); 
+            right: var(--card-padding);
+            font-size: 4rem; 
+            opacity: 0.07; 
+            color: var(--accent-primary); 
+            z-index: 0;
+            transition: color 0.4s ease;
+        }
         [data-theme="dark"] .card-icon { opacity: 0.1; color: var(--accent-blue); }
 
-        .main-card, .active-users-chart-card, .message-distribution-chart-card, .topic-cards-wrapper, .mindmap-card-container { grid-column: 1 / -1; }
-        [data-theme="dark"] .main-card { background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary)); }
+        .main-card,
+        .active-users-chart-card,
+        .message-distribution-chart-card,
+        .topic-cards-wrapper,
+        .mindmap-card-container {
+            grid-column: 1 / -1;
+        }
+        [data-theme="dark"] .main-card {
+             background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+        }
+
         .quote-card { grid-column: span 6; }
         .links-card { grid-column: span 6; }
         .stats-card { grid-column: span 7; }
         .wordcloud-card { grid-column: span 5; }
         
-        .topic-cards-wrapper { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--grid-gap); }
+        .topic-cards-wrapper {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr); 
+            gap: var(--grid-gap);
+        }
+
         .topic-card { grid-column: span 6; min-height: 250px; }
         .topic-card > .topic-card-content-wrapper { flex-grow: 1; padding-bottom: 1rem; }
         .topic-cards-wrapper > .topic-card:nth-last-child(1):nth-child(odd) { grid-column: span 12; }
@@ -135,8 +209,12 @@
         .meta-info span { background-color: var(--bg-tertiary); padding: 5px 10px; border-radius: 20px; font-size: 0.9rem; color: var(--accent-blue); }
         [data-theme="dark"] .meta-info span { color: var(--accent-cyan); }
         .summary { margin-top: 1rem; line-height: 1.7; text-align: left; }
-
-        .chart-container { position: relative; height: 300px; width: 100%; }
+        
+        .chart-container {
+            position: relative;
+            height: 300px;
+            width: 100%;
+        }
 
         .topic-category { display: inline-block; background-color: var(--accent-tertiary); color: #FFFFFF; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; margin-bottom: 0.5rem; }
         .topic-keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 0.75rem; margin-bottom: 0.75rem; }
@@ -156,6 +234,8 @@
         .link-item a:hover .link-title { text-decoration: underline; color: var(--accent-blue); }
         .link-icon { margin-right: 10px; color: var(--accent-blue); }
         .link-title { flex-grow: 1; color: var(--text-primary); }
+        .link-title.is-link { color: var(--accent-blue); }
+        .link-title.is-link:hover { text-decoration: underline; }
 
         .user-stats-table { width: 100%; border-collapse: collapse; margin-top: 0.5rem; }
         .user-stats-table th { text-align: center; padding: 0.75rem 0.5rem; border-bottom: 2px solid var(--accent-primary); color: var(--text-primary); font-weight: 600; font-size: 0.9rem; }
@@ -182,21 +262,48 @@
         .mindmap-controls button i { margin-right: 5px; }
         .mindmap-controls .fullscreen-toggle-btn { margin-left: auto; }
 
-        .kityminder-container { flex-grow: 1; overflow: hidden; background-color: var(--kityminder-bg); border-radius: 8px; padding: 0; border: 1px solid var(--bg-tertiary); min-height: 400px; position: relative; transition: height 0.3s ease-in-out, background-color 0.4s ease; display: flex; align-items: center; justify-content: center; touch-action: none; }
-        .kityminder-container:empty::before { content: "思维导图加载中或内容为空..."; color: var(--text-secondary); font-style: italic; text-align: center; padding: 20px; display: flex; justify-content: center; align-items: center; height: 100%; min-height: 150px; }
+        .kityminder-container {
+            flex-grow: 1; overflow: hidden; background-color: var(--kityminder-bg);
+            border-radius: 8px; padding: 0; border: 1px solid var(--bg-tertiary);
+            min-height: 400px; position: relative;
+            transition: height 0.3s ease-in-out, background-color 0.4s ease;
+            display: flex; align-items: center; justify-content: center; touch-action: none;
+        }
+        .kityminder-container:empty::before { 
+            content: "思维导图加载中或内容为空..."; color: var(--text-secondary);
+            font-style: italic; text-align: center; padding: 20px; display: flex;
+            justify-content: center; align-items: center; height: 100%; min-height: 150px;
+        }
 
-        #mermaid-main-feedback-message, #mermaid-modal-feedback-message { text-align: center; margin-top: 15px; padding: 8px; border-radius: 4px; font-weight: 500; font-size: 0.9rem; display: none; }
+        #mermaid-main-feedback-message, #mermaid-modal-feedback-message {
+            text-align: center; margin-top: 15px; padding: 8px; border-radius: 4px;
+            font-weight: 500; font-size: 0.9rem; display: none;
+        }
         #mermaid-main-feedback-message.success, #mermaid-modal-feedback-message.success { color: #155724; background-color: #d4edda; border: 1px solid #c3e6cb; display: block; }
         #mermaid-main-feedback-message.error, #mermaid-modal-feedback-message.error { color: #721c24; background-color: #f8d7da; border: 1px solid #f5c6cb; display: block; }
+        #mermaid-main-feedback-message.info, #mermaid-modal-feedback-message.info { color: #0c5460; background-color: #d1ecf1; border: 1px solid #bee5eb; display: block; }
 
-        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: var(--modal-bg); display: none; justify-content: center; align-items: center; z-index: 1000; padding: 20px; transition: background-color 0.4s ease; }
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-color: var(--modal-bg);
+            display: none;
+            justify-content: center; align-items: center;
+            z-index: 1000; padding: 20px; transition: background-color 0.4s ease;
+        }
         .modal-overlay.active { display: flex; }
         .modal-content { width: 95%; height: 90%; max-width: 1200px; }
-        .modal-close-btn { position: absolute; top: 15px; right: 20px; background: none; border: none; font-size: 2.2rem; color: var(--text-secondary); cursor: pointer; line-height: 1; padding: 5px; z-index: 1010; }
+        .modal-close-btn {
+            position: absolute; top: 15px; right: 20px; background: none; border: none;
+            font-size: 2.2rem; color: var(--text-secondary); cursor: pointer;
+            line-height: 1; padding: 5px; z-index: 1010;
+        }
         .modal-close-btn:hover { color: var(--text-primary); }
         #modalKityMinderContainer { flex-grow: 1; min-height: 0; display: flex; align-items: center; justify-content: center; }
 
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeIn { 
+            from { opacity: 0; transform: translateY(20px); } 
+            to { opacity: 1; transform: translateY(0); } 
+        }
         .card { animation: fadeIn 0.5s ease forwards; }
         .main-card { animation-delay: 0.1s; }
         .active-users-chart-card { animation-delay: 0.2s; }
@@ -204,23 +311,29 @@
         .topic-cards-wrapper .topic-card:nth-child(1) { animation-delay: 0.4s; }
         .topic-cards-wrapper .topic-card:nth-child(2) { animation-delay: 0.5s; }
         .topic-cards-wrapper .topic-card:nth-child(3) { animation-delay: 0.6s; }
-        .topic-cards-wrapper .topic-card:nth-child(4) { animation-delay: 0.7s; }
-        .mindmap-card-container { animation-delay: 0.8s; }
-        .quote-card { animation-delay: 0.9s; }
-        .links-card { animation-delay: 1.0s; }
-        .stats-card { animation-delay: 1.1s; }
-        .wordcloud-card { animation-delay: 1.2s; }
+        .mindmap-card-container { animation-delay: 0.7s; }
+        .quote-card { animation-delay: 0.8s; }
+        .links-card { animation-delay: 0.9s; }
+        .stats-card { animation-delay: 1.0s; }
+        .wordcloud-card { animation-delay: 1.1s; }
 
         @media (max-width: 768px) {
             #page-container { padding: 10px; }
             h1 { font-size: 1.8rem; } h2 { font-size: 1.4rem; } h3 { font-size: 1.1rem; }
             .grid-container { grid-template-columns: 1fr; }
-            .main-card, .active-users-chart-card, .message-distribution-chart-card, .topic-cards-wrapper, .mindmap-card-container, .quote-card, .links-card, .stats-card, .wordcloud-card { grid-column: 1 / -1; }
+            .main-card, .active-users-chart-card, .message-distribution-chart-card, .topic-cards-wrapper, .mindmap-card-container,
+            .quote-card, .links-card, .stats-card, .wordcloud-card { grid-column: 1 / -1; }
             .topic-cards-wrapper { display: flex; flex-direction: column; gap: var(--grid-gap); } 
             .topic-card { width: 100%; min-height: auto; }
+            .topic-card > .topic-card-content-wrapper { padding-bottom: 1rem; }
+            .topic-mentions { position: static; margin-top: 10px; margin-bottom: 10px; text-align: left; }
+            .card-icon { font-size: 2.5rem; opacity:0.05; } 
+            .mindmap-card-container .card-icon { bottom: 15px; right: 15px; }
             .user-stats-table th, .user-stats-table td { padding: 0.5rem 0.25rem; font-size: 0.8rem; }
             .user-stats-table td { text-align: left; } 
             .user-stats-table .message-count-col { text-align: center; } 
+            .mindmap-card-container { padding: 15px; } 
+            .mindmap-controls button { font-size: 0.8rem; padding: 6px 10px; }
             .modal-content { width: 100%; height: 95%; padding:15px; } 
             .modal-close-btn { font-size: 1.8rem; top:10px; right:10px;}
         }
@@ -233,9 +346,17 @@
             .user-stats-table th { display: none; }
             .user-stats-table td { display: block; text-align: left; border-bottom: none; padding-left: 0.5rem; width: 100% !important; }
             .user-stats-table td.message-count-col { text-align: left; } 
-            .user-stats-table td::before { content: attr(data-label); font-weight: bold; display: inline-block; width: 100px; margin-right: 10px; color: var(--text-primary); text-align: left; }
-            .user-stats-table td.contribution-col::before { width: auto; margin-bottom: 5px; display: block; }
-            .user-stats-table td.contribution-col { padding-left: 0.5rem; }
+            .user-stats-table td::before { 
+                content: attr(data-label); 
+                font-weight: bold; 
+                display: inline-block; 
+                width: 100px; 
+                margin-right: 10px; 
+                color: var(--text-primary); 
+                text-align: left; 
+            }
+             .user-stats-table td.contribution-col::before { width: auto; margin-bottom: 5px; display: block; }
+             .user-stats-table td.contribution-col { padding-left: 0.5rem; }
             .user-stats-table tr:last-child { border-bottom: none; }
         }
     
@@ -284,14 +405,14 @@
 <div id="report-content-wrapper">
 <div class="grid-container">
 <div class="card main-card">
-<h1 contenteditable="false">Lee和Ta的朋友们（三群合并）日报</h1>
+<h1 contenteditable="false">盛夏-亚马逊学习交流群日报</h1>
 <div class="date" contenteditable="false">2026年8月17日</div>
 <div class="meta-info">
-<span contenteditable="false"><i class="fas fa-comment"></i> 消息数: 65</span>
-<span contenteditable="false"><i class="fas fa-users"></i> 活跃用户: 11</span>
+<span contenteditable="false"><i class="fas fa-comment"></i> 消息数: 92</span>
+<span contenteditable="false"><i class="fas fa-users"></i> 活跃用户: 22</span>
 <span contenteditable="false"><i class="fas fa-fire"></i> 热点话题: 6</span>
 </div>
-<p class="summary" contenteditable="false">今日群聊重点围绕“已删除链接被抓取版权投诉绩效”展开深入讨论，@chopx.xi 提供了亚马逊系统重整的宝贵经验。此外，大家还探讨了电池产品图片合规、美国站排名停滞以及SP广告站外流量扩展等重要运营话题，干货满满。</p>
+<p class="summary" contenteditable="false">今日群聊重点讨论了亚马逊低价商城的现状、Temu平台的高额罚款现象，以及沃尔玛、速卖通等其他平台的选择。此外，群友们还交流了亚马逊新建链接自动生成五点描述的新功能，并探讨了在Win10/Win11系统及紫鸟浏览器下设置Passkey的具体步骤。</p>
 <i class="fas fa-microchip card-icon"></i>
 </div>
 <div class="card active-users-chart-card">
@@ -311,85 +432,45 @@
 <div class="topic-cards-wrapper">
 <div class="card topic-card">
 <div class="topic-card-content-wrapper">
-<h2 contenteditable="false"><i class="fas fa-exclamation-triangle"></i> 版权投诉与历史链接抓取</h2>
-<div class="topic-category" contenteditable="false">账号绩效</div>
-<p contenteditable="false"><span class="highlight-name">@吃橘子的🐈</span> 遇到删除一年的链接被抓取版权投诉绩效，<span class="highlight-name">@chopx.xi</span> 分享经验认为是<span class="highlight-keyword">亚马逊重整系统</span>重新审查所致，建议直接申诉。</p>
+<h2 contenteditable="false"><i class="fas fa-lightbulb"></i> 亚马逊低价商城与Temu现状</h2>
+<div class="topic-category" contenteditable="false">平台趋势</div>
+<p contenteditable="false">大家讨论了<span class="highlight-keyword">低价商城</span>的广告推荐，<span class="highlight-name">@Ben 大吉大利</span>提到Temu高额罚款让卖家退场，直言其“成功改变整个电商格局，重创卖家”。</p>
 <div class="topic-keywords">
-<span class="keyword" contenteditable="false">版权投诉</span>
-<span class="keyword" contenteditable="false">链接删除</span>
-<span class="keyword" contenteditable="false">重新审查</span>
+<span class="keyword" contenteditable="false">低价商城</span>
+<span class="keyword" contenteditable="false">Temu罚款</span>
+<span class="keyword" contenteditable="false">电商格局</span>
 </div>
-<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 20+</div>
+<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 18<span style="margin-left: 1rem;">来源：盛夏-亚马逊学习交流群</span></div>
 </div>
-<i class="fas fa-gavel card-icon"></i>
+<i class="fas fa-tools card-icon"></i>
 </div>
 <div class="card topic-card">
 <div class="topic-card-content-wrapper">
-<h2 contenteditable="false"><i class="fas fa-image"></i> 产品下架与图片合规</h2>
-<div class="topic-category" contenteditable="false">产品合规</div>
-<p contenteditable="false"><span class="highlight-name">@h</span> 提到产品被下架，<span class="highlight-name">@Addition</span> 指出<span class="highlight-keyword">圆柱电池禁售</span>，大家讨论只要图片不显示电池是否合规。</p>
-<div class="topic-keywords">
-<span class="keyword" contenteditable="false">产品下架</span>
-<span class="keyword" contenteditable="false">圆柱电池</span>
-<span class="keyword" contenteditable="false">图片合规</span>
-</div>
-<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 4</div>
-</div>
-<i class="fas fa-ban card-icon"></i>
-</div>
-<div class="card topic-card">
-<div class="topic-card-content-wrapper">
-<h2 contenteditable="false"><i class="fas fa-chart-line"></i> 亚马逊排名更新停滞</h2>
-<div class="topic-category" contenteditable="false">平台动态</div>
-<p contenteditable="false"><span class="highlight-name">@小鹿</span> 和 <span class="highlight-name">@嘎嘎达</span> 讨论并确认近期<span class="highlight-keyword">美国站排名</span>几天未更新，处于一动不动的状态。</p>
-<div class="topic-keywords">
-<span class="keyword" contenteditable="false">美国站</span>
-<span class="keyword" contenteditable="false">排名停滞</span>
-</div>
-<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 3</div>
-</div>
-<i class="fas fa-sort-amount-down card-icon"></i>
-</div>
-<div class="card topic-card">
-<div class="topic-card-content-wrapper">
-<h2 contenteditable="false"><i class="fas fa-ad"></i> SP广告站外流量扩展</h2>
-<div class="topic-category" contenteditable="false">广告策略</div>
-<p contenteditable="false"><span class="highlight-name">@鄂妹</span> 分享了最新政策，Amazon将<span class="highlight-keyword">SP广告</span>的站外流量扩展到<span class="highlight-keyword">创作者内容</span>，引发对站内搜索影响的关注。</p>
-<div class="topic-keywords">
-<span class="keyword" contenteditable="false">SP广告</span>
-<span class="keyword" contenteditable="false">站外流量</span>
-<span class="keyword" contenteditable="false">创作者内容</span>
-</div>
-<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 3</div>
-</div>
-<i class="fas fa-bullseye card-icon"></i>
-</div>
-<div class="card topic-card">
-<div class="topic-card-content-wrapper">
-<h2 contenteditable="false"><i class="fas fa-headset"></i> 申诉与客服沟通策略</h2>
+<h2 contenteditable="false"><i class="fas fa-rocket"></i> 亚马逊新功能与运营</h2>
 <div class="topic-category" contenteditable="false">运营技巧</div>
-<p contenteditable="false">针对侵权问题，<span class="highlight-name">@Andrew_Lee</span> 和 <span class="highlight-name">@chopx.xi</span> 建议开case向客服要具体<span class="highlight-keyword">投诉人信息</span>并确认是哪张图侵权。</p>
+<p contenteditable="false"><span class="highlight-name">@浅蓝丶</span>分享了现在新建链接亚马逊会自动写<span class="highlight-keyword">五点描述</span>和简介，认为这非常利好<span class="highlight-keyword">铺货</span>模式。</p>
 <div class="topic-keywords">
-<span class="keyword" contenteditable="false">开case</span>
-<span class="keyword" contenteditable="false">客服沟通</span>
-<span class="keyword" contenteditable="false">侵权申诉</span>
+<span class="keyword" contenteditable="false">五点描述</span>
+<span class="keyword" contenteditable="false">自动生成</span>
+<span class="keyword" contenteditable="false">铺货</span>
 </div>
-<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 5</div>
+<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 12<span style="margin-left: 1rem;">来源：盛夏-亚马逊学习交流群</span></div>
+</div>
+<i class="fas fa-star card-icon"></i>
+</div>
+<div class="card topic-card">
+<div class="topic-card-content-wrapper">
+<h2 contenteditable="false"><i class="fas fa-comments-dollar"></i> Passkey设置与系统环境</h2>
+<div class="topic-category" contenteditable="false">技术支持</div>
+<p contenteditable="false">多位群友探讨了在<span class="highlight-keyword">Win10/Win11</span>系统以及<span class="highlight-keyword">紫鸟浏览器</span>下设置<span class="highlight-keyword">Passkey</span>遇到的问题及解决步骤。</p>
+<div class="topic-keywords">
+<span class="keyword" contenteditable="false">Passkey</span>
+<span class="keyword" contenteditable="false">Win10/11</span>
+<span class="keyword" contenteditable="false">紫鸟浏览器</span>
+</div>
+<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 25<span style="margin-left: 1rem;">来源：盛夏-亚马逊学习交流群</span></div>
 </div>
 <i class="fas fa-comments card-icon"></i>
-</div>
-<div class="card topic-card">
-<div class="topic-card-content-wrapper">
-<h2 contenteditable="false"><i class="fas fa-industry"></i> 寻找商检工厂资源</h2>
-<div class="topic-category" contenteditable="false">供应链</div>
-<p contenteditable="false"><span class="highlight-name">@Li晓</span> 在群内寻问是否有便宜的做<span class="highlight-keyword">商检</span>的工厂资源。</p>
-<div class="topic-keywords">
-<span class="keyword" contenteditable="false">商检</span>
-<span class="keyword" contenteditable="false">工厂资源</span>
-</div>
-<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 2</div>
-</div>
-<i class="fas fa-box card-icon"></i>
 </div>
 </div>
 <div class="card mindmap-card-container">
@@ -400,30 +481,31 @@
 <button id="downloadDiagramBtn"><i class="fas fa-download"></i> 下载 SVG</button>
 <button class="fullscreen-toggle-btn" id="fullscreenOpenBtn"><i class="fas fa-expand"></i> 全屏</button>
 </div>
-<div class="kityminder-container" id="mainKityMinderContainer"></div>
+<div class="kityminder-container" id="mainKityMinderContainer">
+</div>
 <div id="mermaid-main-feedback-message"></div>
 <i class="fas fa-project-diagram card-icon"></i>
 </div>
 <div class="insight-columns"><div class="insight-row insight-row-primary"><div class="card quote-card">
 <h2 contenteditable="false"><i class="fas fa-quote-left"></i> 精彩引用</h2>
 <div class="quote" contenteditable="false">
-                        "版权投诉现在臭名昭著，几乎是独立站恶搞"
-                        <div class="quote-author" contenteditable="false">- @Andrew_Lee</div>
+                        "成功改变整个电商格局，重创卖家"
+                        <div class="quote-author" contenteditable="false">- @Ben 大吉大利</div>
 </div>
 <div class="quote" contenteditable="false">
-                        "我之前删除的链接前段时间也是被重新抓取了绩效，怀疑是亚马逊最近在重整系统"
-                        <div class="quote-author" contenteditable="false">- @chopx.xi</div>
+                        "卧槽，现在新建链接亚马逊自动写五点和简介了，利好铺货"
+                        <div class="quote-author" contenteditable="false">- @浅蓝丶</div>
 </div>
 <div class="quote" contenteditable="false">
-                        "现在貌似对第一次上传的链接的文案和图片在重新审查 所以很严"
-                        <div class="quote-author" contenteditable="false">- @chopx.xi</div>
+                        "卖家赚不到钱 退场了"
+                        <div class="quote-author" contenteditable="false">- @David｜邓荫嘉</div>
 </div>
 <div class="quote" contenteditable="false">
-                        "从 2026 年 8 月 10 日起，Amazon 将 Sponsored Products 的站外流量扩展到 Amazon Influencer Program 的创作者内容。"
-                        <div class="quote-author" contenteditable="false">- @鄂妹</div>
+                        "是时候给美国佬来点潮流风暴了"
+                        <div class="quote-author" contenteditable="false">- @Ben 大吉大利</div>
 </div>
 <i class="fas fa-comment-dots card-icon"></i>
-</div><div class="card links-card"><h2 contenteditable="false"><i class="fas fa-link"></i> 重要链接与资源</h2><div class="resource-grid"><a class="resource-card" href="https://advertising.amazon.com/help/GYTD2Z3SYMAAMVXA?utm_source=chatgpt.com" target="_blank"><div class="resource-card-top"><span class="resource-type">资源链接</span><span class="resource-source">advertising.amazon.com</span></div><div class="resource-title" contenteditable="false">Amazon SP广告站外流量扩展说明</div><p class="resource-desc" contenteditable="false">群内提及资源，用于延展「Amazon SP广告站外流量扩展说明」相关讨论。</p><div class="resource-foot">查看资源<i class="fas fa-arrow-up-right-from-square"></i></div></a></div><i class="fas fa-share-alt card-icon"></i></div></div><div class="insight-row insight-row-secondary"><div class="card stats-card">
+</div><div class="card links-card"><h2 contenteditable="false"><i class="fas fa-link"></i> 重要链接与资源</h2><div class="resource-grid"><a class="resource-card" href="#" target="_blank"><div class="resource-card-top"><span class="resource-type">资源链接</span><span class="resource-source">群聊提及</span></div><div class="resource-title" contenteditable="false">暂无外部链接分享</div><p class="resource-desc" contenteditable="false">群内提及资源，用于延展「暂无外部链接分享」相关讨论。</p><div class="resource-foot">查看资源<i class="fas fa-arrow-up-right-from-square"></i></div></a></div><i class="fas fa-share-alt card-icon"></i></div></div><div class="insight-row insight-row-secondary"><div class="card stats-card">
 <h2 contenteditable="false"><i class="fas fa-chart-line"></i> 活跃之星</h2>
 <table class="user-stats-table">
 <thead>
@@ -435,49 +517,29 @@
 </thead>
 <tbody>
 <tr>
-<td class="user-name-col" contenteditable="false" data-label="用户">@吃橘子的🐈</td>
-<td class="message-count-col" contenteditable="false" data-label="发言数">18</td>
-<td class="contribution-col" contenteditable="false" data-label="主要贡献">提出核心问题：已删除一年的链接收到版权投诉，引发群内深度探讨。</td>
-</tr>
-<tr>
-<td class="user-name-col" contenteditable="false" data-label="用户">@chopx.xi</td>
+<td class="user-name-col" contenteditable="false" data-label="用户">@Ben 大吉大利</td>
 <td class="message-count-col" contenteditable="false" data-label="发言数">9</td>
-<td class="contribution-col" contenteditable="false" data-label="主要贡献">分享自身处理历史链接被抓取绩效的经验，指出亚马逊系统重整及重新审查机制。</td>
+<td class="contribution-col" contenteditable="false" data-label="主要贡献">深入分析Temu平台现状及对电商格局的影响。</td>
 </tr>
 <tr>
-<td class="user-name-col" contenteditable="false" data-label="用户">@Andrew_Lee</td>
-<td class="message-count-col" contenteditable="false" data-label="发言数">4</td>
-<td class="contribution-col" contenteditable="false" data-label="主要贡献">提供专业建议，指出版权投诉多为独立站恶搞，指导如何开case获取投诉人信息。</td>
+<td class="user-name-col" contenteditable="false" data-label="用户">@是盛夏呀～🥕</td>
+<td class="message-count-col" contenteditable="false" data-label="发言数">9</td>
+<td class="contribution-col" contenteditable="false" data-label="主要贡献">发起关于Win10系统设置Passkey的讨论。</td>
 </tr>
 <tr>
-<td class="user-name-col" contenteditable="false" data-label="用户">@鄂妹</td>
-<td class="message-count-col" contenteditable="false" data-label="发言数">3</td>
-<td class="contribution-col" contenteditable="false" data-label="主要贡献">分享关于Amazon SP广告站外流量扩展的重要政策更新链接。</td>
+<td class="user-name-col" contenteditable="false" data-label="用户">@Vicky</td>
+<td class="message-count-col" contenteditable="false" data-label="发言数">7</td>
+<td class="contribution-col" contenteditable="false" data-label="主要贡献">分享Win11系统及本地电脑设置Passkey的经验。</td>
 </tr>
 <tr>
-<td class="user-name-col" contenteditable="false" data-label="用户">@h</td>
-<td class="message-count-col" contenteditable="false" data-label="发言数">2</td>
-<td class="contribution-col" contenteditable="false" data-label="主要贡献">提出产品因图片显示电池被下架的问题。</td>
+<td class="user-name-col" contenteditable="false" data-label="用户">@非</td>
+<td class="message-count-col" contenteditable="false" data-label="发言数">7</td>
+<td class="contribution-col" contenteditable="false" data-label="主要贡献">探讨Temu罚款问题及速卖通一件代发情况。</td>
 </tr>
 <tr>
-<td class="user-name-col" contenteditable="false" data-label="用户">@Addition</td>
-<td class="message-count-col" contenteditable="false" data-label="发言数">2</td>
-<td class="contribution-col" contenteditable="false" data-label="主要贡献">解答关于圆柱电池禁售的合规问题。</td>
-</tr>
-<tr>
-<td class="user-name-col" contenteditable="false" data-label="用户">@小鹿</td>
-<td class="message-count-col" contenteditable="false" data-label="发言数">2</td>
-<td class="contribution-col" contenteditable="false" data-label="主要贡献">反馈美国站排名停滞未更新的现象。</td>
-</tr>
-<tr>
-<td class="user-name-col" contenteditable="false" data-label="用户">@嘎嘎达</td>
-<td class="message-count-col" contenteditable="false" data-label="发言数">2</td>
-<td class="contribution-col" contenteditable="false" data-label="主要贡献">确认排名停滞问题。</td>
-</tr>
-<tr>
-<td class="user-name-col" contenteditable="false" data-label="用户">@Li晓</td>
-<td class="message-count-col" contenteditable="false" data-label="发言数">2</td>
-<td class="contribution-col" contenteditable="false" data-label="主要贡献">寻问商检工厂资源。</td>
+<td class="user-name-col" contenteditable="false" data-label="用户">@浅蓝丶</td>
+<td class="message-count-col" contenteditable="false" data-label="发言数">6</td>
+<td class="contribution-col" contenteditable="false" data-label="主要贡献">分享亚马逊自动生成五点描述的新功能。</td>
 </tr>
 </tbody>
 </table>
@@ -485,21 +547,16 @@
 </div><div class="card wordcloud-card">
 <h2 contenteditable="false"><i class="fas fa-cloud"></i> 词云</h2>
 <div class="wordcloud">
-<span class="wordcloud-item size-5" contenteditable="false" data-weight="5" style="--x:-62px;--y:-12px;--r:-6deg;">版权投诉</span>
-<span class="wordcloud-item size-5" contenteditable="false" data-weight="5" style="--x:68px;--y:-10px;--r:5deg;">绩效</span>
-<span class="wordcloud-item size-4" contenteditable="false" data-weight="4" style="--x:-6px;--y:-78px;--r:2deg;">链接删除</span>
-<span class="wordcloud-item size-4" contenteditable="false" data-weight="4" style="--x:-106px;--y:42px;--r:6deg;">亚马逊系统</span>
-<span class="wordcloud-item size-3" contenteditable="false" data-weight="3" style="--x:108px;--y:44px;--r:-5deg;">重新审查</span>
-<span class="wordcloud-item size-3" contenteditable="false" data-weight="3" style="--x:-8px;--y:70px;--r:-3deg;">SP广告</span>
-<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:58px;--y:108px;--r:4deg;">站外流量</span>
-<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:-122px;--y:-44px;--r:-8deg;">排名更新</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:116px;--y:-50px;--r:7deg;">圆柱电池</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:-142px;--y:4px;--r:6deg;">申诉</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:142px;--y:8px;--r:-5deg;">开case</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:-66px;--y:116px;--r:-4deg;">独立站恶搞</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:76px;--y:-104px;--r:4deg;">创作者内容</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:-22px;--y:132px;--r:0deg;">商检工厂</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:24px;--y:-124px;--r:-2deg;">图片侵权</span>
+<span class="wordcloud-item size-5" contenteditable="false" data-weight="5" style="--x:-62px;--y:-12px;--r:-6deg;">Passkey</span>
+<span class="wordcloud-item size-5" contenteditable="false" data-weight="5" style="--x:68px;--y:-10px;--r:5deg;">Temu</span>
+<span class="wordcloud-item size-4" contenteditable="false" data-weight="4" style="--x:-6px;--y:-78px;--r:2deg;">罚款</span>
+<span class="wordcloud-item size-4" contenteditable="false" data-weight="4" style="--x:-106px;--y:42px;--r:6deg;">低价商城</span>
+<span class="wordcloud-item size-3" contenteditable="false" data-weight="3" style="--x:108px;--y:44px;--r:-5deg;">五点描述</span>
+<span class="wordcloud-item size-3" contenteditable="false" data-weight="3" style="--x:-8px;--y:70px;--r:-3deg;">Win11</span>
+<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:58px;--y:108px;--r:4deg;">紫鸟浏览器</span>
+<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:-122px;--y:-44px;--r:-8deg;">铺货</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:116px;--y:-50px;--r:7deg;">沃尔玛</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:-142px;--y:4px;--r:6deg;">速卖通</span>
 </div>
 <i class="fas fa-tags card-icon"></i>
 </div></div></div>
@@ -518,7 +575,8 @@
 <button id="modalZoomOutBtn"><i class="fas fa-search-minus"></i> 缩小</button>
 <button id="modalDownloadDiagramBtn"><i class="fas fa-download"></i> 下载 SVG</button>
 </div>
-<div class="kityminder-container" id="modalKityMinderContainer"></div>
+<div class="kityminder-container" id="modalKityMinderContainer">
+</div>
 <div id="mermaid-modal-feedback-message"></div>
 </div>
 </div>
@@ -540,6 +598,7 @@
     const showMessageDistributionChart = true;
     const isContentEditable = false;
     
+    const themeSwitcher = document.getElementById('theme-switcher');
     const htmlEl = document.documentElement; 
     let activeUsersChartInstance, messageDistributionChartInstance; 
 
@@ -551,25 +610,38 @@
         return newTheme;
     }
 
+    function toggleTheme() {
+        const currentTheme = htmlEl.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        htmlEl.setAttribute('data-theme', newTheme);
+        reinitializeKityMinderWithNewTheme(newTheme);
+        initializeAllCharts(newTheme); 
+    }
+    
+    if(themeSwitcher) {
+        themeSwitcher.addEventListener('click', toggleTheme);
+    }
+
     let mainKM, modalKM; 
 
     const kityminderData = {
         root: {
-            data: { text: "亚马逊运营热点", expandState: "expand" },
+            data: { text: "跨境电商交流", expandState: "expand" },
             children: [
-                { data: { text: "账号合规与绩效", expandState: "expand" }, children: [
-                    { data: { text: "版权投诉" } },
-                    { data: { text: "历史链接被抓取" } },
-                    { data: { text: "系统重整与重新审查" } }
+                { data: { text: "平台趋势", expandState: "expand" }, children: [
+                    { data: { text: "Temu高额罚款" } },
+                    { data: { text: "亚马逊低价商城" } },
+                    { data: { text: "沃尔玛/速卖通机会" } }
                 ]},
-                { data: { text: "产品与图片合规" }, children: [
-                    { data: { text: "圆柱电池禁售" } },
-                    { data: { text: "图片侵权排查" } }
+                { data: { text: "运营实操", expandState: "expand" }, children: [
+                    { data: { text: "自动生成五点描述" } },
+                    { data: { text: "利好铺货模式" } },
+                    { data: { text: "前台销量显示" } }
                 ]},
-                { data: { text: "流量与广告策略", expandState: "expand" }, children: [
-                    { data: { text: "SP广告站外扩展" } },
-                    { data: { text: "创作者内容引流" } },
-                    { data: { text: "美国站排名停滞" } }
+                { data: { text: "技术支持", expandState: "expand" }, children: [
+                    { data: { text: "Passkey设置" } },
+                    { data: { text: "Win10/Win11系统" } },
+                    { data: { text: "紫鸟浏览器/本地环境" } }
                 ]}
             ]
         },
@@ -857,8 +929,8 @@
         const accentSecondaryColor = getCssVariable('--accent-secondary', '#ff8906');
 
         const userData = {
-            labels: ['吃橘子的🐈', 'chopx.xi', 'Andrew_Lee', '鄂妹', 'h', 'Addition'],
-            counts: [18, 9, 4, 3, 2, 2]
+            labels: ['Ben 大吉大利', '是盛夏呀～🥕', 'Vicky', '非', '浅蓝丶', '457-'],
+            counts: [9, 9, 7, 7, 6, 5]
         };
 
         const yAxisMax = Math.ceil(Math.max(...userData.counts) * 1.2);
@@ -881,14 +953,30 @@
                 responsive: true,
                 maintainAspectRatio: false,
                 plugins: {
-                    legend: { display: false },
+                    legend: {
+                        display: false
+                    },
                     datalabels: {
-                        anchor: 'end', align: 'top', color: tickColor, font: { weight: 'bold' }, formatter: Math.round
+                        anchor: 'end',
+                        align: 'top',
+                        color: tickColor,
+                        font: {
+                            weight: 'bold'
+                        },
+                        formatter: Math.round
                     }
                 },
                 scales: {
-                    y: { beginAtZero: true, ticks: { color: tickColor }, grid: { color: gridColor }, max: yAxisMax },
-                    x: { ticks: { color: tickColor }, grid: { display: false } }
+                    y: {
+                        beginAtZero: true,
+                        ticks: { color: tickColor },
+                        grid: { color: gridColor },
+                        max: yAxisMax
+                    },
+                    x: {
+                        ticks: { color: tickColor },
+                        grid: { display: false }
+                    }
                 }
             }
         });
@@ -900,7 +988,7 @@
         const gridColor = getCssVariable('--chart-grid-color', 'rgba(0, 0, 0, 0.1)');
         const accentColor = getCssVariable('--accent-blue', '#007EFF');
 
-        const messageData = [0, 0, 0, 0, 0, 0, 2, 5, 12, 18, 8, 5, 3, 2, 4, 2, 1, 0, 0, 1, 2, 0, 0, 0];
+        const messageData = [0, 0, 0, 0, 0, 0, 0, 0, 15, 25, 20, 10, 5, 2, 4, 3, 2, 1, 0, 2, 3, 0, 0, 0];
         
         const yAxisMax = Math.ceil(Math.max(...messageData) * 1.25);
 
@@ -924,22 +1012,48 @@
                 responsive: true,
                 maintainAspectRatio: false,
                 plugins: {
-                    legend: { display: false },
+                    legend: {
+                        display: false
+                    },
                     datalabels: {
                         align: 'top',
-                        backgroundColor: (context) => { return htmlEl.getAttribute('data-theme') === 'dark' ? 'rgba(0,0,0,0.5)' : null; },
-                        borderRadius: 4, color: tickColor, font: { weight: 'bold' }, formatter: Math.round, padding: 4
+                        backgroundColor: (context) => {
+                           return htmlEl.getAttribute('data-theme') === 'dark' ? 'rgba(0,0,0,0.5)' : null;
+                        },
+                        borderRadius: 4,
+                        color: tickColor,
+                        font: {
+                            weight: 'bold'
+                        },
+                        formatter: Math.round,
+                        padding: 4
                     }
                 },
                 scales: {
-                    y: { beginAtZero: true, ticks: { color: tickColor }, grid: { color: gridColor }, max: yAxisMax },
-                    x: { ticks: { color: tickColor }, grid: { color: gridColor } }
+                    y: {
+                        beginAtZero: true,
+                        ticks: { color: tickColor },
+                        grid: { color: gridColor },
+                        max: yAxisMax
+                    },
+                    x: {
+                        ticks: { color: tickColor },
+                        grid: { color: gridColor }
+                    }
                 }
             }
         });
     }
 
     function updateCardVisibility(mode) {
+        const qiaomuCards = [
+            document.querySelector('.group-intro-card'),
+            document.querySelector('.more-groups-intro-card'),
+            document.querySelector('.qr-code-container-card')
+        ];
+        const marketingCards = [
+            document.querySelector('.champions-wrapper')
+        ];
         const activeUsersChartCard = document.querySelector('.active-users-chart-card');
         const messageDistributionChartCard = document.querySelector('.message-distribution-chart-card');
         
@@ -952,6 +1066,27 @@
             });
         };
         
+        switch (mode) {
+            case 'general':
+                setVisibility(qiaomuCards, false);
+                setVisibility(marketingCards, false);
+                break;
+            case 'marketing':
+                setVisibility(qiaomuCards, false);
+                setVisibility(marketingCards, true);
+                break;
+            case 'qiaomu':
+                setVisibility(qiaomuCards, true);
+                setVisibility(marketingCards, false);
+                break;
+            case 'education':
+            case 'medical':
+            default:
+                setVisibility(qiaomuCards, true);
+                setVisibility(marketingCards, true);
+                break;
+        }
+
         setVisibility(activeUsersChartCard, showActiveUsersChart);
         setVisibility(messageDistributionChartCard, showMessageDistributionChart);
     }

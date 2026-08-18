@@ -2,9 +2,17 @@
   "group_set": "midsummer_amazon_study",
   "display_name": "盛夏-亚马逊学习交流群",
   "slug": "midsummer_amazon_study",
-  "generated_at": "2026-08-18T10:55:18",
+  "generated_at": "2026-08-18T15:28:16",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260817",
+      "title": "暂无外部链接分享",
+      "summary": "今日群聊重点讨论了亚马逊低价商城的现状、Temu平台的高额罚款现象，以及沃尔玛、速卖通等其他平台的选择。此外，群友们还交流了亚马逊新建链接自动生成五点描述的新功能，并探讨了在Win10/Win11系统及紫鸟浏览器下设置Passkey的具体步骤。",
+      "source_html": "data/20260817/midsummer_amazon_study/MODE2_20260817_盛夏-亚马逊学习交流群_20260818_152606.html",
+      "path": "groups/midsummer_amazon_study/days/20260817.html",
+      "mtime": "2026-08-18T15:28:12"
+    },
     {
       "date": "20260816",
       "title": "盛夏-亚马逊学习交流群日报",
@@ -23,6 +31,7 @@
     }
   ],
   "urls": {
+    "20260817": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260817.html",
     "20260816": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260816.html",
     "20260811": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260811.html"
   }

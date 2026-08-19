@@ -10,7 +10,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>盛夏-亚马逊学习交流群日报 - 20260817</title>
+<title>盛夏-亚马逊学习交流群 日报 - 20260817</title>
 <link href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet"/>
 <link href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-100-M/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -99,8 +99,14 @@
              background-color: rgba(61, 169, 252, 0.1);
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html, body { transition: background-color 0.4s ease, color 0.4s ease; }
+        * {
+            margin: 0; padding: 0; box-sizing: border-box;
+        }
+
+        html, body {
+            transition: background-color 0.4s ease, color 0.4s ease;
+        }
+
         body {
             font-family: var(--font-family);
             background-color: var(--bg-primary);
@@ -110,7 +116,12 @@
             width: 100%;
         }
         
-        #page-container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+        #page-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
         body.modal-active { overflow: hidden; }
 
         h1, h2, h3, h4 { font-weight: 600; letter-spacing: 0.5px; transition: color 0.4s ease; }
@@ -174,7 +185,10 @@
             z-index: 0;
             transition: color 0.4s ease;
         }
-        [data-theme="dark"] .card-icon { opacity: 0.1; color: var(--accent-blue); }
+        [data-theme="dark"] .card-icon {
+            opacity: 0.1; 
+            color: var(--accent-blue);
+        }
 
         .main-card,
         .active-users-chart-card,
@@ -209,7 +223,7 @@
         .meta-info span { background-color: var(--bg-tertiary); padding: 5px 10px; border-radius: 20px; font-size: 0.9rem; color: var(--accent-blue); }
         [data-theme="dark"] .meta-info span { color: var(--accent-cyan); }
         .summary { margin-top: 1rem; line-height: 1.7; text-align: left; }
-        
+
         .chart-container {
             position: relative;
             height: 300px;
@@ -311,11 +325,14 @@
         .topic-cards-wrapper .topic-card:nth-child(1) { animation-delay: 0.4s; }
         .topic-cards-wrapper .topic-card:nth-child(2) { animation-delay: 0.5s; }
         .topic-cards-wrapper .topic-card:nth-child(3) { animation-delay: 0.6s; }
-        .mindmap-card-container { animation-delay: 0.7s; }
-        .quote-card { animation-delay: 0.8s; }
-        .links-card { animation-delay: 0.9s; }
-        .stats-card { animation-delay: 1.0s; }
-        .wordcloud-card { animation-delay: 1.1s; }
+        .topic-cards-wrapper .topic-card:nth-child(4) { animation-delay: 0.7s; }
+        .topic-cards-wrapper .topic-card:nth-child(5) { animation-delay: 0.8s; }
+        .topic-cards-wrapper .topic-card:nth-child(6) { animation-delay: 0.9s; }
+        .mindmap-card-container { animation-delay: 1.0s; }
+        .quote-card { animation-delay: 1.1s; }
+        .links-card { animation-delay: 1.2s; }
+        .stats-card { animation-delay: 1.3s; }
+        .wordcloud-card { animation-delay: 1.4s; }
 
         @media (max-width: 768px) {
             #page-container { padding: 10px; }
@@ -404,17 +421,19 @@
 <div id="page-container">
 <div id="report-content-wrapper">
 <div class="grid-container">
+<!-- 主报告信息卡片 -->
 <div class="card main-card">
-<h1 contenteditable="false">盛夏-亚马逊学习交流群日报</h1>
+<h1 contenteditable="false">盛夏-亚马逊学习交流群 日报</h1>
 <div class="date" contenteditable="false">2026年8月17日</div>
 <div class="meta-info">
 <span contenteditable="false"><i class="fas fa-comment"></i> 消息数: 92</span>
 <span contenteditable="false"><i class="fas fa-users"></i> 活跃用户: 22</span>
 <span contenteditable="false"><i class="fas fa-fire"></i> 热点话题: 6</span>
 </div>
-<p class="summary" contenteditable="false">今日群聊重点讨论了亚马逊低价商城的现状、Temu平台的高额罚款现象，以及沃尔玛、速卖通等其他平台的选择。此外，群友们还交流了亚马逊新建链接自动生成五点描述的新功能，并探讨了在Win10/Win11系统及紫鸟浏览器下设置Passkey的具体步骤。</p>
+<p class="summary" contenteditable="false">今日群内主要围绕亚马逊多渠道配送追踪编码、低价商城与Temu的电商环境冲击、速卖通与沃尔玛平台现状、亚马逊新建链接自动生成功能以及Win10/Win11系统下Passkey的设置等话题展开了热烈讨论。KOL @Ben 大吉大利 对当前电商格局的感慨引发了大家的共鸣。</p>
 <i class="fas fa-microchip card-icon"></i>
 </div>
+<!-- 活跃用户分布图表卡片 -->
 <div class="card active-users-chart-card">
 <h2 contenteditable="false"><i class="fas fa-chart-bar"></i> 活跃用户分布</h2>
 <div class="chart-container">
@@ -422,6 +441,7 @@
 </div>
 <i class="fas fa-users card-icon"></i>
 </div>
+<!-- 消息时间分布图表卡片 -->
 <div class="card message-distribution-chart-card">
 <h2 contenteditable="false"><i class="fas fa-clock"></i> 消息时间分布</h2>
 <div class="chart-container">
@@ -429,50 +449,95 @@
 </div>
 <i class="fas fa-hourglass-half card-icon"></i>
 </div>
+<!-- 热门话题卡片容器 -->
 <div class="topic-cards-wrapper">
 <div class="card topic-card">
 <div class="topic-card-content-wrapper">
-<h2 contenteditable="false"><i class="fas fa-lightbulb"></i> 亚马逊低价商城与Temu现状</h2>
-<div class="topic-category" contenteditable="false">平台趋势</div>
-<p contenteditable="false">大家讨论了<span class="highlight-keyword">低价商城</span>的广告推荐，<span class="highlight-name">@Ben 大吉大利</span>提到Temu高额罚款让卖家退场，直言其“成功改变整个电商格局，重创卖家”。</p>
+<h2 contenteditable="false"><i class="fas fa-lightbulb"></i> Win10/Win11系统Passkey设置探讨</h2>
+<div class="topic-category" contenteditable="false">系统与工具</div>
+<p contenteditable="false"><span class="highlight-name">@是盛夏呀～🥕</span> 提出了在Win10本地设置Passkey遇到困难的问题，引发了大家对不同系统和环境下Passkey设置的讨论。<span class="highlight-name">@Vicky</span> 分享了自己上周在Win10设置失败，升级到Win11才成功的经验。而 <span class="highlight-name">@457-</span> 则表示自己的Win10在<span class="highlight-keyword">紫鸟</span>环境下可以成功设置。最终得出结论，如果是使用紫鸟浏览器，则无所谓系统版本，但如果是本地电脑，Win11的成功率似乎更高。这为遇到类似验证问题的卖家提供了排查方向。</p>
 <div class="topic-keywords">
-<span class="keyword" contenteditable="false">低价商城</span>
-<span class="keyword" contenteditable="false">Temu罚款</span>
-<span class="keyword" contenteditable="false">电商格局</span>
+<span class="keyword" contenteditable="false">Passkey</span>
+<span class="keyword" contenteditable="false">Win10</span>
+<span class="keyword" contenteditable="false">Win11</span>
+<span class="keyword" contenteditable="false">紫鸟</span>
 </div>
-<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 18<span style="margin-left: 1rem;">来源：盛夏-亚马逊学习交流群</span></div>
+<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 18</div>
 </div>
 <i class="fas fa-tools card-icon"></i>
 </div>
 <div class="card topic-card">
 <div class="topic-card-content-wrapper">
-<h2 contenteditable="false"><i class="fas fa-rocket"></i> 亚马逊新功能与运营</h2>
-<div class="topic-category" contenteditable="false">运营技巧</div>
-<p contenteditable="false"><span class="highlight-name">@浅蓝丶</span>分享了现在新建链接亚马逊会自动写<span class="highlight-keyword">五点描述</span>和简介，认为这非常利好<span class="highlight-keyword">铺货</span>模式。</p>
+<h2 contenteditable="false"><i class="fas fa-rocket"></i> Temu对电商环境的冲击与卖家现状</h2>
+<div class="topic-category" contenteditable="false">行业观察</div>
+<p contenteditable="false">群内对Temu平台当前的运营环境进行了深入探讨。<span class="highlight-name">@Ben 大吉大利</span> 提到之前低价商城大张旗鼓，现在没动静了，并感慨Temu成功改变了整个<span class="highlight-keyword">电商格局</span>，重创了卖家。<span class="highlight-name">@David｜邓荫嘉</span> 表示Temu卖家赚不到钱已经退场。多位群友如 <span class="highlight-name">@浅蓝丶</span> 和 <span class="highlight-name">@非</span> 纷纷爆料身边做Temu被随意<span class="highlight-keyword">罚款</span>的真实案例，金额从几百到几万不等，<span class="highlight-name">@Icy🍉</span> 更是直言“TEMU罚款不需要理由”。大家一致认为当前卷不过Temu，且其对卖家极度不友好。</p>
 <div class="topic-keywords">
-<span class="keyword" contenteditable="false">五点描述</span>
-<span class="keyword" contenteditable="false">自动生成</span>
-<span class="keyword" contenteditable="false">铺货</span>
+<span class="keyword" contenteditable="false">Temu</span>
+<span class="keyword" contenteditable="false">罚款</span>
+<span class="keyword" contenteditable="false">电商格局</span>
 </div>
-<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 12<span style="margin-left: 1rem;">来源：盛夏-亚马逊学习交流群</span></div>
+<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 15</div>
 </div>
 <i class="fas fa-star card-icon"></i>
 </div>
 <div class="card topic-card">
 <div class="topic-card-content-wrapper">
-<h2 contenteditable="false"><i class="fas fa-comments-dollar"></i> Passkey设置与系统环境</h2>
-<div class="topic-category" contenteditable="false">技术支持</div>
-<p contenteditable="false">多位群友探讨了在<span class="highlight-keyword">Win10/Win11</span>系统以及<span class="highlight-keyword">紫鸟浏览器</span>下设置<span class="highlight-keyword">Passkey</span>遇到的问题及解决步骤。</p>
+<h2 contenteditable="false"><i class="fas fa-comments-dollar"></i> 跨境电商多平台布局探讨：沃尔玛与速卖通</h2>
+<div class="topic-category" contenteditable="false">平台布局</div>
+<p contenteditable="false">在感慨Temu难做之后，群友们开始探讨其他平台的可能性。<span class="highlight-name">@David｜邓荫嘉</span> 建议大家“做<span class="highlight-keyword">沃尔玛</span>吧”，引发了 <span class="highlight-name">@Icy🍉</span> 和 <span class="highlight-name">@Ben 大吉大利</span> 对于沃尔玛什么<span class="highlight-keyword">品类</span>好做的疑问，<span class="highlight-name">@迷当</span> 幽默地建议做“拖鞋”，<span class="highlight-name">@Ben 大吉大利</span> 更是调侃“是时候给美国佬来点潮流风暴了”。同时，<span class="highlight-name">@非</span> 询问了<span class="highlight-keyword">速卖通</span>一件代发的情况，表示自己不出单，<span class="highlight-name">@David｜邓荫嘉</span> 建议其报名活动。这反映了卖家在多平台布局上的探索与迷茫。</p>
 <div class="topic-keywords">
-<span class="keyword" contenteditable="false">Passkey</span>
-<span class="keyword" contenteditable="false">Win10/11</span>
-<span class="keyword" contenteditable="false">紫鸟浏览器</span>
+<span class="keyword" contenteditable="false">沃尔玛</span>
+<span class="keyword" contenteditable="false">速卖通</span>
+<span class="keyword" contenteditable="false">品类</span>
 </div>
-<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 25<span style="margin-left: 1rem;">来源：盛夏-亚马逊学习交流群</span></div>
+<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 8</div>
 </div>
 <i class="fas fa-comments card-icon"></i>
 </div>
+<div class="card topic-card">
+<div class="topic-card-content-wrapper">
+<h2 contenteditable="false"><i class="fas fa-desktop"></i> 前台销量显示与系统网络问题</h2>
+<div class="topic-category" contenteditable="false">日常运营</div>
+<p contenteditable="false">群内还零星讨论了一些系统和显示异常的问题。<span class="highlight-name">@Tony-Li</span> 发现亚马逊前台有时不显示<span class="highlight-keyword">销量</span>，但在其他电脑上又正常显示。<span class="highlight-name">@禾竼</span> 遇到了后台保存提交失败的问题，<span class="highlight-name">@好多米</span> 分析可能是网络或系统原因。此外，<span class="highlight-name">@Edy</span> 顺带分享了自己“32g+1tb”的<span class="highlight-keyword">电脑配置</span>“嘎嘎好用”。这些日常交流反映了卖家在运营过程中经常遇到的小Bug和对硬件工具的交流。</p>
+<div class="topic-keywords">
+<span class="keyword" contenteditable="false">销量显示</span>
+<span class="keyword" contenteditable="false">提交失败</span>
+<span class="keyword" contenteditable="false">电脑配置</span>
 </div>
+<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 6</div>
+</div>
+<i class="fas fa-desktop card-icon"></i>
+</div>
+<div class="card topic-card">
+<div class="topic-card-content-wrapper">
+<h2 contenteditable="false"><i class="fas fa-truck"></i> 亚马逊多渠道配送追踪编码选择</h2>
+<div class="topic-category" contenteditable="false">实操答疑</div>
+<p contenteditable="false">关于亚马逊日常运营实操，<span class="highlight-name">@帅哥哥</span> 提出了一个具体问题：“<span class="highlight-keyword">多渠道配送</span>现在有两个<span class="highlight-keyword">追踪编码</span>，用哪个呀，朋友们”。这个问题迅速得到了群内热心卖家的解答。<span class="highlight-name">@panda🎋</span> 和 <span class="highlight-name">@Stars</span> 均明确指出应该使用“<span class="highlight-keyword">承运人</span>追踪编码”。这个简短的问答体现了群内互助的良好氛围，帮助卖家快速解决实际操作中的小疑惑，确保订单追踪信息的准确填写。</p>
+<div class="topic-keywords">
+<span class="keyword" contenteditable="false">多渠道配送</span>
+<span class="keyword" contenteditable="false">追踪编码</span>
+<span class="keyword" contenteditable="false">承运人</span>
+</div>
+<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 4</div>
+</div>
+<i class="fas fa-truck card-icon"></i>
+</div>
+<div class="card topic-card">
+<div class="topic-card-content-wrapper">
+<h2 contenteditable="false"><i class="fas fa-edit"></i> 亚马逊Listing新建功能更新</h2>
+<div class="topic-category" contenteditable="false">平台更新</div>
+<p contenteditable="false"><span class="highlight-name">@浅蓝丶</span> 在群内分享了一个关于亚马逊后台功能更新的重要发现：“卧槽，现在<span class="highlight-keyword">新建链接</span>亚马逊自动写<span class="highlight-keyword">五点</span>和<span class="highlight-keyword">简介</span>了”。这一功能的变化立刻引起了关注，<span class="highlight-name">@浅蓝丶</span> 进一步评价这一更新是“利好<span class="highlight-keyword">铺货</span>”。这个话题虽然讨论篇幅不长，但对于依赖大量上新的铺货型卖家来说是一个值得关注的效率提升点，也反映了亚马逊在利用AI辅助卖家生成内容方面的持续推进。</p>
+<div class="topic-keywords">
+<span class="keyword" contenteditable="false">新建链接</span>
+<span class="keyword" contenteditable="false">五点</span>
+<span class="keyword" contenteditable="false">铺货</span>
+</div>
+<div class="topic-mentions" contenteditable="false"><i class="fas fa-bullhorn"></i> 提及次数: 3</div>
+</div>
+<i class="fas fa-edit card-icon"></i>
+</div>
+</div>
+<!-- 思维导图卡片 -->
 <div class="card mindmap-card-container">
 <h2><i class="fas fa-sitemap"></i> 核心概念关系图</h2>
 <div class="mindmap-controls">
@@ -486,26 +551,31 @@
 <div id="mermaid-main-feedback-message"></div>
 <i class="fas fa-project-diagram card-icon"></i>
 </div>
+<!-- 精彩引用卡片 -->
 <div class="insight-columns"><div class="insight-row insight-row-primary"><div class="card quote-card">
 <h2 contenteditable="false"><i class="fas fa-quote-left"></i> 精彩引用</h2>
-<div class="quote" contenteditable="false">
-                        "成功改变整个电商格局，重创卖家"
-                        <div class="quote-author" contenteditable="false">- @Ben 大吉大利</div>
-</div>
-<div class="quote" contenteditable="false">
-                        "卧槽，现在新建链接亚马逊自动写五点和简介了，利好铺货"
-                        <div class="quote-author" contenteditable="false">- @浅蓝丶</div>
-</div>
-<div class="quote" contenteditable="false">
-                        "卖家赚不到钱 退场了"
-                        <div class="quote-author" contenteditable="false">- @David｜邓荫嘉</div>
-</div>
-<div class="quote" contenteditable="false">
-                        "是时候给美国佬来点潮流风暴了"
-                        <div class="quote-author" contenteditable="false">- @Ben 大吉大利</div>
-</div>
+<div class="quote" contenteditable="false">"多渠道配送现在有两个追踪编码，用哪个呀，朋友们"<div class="quote-author" contenteditable="false">- @帅哥哥</div></div>
+<div class="quote" contenteditable="false">"承运人追踪编码"<div class="quote-author" contenteditable="false">- @panda🎋</div></div>
+<div class="quote" contenteditable="false">"之前还见低价商场大张旗鼓的，最近又没什么动静了"<div class="quote-author" contenteditable="false">- @Ben 大吉大利</div></div>
+<div class="quote" contenteditable="false">"卷不过temu吧"<div class="quote-author" contenteditable="false">- @非</div></div>
+<div class="quote" contenteditable="false">"没事 特姆也凉半截了"<div class="quote-author" contenteditable="false">- @David｜邓荫嘉</div></div>
+<div class="quote" contenteditable="false">"卖家赚不到钱 退场了"<div class="quote-author" contenteditable="false">- @David｜邓荫嘉</div></div>
+<div class="quote" contenteditable="false">"不是被罚光了退场"<div class="quote-author" contenteditable="false">- @Ben 大吉大利</div></div>
+<div class="quote" contenteditable="false">"我同学做了3个月被罚几万"<div class="quote-author" contenteditable="false">- @浅蓝丶</div></div>
+<div class="quote" contenteditable="false">"TEMU罚款不需要理由"<div class="quote-author" contenteditable="false">- @Icy🍉</div></div>
+<div class="quote" contenteditable="false">"temu没出来之前，我印象中电商环境不是这样的吧"<div class="quote-author" contenteditable="false">- @Ben 大吉大利</div></div>
+<div class="quote" contenteditable="false">"成功改变整个电商格局，重创卖家"<div class="quote-author" contenteditable="false">- @Ben 大吉大利</div></div>
+<div class="quote" contenteditable="false">"做沃尔玛吧"<div class="quote-author" contenteditable="false">- @David｜邓荫嘉</div></div>
+<div class="quote" contenteditable="false">"是时候给美国佬来点潮流风暴了"<div class="quote-author" contenteditable="false">- @Ben 大吉大利</div></div>
+<div class="quote" contenteditable="false">"有人做速卖通一件代发吗"<div class="quote-author" contenteditable="false">- @非</div></div>
+<div class="quote" contenteditable="false">"卧槽，现在新建链接亚马逊自动写五点和简介了"<div class="quote-author" contenteditable="false">- @浅蓝丶</div></div>
+<div class="quote" contenteditable="false">"利好铺货"<div class="quote-author" contenteditable="false">- @浅蓝丶</div></div>
+<div class="quote" contenteditable="false">"你们有谁win10本地设置了passkey吗"<div class="quote-author" contenteditable="false">- @是盛夏呀～🥕</div></div>
+<div class="quote" contenteditable="false">"我上周设置了不行 然后升级到win 11 才设置成功的"<div class="quote-author" contenteditable="false">- @Vicky</div></div>
+<div class="quote" contenteditable="false">"紫鸟的话 是无所谓版本的"<div class="quote-author" contenteditable="false">- @是盛夏呀～🥕</div></div>
+<div class="quote" contenteditable="false">"现在前台是不是不显示销量？"<div class="quote-author" contenteditable="false">- @Tony-Li</div></div>
 <i class="fas fa-comment-dots card-icon"></i>
-</div><div class="card links-card"><h2 contenteditable="false"><i class="fas fa-link"></i> 重要链接与资源</h2><div class="resource-grid"><a class="resource-card" href="#" target="_blank"><div class="resource-card-top"><span class="resource-type">资源链接</span><span class="resource-source">群聊提及</span></div><div class="resource-title" contenteditable="false">暂无外部链接分享</div><p class="resource-desc" contenteditable="false">群内提及资源，用于延展「暂无外部链接分享」相关讨论。</p><div class="resource-foot">查看资源<i class="fas fa-arrow-up-right-from-square"></i></div></a></div><i class="fas fa-share-alt card-icon"></i></div></div><div class="insight-row insight-row-secondary"><div class="card stats-card">
+</div><div class="card links-card"><h2 contenteditable="false"><i class="fas fa-link"></i> 重要链接与资源</h2><div class="resource-grid"><a class="resource-card" href="https://sellercentral.amazon.com/" target="_blank"><div class="resource-card-top"><span class="resource-type">资源链接</span><span class="resource-source">sellercentral.amazon.com</span></div><div class="resource-title" contenteditable="false">亚马逊卖家中心</div><p class="resource-desc" contenteditable="false">群内提及资源，用于延展「亚马逊卖家中心」相关讨论。</p><div class="resource-foot">查看资源<i class="fas fa-arrow-up-right-from-square"></i></div></a><a class="resource-card" href="https://seller.walmart.com/" target="_blank"><div class="resource-card-top"><span class="resource-type">资源链接</span><span class="resource-source">seller.walmart.com</span></div><div class="resource-title" contenteditable="false">沃尔玛卖家中心</div><p class="resource-desc" contenteditable="false">群内提及资源，用于延展「沃尔玛卖家中心」相关讨论。</p><div class="resource-foot">查看资源<i class="fas fa-arrow-up-right-from-square"></i></div></a><a class="resource-card" href="https://sellercenter.aliexpress.com/" target="_blank"><div class="resource-card-top"><span class="resource-type">资源链接</span><span class="resource-source">sellercenter.aliexpress.com</span></div><div class="resource-title" contenteditable="false">速卖通卖家后台</div><p class="resource-desc" contenteditable="false">群内提及资源，用于延展「速卖通卖家后台」相关讨论。</p><div class="resource-foot">查看资源<i class="fas fa-arrow-up-right-from-square"></i></div></a><a class="resource-card" href="https://www.ziniao.com/" target="_blank"><div class="resource-card-top"><span class="resource-type">资源链接</span><span class="resource-source">ziniao.com</span></div><div class="resource-title" contenteditable="false">紫鸟浏览器官网</div><p class="resource-desc" contenteditable="false">群内提及资源，用于延展「紫鸟浏览器官网」相关讨论。</p><div class="resource-foot">查看资源<i class="fas fa-arrow-up-right-from-square"></i></div></a><a class="resource-card" href="https://kuajing.pinduoduo.com/" target="_blank"><div class="resource-card-top"><span class="resource-type">资源链接</span><span class="resource-source">kuajing.pinduoduo.com</span></div><div class="resource-title" contenteditable="false">Temu跨境卖家中心</div><p class="resource-desc" contenteditable="false">群内提及资源，用于延展「Temu跨境卖家中心」相关讨论。</p><div class="resource-foot">查看资源<i class="fas fa-arrow-up-right-from-square"></i></div></a><a class="resource-card" href="https://www.microsoft.com/zh-cn/windows/windows-11" target="_blank"><div class="resource-card-top"><span class="resource-type">资源链接</span><span class="resource-source">microsoft.com</span></div><div class="resource-title" contenteditable="false">微软Windows 11升级指南</div><p class="resource-desc" contenteditable="false">群内提及资源，用于延展「微软Windows 11升级指南」相关讨论。</p><div class="resource-foot">查看资源<i class="fas fa-arrow-up-right-from-square"></i></div></a></div><i class="fas fa-share-alt card-icon"></i></div></div><div class="insight-row insight-row-secondary"><div class="card stats-card">
 <h2 contenteditable="false"><i class="fas fa-chart-line"></i> 活跃之星</h2>
 <table class="user-stats-table">
 <thead>
@@ -517,29 +587,49 @@
 </thead>
 <tbody>
 <tr>
-<td class="user-name-col" contenteditable="false" data-label="用户">@Ben 大吉大利</td>
-<td class="message-count-col" contenteditable="false" data-label="发言数">9</td>
-<td class="contribution-col" contenteditable="false" data-label="主要贡献">深入分析Temu平台现状及对电商格局的影响。</td>
-</tr>
-<tr>
 <td class="user-name-col" contenteditable="false" data-label="用户">@是盛夏呀～🥕</td>
-<td class="message-count-col" contenteditable="false" data-label="发言数">9</td>
-<td class="contribution-col" contenteditable="false" data-label="主要贡献">发起关于Win10系统设置Passkey的讨论。</td>
+<td class="message-count-col" contenteditable="false" data-label="发言数">10</td>
+<td class="contribution-col" contenteditable="false" data-label="主要贡献">探讨Win10/Win11系统下Passkey的设置问题</td>
 </tr>
 <tr>
-<td class="user-name-col" contenteditable="false" data-label="用户">@Vicky</td>
-<td class="message-count-col" contenteditable="false" data-label="发言数">7</td>
-<td class="contribution-col" contenteditable="false" data-label="主要贡献">分享Win11系统及本地电脑设置Passkey的经验。</td>
-</tr>
-<tr>
-<td class="user-name-col" contenteditable="false" data-label="用户">@非</td>
-<td class="message-count-col" contenteditable="false" data-label="发言数">7</td>
-<td class="contribution-col" contenteditable="false" data-label="主要贡献">探讨Temu罚款问题及速卖通一件代发情况。</td>
+<td class="user-name-col" contenteditable="false" data-label="用户">@Ben 大吉大利</td>
+<td class="message-count-col" contenteditable="false" data-label="发言数">8</td>
+<td class="contribution-col" contenteditable="false" data-label="主要贡献">深刻剖析Temu对电商格局的改变及卖家现状</td>
 </tr>
 <tr>
 <td class="user-name-col" contenteditable="false" data-label="用户">@浅蓝丶</td>
 <td class="message-count-col" contenteditable="false" data-label="发言数">6</td>
-<td class="contribution-col" contenteditable="false" data-label="主要贡献">分享亚马逊自动生成五点描述的新功能。</td>
+<td class="contribution-col" contenteditable="false" data-label="主要贡献">分享亚马逊新建链接自动生成五点功能，讨论Temu罚款</td>
+</tr>
+<tr>
+<td class="user-name-col" contenteditable="false" data-label="用户">@非</td>
+<td class="message-count-col" contenteditable="false" data-label="发言数">6</td>
+<td class="contribution-col" contenteditable="false" data-label="主要贡献">吐槽Temu罚款经历，询问速卖通一件代发情况</td>
+</tr>
+<tr>
+<td class="user-name-col" contenteditable="false" data-label="用户">@Vicky</td>
+<td class="message-count-col" contenteditable="false" data-label="发言数">6</td>
+<td class="contribution-col" contenteditable="false" data-label="主要贡献">分享Win10升级Win11成功设置Passkey的经验</td>
+</tr>
+<tr>
+<td class="user-name-col" contenteditable="false" data-label="用户">@457-</td>
+<td class="message-count-col" contenteditable="false" data-label="发言数">5</td>
+<td class="contribution-col" contenteditable="false" data-label="主要贡献">分享紫鸟环境下Win10成功设置Passkey的经历</td>
+</tr>
+<tr>
+<td class="user-name-col" contenteditable="false" data-label="用户">@@</td>
+<td class="message-count-col" contenteditable="false" data-label="发言数">5</td>
+<td class="contribution-col" contenteditable="false" data-label="主要贡献">参与低价商城、Temu销量及Win11设置的讨论</td>
+</tr>
+<tr>
+<td class="user-name-col" contenteditable="false" data-label="用户">@David｜邓荫嘉</td>
+<td class="message-count-col" contenteditable="false" data-label="发言数">3</td>
+<td class="contribution-col" contenteditable="false" data-label="主要贡献">建议转战沃尔玛，解答速卖通不出单问题</td>
+</tr>
+<tr>
+<td class="user-name-col" contenteditable="false" data-label="用户">@帅哥哥</td>
+<td class="message-count-col" contenteditable="false" data-label="发言数">3</td>
+<td class="contribution-col" contenteditable="false" data-label="主要贡献">提问多渠道配送追踪编码的选择</td>
 </tr>
 </tbody>
 </table>
@@ -547,21 +637,44 @@
 </div><div class="card wordcloud-card">
 <h2 contenteditable="false"><i class="fas fa-cloud"></i> 词云</h2>
 <div class="wordcloud">
-<span class="wordcloud-item size-5" contenteditable="false" data-weight="5" style="--x:-62px;--y:-12px;--r:-6deg;">Passkey</span>
+<span class="wordcloud-item size-5" contenteditable="false" data-weight="5" style="--x:-62px;--y:-12px;--r:-6deg;">亚马逊</span>
 <span class="wordcloud-item size-5" contenteditable="false" data-weight="5" style="--x:68px;--y:-10px;--r:5deg;">Temu</span>
-<span class="wordcloud-item size-4" contenteditable="false" data-weight="4" style="--x:-6px;--y:-78px;--r:2deg;">罚款</span>
-<span class="wordcloud-item size-4" contenteditable="false" data-weight="4" style="--x:-106px;--y:42px;--r:6deg;">低价商城</span>
-<span class="wordcloud-item size-3" contenteditable="false" data-weight="3" style="--x:108px;--y:44px;--r:-5deg;">五点描述</span>
-<span class="wordcloud-item size-3" contenteditable="false" data-weight="3" style="--x:-8px;--y:70px;--r:-3deg;">Win11</span>
-<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:58px;--y:108px;--r:4deg;">紫鸟浏览器</span>
-<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:-122px;--y:-44px;--r:-8deg;">铺货</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:116px;--y:-50px;--r:7deg;">沃尔玛</span>
-<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:-142px;--y:4px;--r:6deg;">速卖通</span>
+<span class="wordcloud-item size-4" contenteditable="false" data-weight="4" style="--x:-6px;--y:-78px;--r:2deg;">多渠道配送</span>
+<span class="wordcloud-item size-4" contenteditable="false" data-weight="4" style="--x:-106px;--y:42px;--r:6deg;">追踪编码</span>
+<span class="wordcloud-item size-4" contenteditable="false" data-weight="4" style="--x:108px;--y:44px;--r:-5deg;">沃尔玛</span>
+<span class="wordcloud-item size-4" contenteditable="false" data-weight="4" style="--x:-8px;--y:70px;--r:-3deg;">Passkey</span>
+<span class="wordcloud-item size-3" contenteditable="false" data-weight="3" style="--x:58px;--y:108px;--r:4deg;">承运人</span>
+<span class="wordcloud-item size-3" contenteditable="false" data-weight="3" style="--x:-122px;--y:-44px;--r:-8deg;">低价商城</span>
+<span class="wordcloud-item size-3" contenteditable="false" data-weight="3" style="--x:116px;--y:-50px;--r:7deg;">罚款</span>
+<span class="wordcloud-item size-3" contenteditable="false" data-weight="3" style="--x:-142px;--y:4px;--r:6deg;">速卖通</span>
+<span class="wordcloud-item size-3" contenteditable="false" data-weight="3" style="--x:142px;--y:8px;--r:-5deg;">新建链接</span>
+<span class="wordcloud-item size-3" contenteditable="false" data-weight="3" style="--x:-66px;--y:116px;--r:-4deg;">Win10</span>
+<span class="wordcloud-item size-3" contenteditable="false" data-weight="3" style="--x:76px;--y:-104px;--r:4deg;">Win11</span>
+<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:-22px;--y:132px;--r:0deg;">广告</span>
+<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:24px;--y:-124px;--r:-2deg;">销量</span>
+<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:-152px;--y:-86px;--r:-8deg;">电商格局</span>
+<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:154px;--y:-84px;--r:7deg;">品类</span>
+<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:-150px;--y:92px;--r:4deg;">拖鞋</span>
+<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:152px;--y:94px;--r:-6deg;">一件代发</span>
+<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:-86px;--y:-122px;--r:6deg;">五点描述</span>
+<span class="wordcloud-item size-2" contenteditable="false" data-weight="2" style="--x:92px;--y:132px;--r:-4deg;">紫鸟浏览器</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:-34px;--y:-142px;--r:8deg;">活动</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:122px;--y:132px;--r:-6deg;">资质</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-weight="1" style="--x:-126px;--y:132px;--r:5deg;">简介</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-hidden="true">铺货</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-hidden="true">验证码</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-hidden="true">前台显示</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-hidden="true">电脑配置</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-hidden="true">卖家</span>
+<span class="wordcloud-item size-1" contenteditable="false" data-hidden="true">跨境电商</span>
 </div>
 <i class="fas fa-tags card-icon"></i>
 </div></div></div>
+<!-- 重要链接与资源卡片 -->
 
+<!-- 活跃之星统计卡片 -->
 
+<!-- 词云卡片 -->
 
 </div>
 </div>
@@ -598,7 +711,6 @@
     const showMessageDistributionChart = true;
     const isContentEditable = false;
     
-    const themeSwitcher = document.getElementById('theme-switcher');
     const htmlEl = document.documentElement; 
     let activeUsersChartInstance, messageDistributionChartInstance; 
 
@@ -610,38 +722,35 @@
         return newTheme;
     }
 
-    function toggleTheme() {
-        const currentTheme = htmlEl.getAttribute('data-theme');
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-        htmlEl.setAttribute('data-theme', newTheme);
-        reinitializeKityMinderWithNewTheme(newTheme);
-        initializeAllCharts(newTheme); 
-    }
-    
-    if(themeSwitcher) {
-        themeSwitcher.addEventListener('click', toggleTheme);
-    }
-
     let mainKM, modalKM; 
 
     const kityminderData = {
         root: {
-            data: { text: "跨境电商交流", expandState: "expand" },
+            data: { text: "电商运营交流", expandState: "expand" },
             children: [
-                { data: { text: "平台趋势", expandState: "expand" }, children: [
-                    { data: { text: "Temu高额罚款" } },
-                    { data: { text: "亚马逊低价商城" } },
-                    { data: { text: "沃尔玛/速卖通机会" } }
+                { data: { text: "平台现状与布局", expandState: "expand" }, children: [
+                    { data: { text: "Temu冲击" }, children: [
+                        { data: { text: "改变电商格局" } }, { data: { text: "卖家利润受损" } }, { data: { text: "随意罚款现象" } }
+                    ]},
+                    { data: { text: "多平台探索" }, children: [
+                        { data: { text: "沃尔玛(品类探讨)" } }, { data: { text: "速卖通(一件代发)" } }
+                    ]}
                 ]},
-                { data: { text: "运营实操", expandState: "expand" }, children: [
-                    { data: { text: "自动生成五点描述" } },
-                    { data: { text: "利好铺货模式" } },
-                    { data: { text: "前台销量显示" } }
+                { data: { text: "亚马逊实操", expandState: "expand" }, children: [
+                    { data: { text: "多渠道配送" }, children: [
+                        { data: { text: "选择承运人追踪编码" } }
+                    ]},
+                    { data: { text: "Listing上新" }, children: [
+                        { data: { text: "自动生成五点和简介" } }, { data: { text: "利好铺货模式" } }
+                    ]}
                 ]},
-                { data: { text: "技术支持", expandState: "expand" }, children: [
-                    { data: { text: "Passkey设置" } },
-                    { data: { text: "Win10/Win11系统" } },
-                    { data: { text: "紫鸟浏览器/本地环境" } }
+                { data: { text: "系统与工具", expandState: "expand" }, children: [
+                    { data: { text: "Passkey设置" }, children: [
+                        { data: { text: "Win10本地设置困难" } }, { data: { text: "升级Win11成功率高" } }, { data: { text: "紫鸟环境无视版本" } }
+                    ]},
+                    { data: { text: "其他异常" }, children: [
+                        { data: { text: "前台销量不显示" } }, { data: { text: "后台提交失败" } }
+                    ]}
                 ]}
             ]
         },
@@ -862,19 +971,6 @@
         });
     }
 
-    function reinitializeKityMinderWithNewTheme(newTheme) {
-        if (mainKityMinderContainer) {
-            initializeKityMinder(mainKityMinderContainer, kityminderData, mermaidMainFeedbackMessage, false, newTheme)
-                .then(kmInstance => mainKM = kmInstance)
-                .catch(err => console.error("重新初始化主思维导图失败:", err));
-        }
-        if (fullscreenModal.classList.contains('active') && modalKityMinderContainer) {
-             initializeKityMinder(modalKityMinderContainer, kityminderData, mermaidModalFeedbackMessage, true, newTheme)
-                .then(kmInstance => modalKM = kmInstance)
-                .catch(err => console.error("重新初始化模态框思维导图失败:", err));
-        }
-    }
-
     if(mainZoomInBtn) mainZoomInBtn.addEventListener('click', () => { if (mainKM) mainKM.execCommand('zoomIn'); });
     if(mainZoomOutBtn) mainZoomOutBtn.addEventListener('click', () => { if (mainKM) mainKM.execCommand('zoomOut'); });
     if(mainDownloadDiagramBtn) mainDownloadDiagramBtn.addEventListener('click', () => { downloadKityMinderAsSVG(mainKM, '核心概念关系图-主视图', mermaidMainFeedbackMessage); });
@@ -929,8 +1025,8 @@
         const accentSecondaryColor = getCssVariable('--accent-secondary', '#ff8906');
 
         const userData = {
-            labels: ['Ben 大吉大利', '是盛夏呀～🥕', 'Vicky', '非', '浅蓝丶', '457-'],
-            counts: [9, 9, 7, 7, 6, 5]
+            labels: ['是盛夏呀～🥕', 'Ben 大吉大利', '浅蓝丶', '非', 'Vicky', '457-'],
+            counts: [10, 8, 6, 6, 6, 5]
         };
 
         const yAxisMax = Math.ceil(Math.max(...userData.counts) * 1.2);
@@ -988,7 +1084,7 @@
         const gridColor = getCssVariable('--chart-grid-color', 'rgba(0, 0, 0, 0.1)');
         const accentColor = getCssVariable('--accent-blue', '#007EFF');
 
-        const messageData = [0, 0, 0, 0, 0, 0, 0, 0, 15, 25, 20, 10, 5, 2, 4, 3, 2, 1, 0, 2, 3, 0, 0, 0];
+        const messageData = [0, 0, 0, 0, 0, 0, 2, 8, 15, 22, 18, 10, 5, 2, 4, 3, 1, 0, 0, 0, 1, 1, 0, 0];
         
         const yAxisMax = Math.ceil(Math.max(...messageData) * 1.25);
 

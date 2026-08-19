@@ -2,9 +2,17 @@
   "group_set": "midsummer_amazon_study",
   "display_name": "盛夏-亚马逊学习交流群",
   "slug": "midsummer_amazon_study",
-  "generated_at": "2026-08-19T13:23:44",
+  "generated_at": "2026-08-19T14:38:38",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260818",
+      "title": "亚马逊批量清货计划 (Liquidations) 官方说明",
+      "summary": "今日群聊重点围绕亚马逊发货仓库选择、运费上涨、海关查验费用分摊、批量清货策略以及跨类目显示异常等运营实操问题展开了热烈讨论。此外，群友们还分享了本地版Passkey的设置教程，并对近期流行的“牛来”摆件进行了趣味交流。",
+      "source_html": "data/20260818/midsummer_amazon_study/MODE2_20260818_盛夏-亚马逊学习交流群_20260819_143608.html",
+      "path": "groups/midsummer_amazon_study/days/20260818.html",
+      "mtime": "2026-08-19T14:38:33"
+    },
     {
       "date": "20260817",
       "title": "微软Windows 11升级指南",
@@ -31,6 +39,7 @@
     }
   ],
   "urls": {
+    "20260818": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260818.html",
     "20260817": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260817.html",
     "20260816": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260816.html",
     "20260811": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260811.html"

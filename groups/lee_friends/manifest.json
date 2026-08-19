@@ -2,9 +2,17 @@
   "group_set": "lee_friends",
   "display_name": "Lee和Ta的朋友们（三群合并）",
   "slug": "lee_friends",
-  "generated_at": "2026-08-19T11:21:49",
+  "generated_at": "2026-08-19T14:36:08",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260818",
+      "title": "亚马逊物流 (FBA) 政策与指南",
+      "summary": "今日群聊主要围绕亚马逊运营相关话题展开，包括广告点击率优化、主图视频上传要求、Vine评价被删及申诉、新版合并变体报错等实操问题。此外，群友们还讨论了香港公司商业保险购买、AGL与第三方物流的优劣，以及热门电影《牛来》和相关社会现象，交流氛围活跃且干货满满。",
+      "source_html": "data/20260818/lee_friends/MODE2_20260818_Lee和Ta的朋友们_三群合并__20260819_143341.html",
+      "path": "groups/lee_friends/days/20260818.html",
+      "mtime": "2026-08-19T14:36:02"
+    },
     {
       "date": "20260817",
       "title": "Amazon SP广告站外流量扩展说明",
@@ -39,6 +47,7 @@
     }
   ],
   "urls": {
+    "20260818": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260818.html",
     "20260817": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260817.html",
     "20260816": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260816.html",
     "20260811": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260811.html",

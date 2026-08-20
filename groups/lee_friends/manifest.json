@@ -2,9 +2,17 @@
   "group_set": "lee_friends",
   "display_name": "Lee和Ta的朋友们（三群合并）",
   "slug": "lee_friends",
-  "generated_at": "2026-08-19T14:36:08",
+  "generated_at": "2026-08-20T09:34:29",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260819",
+      "title": "Levanta (群友提问工具)",
+      "summary": "今日群聊讨论热烈，主要围绕跨境物流发货建议、亚马逊运营公司管理费与合伙人模式、遭遇恶意差评与点星的应对策略、运营日常数据统计的效率、主管带新人的经验与吐槽，以及职场离职八卦等话题展开。此外，群主 @Andrew_Lee 在七夕佳节为大家发放了红包，群友们纷纷表达感谢，气氛融洽。",
+      "source_html": "data/20260819/lee_friends/MODE2_20260819_Lee和Ta的朋友们_三群合并__20260820_093107.html",
+      "path": "groups/lee_friends/days/20260819.html",
+      "mtime": "2026-08-20T09:34:23"
+    },
     {
       "date": "20260818",
       "title": "亚马逊物流 (FBA) 政策与指南",
@@ -47,6 +55,7 @@
     }
   ],
   "urls": {
+    "20260819": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260819.html",
     "20260818": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260818.html",
     "20260817": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260817.html",
     "20260816": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260816.html",

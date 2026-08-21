@@ -2,9 +2,17 @@
   "group_set": "lee_friends",
   "display_name": "Lee和Ta的朋友们（三群合并）",
   "slug": "lee_friends",
-  "generated_at": "2026-08-21T09:30:41",
+  "generated_at": "2026-08-21T16:02:38",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260820",
+      "title": "亚马逊卖家中心",
+      "summary": "今日群聊围绕亚马逊运营展开深度讨论，核心聚焦于广告归因机制、新品推广转化率下滑的原因排查、竞品分析与广告位置调整策略。同时，群友们也交流了老链接销量断崖式下跌的挽救方法、链接侵权对店铺的影响，以及WhatsApp注册等实操问题。讨论氛围热烈，干货满满。",
+      "source_html": "data/20260820/lee_friends/MODE2_20260820_Lee和Ta的朋友们_三群合并__20260821_160008.html",
+      "path": "groups/lee_friends/days/20260820.html",
+      "mtime": "2026-08-21T16:02:32"
+    },
     {
       "date": "20260819",
       "title": "Levanta (群友提问工具)",
@@ -55,6 +63,7 @@
     }
   ],
   "urls": {
+    "20260820": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260820.html",
     "20260819": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260819.html",
     "20260818": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260818.html",
     "20260817": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260817.html",

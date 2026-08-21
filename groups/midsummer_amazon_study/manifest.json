@@ -2,9 +2,17 @@
   "group_set": "midsummer_amazon_study",
   "display_name": "盛夏-亚马逊学习交流群",
   "slug": "midsummer_amazon_study",
-  "generated_at": "2026-08-21T09:31:00",
+  "generated_at": "2026-08-21T16:05:29",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260820",
+      "title": "账号安全工具：紫鸟浏览器托管",
+      "summary": "今日群聊主要围绕亚马逊运营实操展开，重点讨论了赶跟卖与透明计划、Passkey登录设置、Vine评价与直评的风险、工厂型卖家开店策略以及AWD仓储发货等话题。群友们积极分享经验，互帮互助氛围浓厚。",
+      "source_html": "data/20260820/midsummer_amazon_study/MODE2_20260820_盛夏-亚马逊学习交流群_20260821_160238.html",
+      "path": "groups/midsummer_amazon_study/days/20260820.html",
+      "mtime": "2026-08-21T16:05:24"
+    },
     {
       "date": "20260819",
       "title": "Barcodes Talk (UPC购买渠道分享)",
@@ -47,6 +55,7 @@
     }
   ],
   "urls": {
+    "20260820": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260820.html",
     "20260819": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260819.html",
     "20260818": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260818.html",
     "20260817": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260817.html",

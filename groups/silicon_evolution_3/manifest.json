@@ -2,9 +2,17 @@
   "group_set": "silicon_evolution_3",
   "display_name": "10x效率|硅基进化论③",
   "slug": "silicon_evolution_3",
-  "generated_at": "2026-08-21T16:07:58",
+  "generated_at": "2026-08-22T09:43:52",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260821",
+      "title": "DeepSeek API 价格说明",
+      "summary": "今日群聊由KOL @Simon 和 @硅基妙妙屋- Morgan 主导，主要围绕大模型降智现象、DeepSeek Pro的定价策略以及GitHub桌面版等话题展开。大家分享了关于ChatGPT模型路由降级的观察，并以幽默的方式探讨了AI工具的高昂成本与职场影响，展现了群友对前沿AI工具的敏锐度与真实体验反馈。",
+      "source_html": "data/20260821/silicon_evolution_3/MODE2_20260821_10x效率_硅基进化论__20260822_094120.html",
+      "path": "groups/silicon_evolution_3/days/20260821.html",
+      "mtime": "2026-08-22T09:43:47"
+    },
     {
       "date": "20260820",
       "title": "今日群聊暂无分享链接",
@@ -39,6 +47,7 @@
     }
   ],
   "urls": {
+    "20260821": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260821.html",
     "20260820": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260820.html",
     "20260819": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260819.html",
     "20260816": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260816.html",

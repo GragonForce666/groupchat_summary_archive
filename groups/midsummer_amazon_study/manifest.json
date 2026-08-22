@@ -2,9 +2,17 @@
   "group_set": "midsummer_amazon_study",
   "display_name": "盛夏-亚马逊学习交流群",
   "slug": "midsummer_amazon_study",
-  "generated_at": "2026-08-21T16:05:29",
+  "generated_at": "2026-08-22T09:41:20",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260821",
+      "title": "AI 作图辅助工具（讨论资源）",
+      "summary": "今日群聊内容丰富，主要围绕亚马逊运营中的实际痛点展开。核心KOL @是盛夏呀～🥕 与 @浅蓝丶 等人深入探讨了Passkey升级带来的系统重装烦恼、紫鸟浏览器的替代方案、美工作图效率低下以及FBA发货混装政策变化等问题。此外，大家还交流了周末加班与老板边界感的话题，展现了亚马逊运营人的真实日常。",
+      "source_html": "data/20260821/midsummer_amazon_study/MODE2_20260821_盛夏-亚马逊学习交流群_20260822_093750.html",
+      "path": "groups/midsummer_amazon_study/days/20260821.html",
+      "mtime": "2026-08-22T09:41:16"
+    },
     {
       "date": "20260820",
       "title": "账号安全工具：紫鸟浏览器托管",
@@ -55,6 +63,7 @@
     }
   ],
   "urls": {
+    "20260821": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260821.html",
     "20260820": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260820.html",
     "20260819": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260819.html",
     "20260818": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260818.html",

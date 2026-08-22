@@ -2,9 +2,17 @@
   "group_set": "lee_friends",
   "display_name": "Lee和Ta的朋友们（三群合并）",
   "slug": "lee_friends",
-  "generated_at": "2026-08-21T16:02:38",
+  "generated_at": "2026-08-22T09:37:50",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260821",
+      "title": "Lee 的网易跨境收款专属优惠链接",
+      "summary": "今日群聊围绕亚马逊运营实操展开了热烈讨论。核心话题包括亚马逊最新的退货评分机制引发的差评潮、广告竞价策略（固定竞价与UP and Down的对比）、新店铺注册的IP限制问题。此外，群友还交流了公司招聘背调的必要性、跨境收款工具的选择，并分享了近期热门电影的观影体验。",
+      "source_html": "data/20260821/lee_friends/MODE2_20260821_Lee和Ta的朋友们_三群合并__20260822_093049.html",
+      "path": "groups/lee_friends/days/20260821.html",
+      "mtime": "2026-08-22T09:37:44"
+    },
     {
       "date": "20260820",
       "title": "亚马逊卖家中心",
@@ -63,6 +71,7 @@
     }
   ],
   "urls": {
+    "20260821": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260821.html",
     "20260820": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260820.html",
     "20260819": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260819.html",
     "20260818": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260818.html",

@@ -2,9 +2,17 @@
   "group_set": "midsummer_amazon_study",
   "display_name": "盛夏-亚马逊学习交流群",
   "slug": "midsummer_amazon_study",
-  "generated_at": "2026-08-25T09:31:39",
+  "generated_at": "2026-08-25T15:50:48",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260824",
+      "title": "盛夏-亚马逊学习交流群日报",
+      "summary": "今日群内讨论氛围活跃，话题涵盖了中秋国庆双节的旅游出行计划，以及多项亚马逊运营实操问题。在业务方面，群友们重点探讨了FBA发货分仓规则（需满足同SKU同数量的5箱及以上）、透明计划标签的打印规范（FNSKU与UPC的区别）、外箱Made in China标识的贴法，以及Listing标题字符限制和模板变体属性报错的解决方法。",
+      "source_html": "data/20260824/midsummer_amazon_study/MODE2_20260824_盛夏-亚马逊学习交流群_20260825_154657.html",
+      "path": "groups/midsummer_amazon_study/days/20260824.html",
+      "mtime": "2026-08-25T15:50:40"
+    },
     {
       "date": "20260821",
       "title": "AI 作图辅助工具（讨论资源）",
@@ -63,6 +71,7 @@
     }
   ],
   "urls": {
+    "20260824": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260824.html",
     "20260821": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260821.html",
     "20260820": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260820.html",
     "20260819": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260819.html",

@@ -2,9 +2,17 @@
   "group_set": "lee_friends",
   "display_name": "Lee和Ta的朋友们（三群合并）",
   "slug": "lee_friends",
-  "generated_at": "2026-08-25T09:31:04",
+  "generated_at": "2026-08-25T15:46:57",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260824",
+      "title": "雨果跨境资讯平台",
+      "summary": "今日群聊围绕亚马逊最新政策、评分机制变化及运营策略展开了深度讨论。今日KOL推荐为 @胡程 ，其对亚马逊算法及政策的深度剖析为群友提供了极高的参考价值。大家普遍关注低价螺旋现象、新品推广难度以及Vine评论被删等痛点问题。",
+      "source_html": "data/20260824/lee_friends/MODE2_20260824_Lee和Ta的朋友们_三群合并__20260825_154259.html",
+      "path": "groups/lee_friends/days/20260824.html",
+      "mtime": "2026-08-25T15:46:51"
+    },
     {
       "date": "20260821",
       "title": "Lee 的网易跨境收款专属优惠链接",
@@ -71,6 +79,7 @@
     }
   ],
   "urls": {
+    "20260824": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260824.html",
     "20260821": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260821.html",
     "20260820": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260820.html",
     "20260819": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260819.html",

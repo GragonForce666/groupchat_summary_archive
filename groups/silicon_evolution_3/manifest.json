@@ -2,9 +2,17 @@
   "group_set": "silicon_evolution_3",
   "display_name": "10x效率|硅基进化论③",
   "slug": "silicon_evolution_3",
-  "generated_at": "2026-08-25T15:53:28",
+  "generated_at": "2026-08-26T09:40:06",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260825",
+      "title": "Linux DO 社区",
+      "summary": "今日群聊气氛活跃，主要围绕AI工具的实际应用与Agent的商业化展开讨论。群友分享了关于Gemini、豆包等工具的体验。最引人注目的是群内“AI 硅基妙妙屋”机器人的毒舌互动，引发了大家对AI人设和亚马逊运营的趣味探讨。此外，Morgan分享了正在构建的图片生成提示词知识库，备受期待。",
+      "source_html": "data/20260825/silicon_evolution_3/MODE2_20260825_10x效率_硅基进化论__20260826_093638.html",
+      "path": "groups/silicon_evolution_3/days/20260825.html",
+      "mtime": "2026-08-26T09:40:02"
+    },
     {
       "date": "20260824",
       "title": "Devin AI程序员 (讨论提及)",
@@ -55,6 +63,7 @@
     }
   ],
   "urls": {
+    "20260825": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260825.html",
     "20260824": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260824.html",
     "20260821": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260821.html",
     "20260820": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260820.html",

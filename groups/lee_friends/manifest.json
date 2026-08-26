@@ -2,9 +2,17 @@
   "group_set": "lee_friends",
   "display_name": "Lee和Ta的朋友们（三群合并）",
   "slug": "lee_friends",
-  "generated_at": "2026-08-25T15:46:57",
+  "generated_at": "2026-08-26T09:33:55",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260825",
+      "title": "Lee和Ta的朋友们日报",
+      "summary": "今日群聊重点探讨了亚马逊运营中的多项实操问题与合规风险。主要包括新店品牌关联操作、服务商“卡BUG”降佣金的封店隐患、TK视频搬运的侵权风险，以及店铺被限评、FBM购物车异常等疑难杂症。群友们积极分享经验，强调合规运营的重要性。",
+      "source_html": "data/20260825/lee_friends/MODE2_20260825_Lee和Ta的朋友们_三群合并__20260826_093050.html",
+      "path": "groups/lee_friends/days/20260825.html",
+      "mtime": "2026-08-26T09:33:50"
+    },
     {
       "date": "20260824",
       "title": "雨果跨境资讯平台",
@@ -79,6 +87,7 @@
     }
   ],
   "urls": {
+    "20260825": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260825.html",
     "20260824": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260824.html",
     "20260821": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260821.html",
     "20260820": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260820.html",

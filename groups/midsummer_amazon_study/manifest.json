@@ -2,9 +2,17 @@
   "group_set": "midsummer_amazon_study",
   "display_name": "盛夏-亚马逊学习交流群",
   "slug": "midsummer_amazon_study",
-  "generated_at": "2026-08-25T15:50:48",
+  "generated_at": "2026-08-26T09:36:38",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260825",
+      "title": "亚马逊远程配送费用计算器",
+      "summary": "今日群聊聚焦于亚马逊运营实操与AI工具应用。大家深入探讨了远程配送的定价策略、店铺合规保险、广告折扣对利润的影响，以及物流运费的最新波动。同时，群友们积极分享了豆包、ChatGPT和Gemini等AI工具在生图和编写五点描述中的实际体验。",
+      "source_html": "data/20260825/midsummer_amazon_study/MODE2_20260825_盛夏-亚马逊学习交流群_20260826_093355.html",
+      "path": "groups/midsummer_amazon_study/days/20260825.html",
+      "mtime": "2026-08-26T09:36:29"
+    },
     {
       "date": "20260824",
       "title": "盛夏-亚马逊学习交流群日报",
@@ -71,6 +79,7 @@
     }
   ],
   "urls": {
+    "20260825": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260825.html",
     "20260824": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260824.html",
     "20260821": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260821.html",
     "20260820": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260820.html",

@@ -2,9 +2,17 @@
   "group_set": "midsummer_amazon_study",
   "display_name": "盛夏-亚马逊学习交流群",
   "slug": "midsummer_amazon_study",
-  "generated_at": "2026-08-26T09:36:38",
+  "generated_at": "2026-08-27T09:41:46",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260826",
+      "title": "亚马逊全球开店 - 德国站税务合规指南",
+      "summary": "今日群聊主要围绕亚马逊运营的日常问题展开，包括销量波动吐槽、产品翻新后的ASIN处理、品牌备案流程的最新免验证码更新、库容申请的生效时间、欧洲站库存休眠设置、广告后台的系统异常以及下周运费上涨的预警。群友们互帮互助，分享了许多实用的运营经验，今日KOL推荐关注 @浅蓝丶 和 @ひとり。",
+      "source_html": "data/20260826/midsummer_amazon_study/MODE2_20260826_盛夏-亚马逊学习交流群_20260827_093402.html",
+      "path": "groups/midsummer_amazon_study/days/20260826.html",
+      "mtime": "2026-08-27T09:41:41"
+    },
     {
       "date": "20260825",
       "title": "亚马逊远程配送费用计算器",
@@ -79,6 +87,7 @@
     }
   ],
   "urls": {
+    "20260826": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260826.html",
     "20260825": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260825.html",
     "20260824": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260824.html",
     "20260821": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260821.html",

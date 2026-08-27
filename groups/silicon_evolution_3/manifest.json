@@ -2,9 +2,17 @@
   "group_set": "silicon_evolution_3",
   "display_name": "10x效率|硅基进化论③",
   "slug": "silicon_evolution_3",
-  "generated_at": "2026-08-26T09:40:06",
+  "generated_at": "2026-08-27T09:43:56",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260826",
+      "title": "Workbuddy 邀请注册链接",
+      "summary": "今日群聊围绕AI工具的最新动态展开热烈讨论。KOL @硅基妙妙屋- Morgan 分享了珍藏的图片生成提示词飞书表格，引发广泛关注。群友们深入探讨了 Workbuddy 的积分羊毛、豆包与 Trae 的合并传闻、Manus 与 Anygen 的使用体验。此外，关于本地大模型运行的硬件配置（如5090显卡）以及操作系统（Mac vs Win）的适配性也引发了技术向的交流。最后，群友还分享了 Shopify 独立站 smind 插件被劫持的安全预警。",
+      "source_html": "data/20260826/silicon_evolution_3/MODE2_20260826_10x效率_硅基进化论__20260827_094146.html",
+      "path": "groups/silicon_evolution_3/days/20260826.html",
+      "mtime": "2026-08-27T09:43:51"
+    },
     {
       "date": "20260825",
       "title": "Linux DO 社区",
@@ -63,6 +71,7 @@
     }
   ],
   "urls": {
+    "20260826": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260826.html",
     "20260825": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260825.html",
     "20260824": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260824.html",
     "20260821": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260821.html",

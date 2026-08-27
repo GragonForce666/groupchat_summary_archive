@@ -2,9 +2,17 @@
   "group_set": "lee_friends",
   "display_name": "Lee和Ta的朋友们（三群合并）",
   "slug": "lee_friends",
-  "generated_at": "2026-08-26T09:33:55",
+  "generated_at": "2026-08-27T09:34:02",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260826",
+      "title": "Lee和Ta的朋友们（三群合并）日报",
+      "summary": "今日群聊主要围绕俄罗斯电商平台Ozon的代运营诈骗事件展开热烈讨论，大家对该平台的霸王条款和资金安全表示震惊。此外，群友还交流了近期亚马逊Vine掉评的异常现象，以及防范报关推销电话的经验。",
+      "source_html": "data/20260826/lee_friends/MODE2_20260826_Lee和Ta的朋友们_三群合并__20260827_093047.html",
+      "path": "groups/lee_friends/days/20260826.html",
+      "mtime": "2026-08-27T09:33:56"
+    },
     {
       "date": "20260825",
       "title": "Lee和Ta的朋友们日报",
@@ -87,6 +95,7 @@
     }
   ],
   "urls": {
+    "20260826": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260826.html",
     "20260825": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260825.html",
     "20260824": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260824.html",
     "20260821": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260821.html",

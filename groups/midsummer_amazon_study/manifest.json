@@ -2,9 +2,17 @@
   "group_set": "midsummer_amazon_study",
   "display_name": "盛夏-亚马逊学习交流群",
   "slug": "midsummer_amazon_study",
-  "generated_at": "2026-08-27T09:41:46",
+  "generated_at": "2026-08-28T09:34:39",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260827",
+      "title": "跨境电商薪资调研报告2026",
+      "summary": "今日群聊由KOL @好多米 领衔，大家围绕跨境电商就业环境（单休/大小周）、职场对女性的生育歧视、亚马逊一星评价事件及BD定价策略等话题展开了热烈讨论。同时，群友们也对高昂的生活成本和时代变迁带来的压力表达了深刻的共鸣。",
+      "source_html": "data/20260827/midsummer_amazon_study/MODE2_20260827_盛夏-亚马逊学习交流群_20260828_093225.html",
+      "path": "groups/midsummer_amazon_study/days/20260827.html",
+      "mtime": "2026-08-28T09:34:35"
+    },
     {
       "date": "20260826",
       "title": "亚马逊全球开店 - 德国站税务合规指南",
@@ -87,6 +95,7 @@
     }
   ],
   "urls": {
+    "20260827": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260827.html",
     "20260826": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260826.html",
     "20260825": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260825.html",
     "20260824": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260824.html",

@@ -2,9 +2,17 @@
   "group_set": "silicon_evolution_3",
   "display_name": "10x效率|硅基进化论③",
   "slug": "silicon_evolution_3",
-  "generated_at": "2026-08-27T09:43:56",
+  "generated_at": "2026-08-28T09:38:07",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260827",
+      "title": "Workbuddy 邀请注册链接",
+      "summary": "今日群聊围绕AI工具的深度应用与限制展开了热烈讨论。核心KOL @MaNia 深入探讨了 Grok bot 与 Cursor 的使用体验、额度消耗及内容审查问题。此外，群友们还交流了 Workbuddy 的注册体验、AI算力限制带来的焦虑，以及自动化工作流的极简哲学。整体氛围聚焦于前沿AI工具的实战测试与效率提升。",
+      "source_html": "data/20260827/silicon_evolution_3/MODE2_20260827_10x效率_硅基进化论__20260828_093439.html",
+      "path": "groups/silicon_evolution_3/days/20260827.html",
+      "mtime": "2026-08-28T09:38:04"
+    },
     {
       "date": "20260826",
       "title": "Workbuddy 邀请注册链接",
@@ -71,6 +79,7 @@
     }
   ],
   "urls": {
+    "20260827": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260827.html",
     "20260826": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260826.html",
     "20260825": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260825.html",
     "20260824": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260824.html",

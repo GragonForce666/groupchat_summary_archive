@@ -2,9 +2,17 @@
   "group_set": "lee_friends",
   "display_name": "Lee和Ta的朋友们（三群合并）",
   "slug": "lee_friends",
-  "generated_at": "2026-08-27T09:34:02",
+  "generated_at": "2026-08-28T09:32:25",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260827",
+      "title": "Lee和Ta的朋友们（三群合并）",
+      "summary": "今日群聊主要围绕亚马逊运营策略展开，包括新品自然流量获取、广告投放技巧（SP与SB广告）、Vine评论限制等。此外，群友们还就职场维权、试用期辞退及劳动仲裁等话题进行了深入探讨，分享了宝贵的经验与建议。",
+      "source_html": "data/20260827/lee_friends/MODE2_20260827_Lee和Ta的朋友们_三群合并__20260828_093046.html",
+      "path": "groups/lee_friends/days/20260827.html",
+      "mtime": "2026-08-28T09:32:21"
+    },
     {
       "date": "20260826",
       "title": "Lee和Ta的朋友们（三群合并）日报",
@@ -95,6 +103,7 @@
     }
   ],
   "urls": {
+    "20260827": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260827.html",
     "20260826": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260826.html",
     "20260825": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260825.html",
     "20260824": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260824.html",

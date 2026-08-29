@@ -2,9 +2,17 @@
   "group_set": "lee_friends",
   "display_name": "Lee和Ta的朋友们（三群合并）",
   "slug": "lee_friends",
-  "generated_at": "2026-08-28T09:32:25",
+  "generated_at": "2026-08-29T09:32:17",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260828",
+      "title": "Lee和Ta的朋友们 日报",
+      "summary": "今日群聊主要围绕亚马逊运营实操展开，重点讨论了FBA库容扩容策略与服务商避坑、旺季仓储费规则、AI生成图片合规标注以及多站点关联与二审问题。群友们积极分享实战经验，互助氛围浓厚。",
+      "source_html": "data/20260828/lee_friends/MODE2_20260828_Lee和Ta的朋友们_三群合并__20260829_093042.html",
+      "path": "groups/lee_friends/days/20260828.html",
+      "mtime": "2026-08-29T09:32:12"
+    },
     {
       "date": "20260827",
       "title": "Lee和Ta的朋友们（三群合并）",
@@ -103,6 +111,7 @@
     }
   ],
   "urls": {
+    "20260828": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260828.html",
     "20260827": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260827.html",
     "20260826": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260826.html",
     "20260825": "https://gragonforce666.github.io/groupchat_summary_archive/groups/lee_friends/days/20260825.html",

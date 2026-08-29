@@ -2,9 +2,17 @@
   "group_set": "silicon_evolution_3",
   "display_name": "10x效率|硅基进化论③",
   "slug": "silicon_evolution_3",
-  "generated_at": "2026-08-28T09:38:07",
+  "generated_at": "2026-08-29T09:37:41",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260828",
+      "title": "OpenAI 官方网站",
+      "summary": "今日群聊由KOL @MaNia 领衔，话题广泛涉及孙宇晨与Claude的八卦事件、AI中转站的安全性探讨、腾讯新模型的定价与性能评测，以及智谱Zcode和豆包等国产大模型的日常使用体验。大家在吃瓜的同时，也对各家AI工具的性价比和实用性进行了深入交流。",
+      "source_html": "data/20260828/silicon_evolution_3/MODE2_20260828_10x效率_硅基进化论__20260829_093505.html",
+      "path": "groups/silicon_evolution_3/days/20260828.html",
+      "mtime": "2026-08-29T09:37:37"
+    },
     {
       "date": "20260827",
       "title": "Workbuddy 邀请注册链接",
@@ -79,6 +87,7 @@
     }
   ],
   "urls": {
+    "20260828": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260828.html",
     "20260827": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260827.html",
     "20260826": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260826.html",
     "20260825": "https://gragonforce666.github.io/groupchat_summary_archive/groups/silicon_evolution_3/days/20260825.html",

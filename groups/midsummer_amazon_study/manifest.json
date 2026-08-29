@@ -2,9 +2,17 @@
   "group_set": "midsummer_amazon_study",
   "display_name": "盛夏-亚马逊学习交流群",
   "slug": "midsummer_amazon_study",
-  "generated_at": "2026-08-28T09:34:39",
+  "generated_at": "2026-08-29T09:35:05",
   "base_url": "https://gragonforce666.github.io/groupchat_summary_archive",
   "days": [
+    {
+      "date": "20260828",
+      "title": "美国专利商标局 (USPTO) 官网",
+      "summary": "今日群聊重点讨论了亚马逊后台新版界面的操作体验、变体上传的痛点，以及专利投诉中的品牌滥用风险。此外，大家还交流了领星ERP数据准确性、紫鸟浏览器环境登录问题和近期发货运费及加拿大时效。",
+      "source_html": "data/20260828/midsummer_amazon_study/MODE2_20260828_盛夏-亚马逊学习交流群_20260829_093217.html",
+      "path": "groups/midsummer_amazon_study/days/20260828.html",
+      "mtime": "2026-08-29T09:35:02"
+    },
     {
       "date": "20260827",
       "title": "跨境电商薪资调研报告2026",
@@ -95,6 +103,7 @@
     }
   ],
   "urls": {
+    "20260828": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260828.html",
     "20260827": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260827.html",
     "20260826": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260826.html",
     "20260825": "https://gragonforce666.github.io/groupchat_summary_archive/groups/midsummer_amazon_study/days/20260825.html",
